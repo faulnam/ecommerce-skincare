@@ -1,0 +1,34 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        DB::statement("ALTER TABLE users MODIFY COLUMN role ENUM('admin', 'customer', 'courier', 'developer', 'blogger') DEFAULT 'customer'");
+        
+        Schema::table('insights', function (Blueprint $table) {
+            $table->foreignId('user_id')->nullable()->after('id')->constrained('users')->nullOnDelete();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::table('insights', function (Blueprint $table) {
+            $table->dropForeign(['user_id']);
+            $table->dropColumn('user_id');
+        });
+        
+        DB::statement("ALTER TABLE users MODIFY COLUMN role ENUM('admin', 'customer', 'courier', 'developer') DEFAULT 'customer'");
+    }
+};

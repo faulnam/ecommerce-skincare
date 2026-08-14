@@ -1,0 +1,68 @@
+{
+  "navbar": {
+    "home": { "id": "Beranda", "en": "Home" },
+    "new_arrivals": { "id": "Produk Terbaru", "en": "New Arrivals" },
+    "hijab": { "id": "Hijab", "en": "Hijabs" },
+    "shoes": { "id": "Sepatu", "en": "Shoes" },
+    "accessories": { "id": "Aksesoris", "en": "Accessories" },
+    "brand_catalog": { "id": "Katalog Brand", "en": "Brand Catalog" },
+    "about": { "id": "Tentang", "en": "About" },
+    "contact": { "id": "Hubungi Kami", "en": "Contact" },
+    "login": { "id": "Masuk", "en": "Login" },
+    "cart": { "id": "Keranjang", "en": "Cart" },
+    "wishlist": { "id": "Favorit", "en": "Wishlist" },
+    "headers": {
+      "brand": { "id": "MEREK", "en": "BRAND" },
+      "level": { "id": "TINGKATAN", "en": "LEVEL" },
+      "category": { "id": "KATEGORI", "en": "CATEGORY" }
+    },
+    "levels": {
+      "beginner": { "id": "Pemula", "en": "Beginner" },
+      "intermediate": { "id": "Menengah", "en": "Intermediate" },
+      "pro": { "id": "Profesional", "en": "Pro" }
+    },
+    "promo_texts": {
+      "hijab_title": { "id": "Hijab Premium", "en": "Premium Hijabs" },
+      "hijab_desc": { "id": "Akurasi & Kekuatan", "en": "Precision & Power" },
+      "shoes_title": { "id": "Sepatu Premium", "en": "Premium Shoes" },
+      "shoes_desc": { "id": "Bergerak Lebih Cepat, Bermain Lebih Pintar", "en": "Move Faster, Play Smarter" },
+      "acc_title": { "id": "Aksesoris Premium", "en": "Premium Accessories" },
+      "acc_desc": { "id": "Kenyamanan Bertemu Performa", "en": "Comfort Meets Performance" }
+    },
+    "product_card": {
+      "btn_detail": { "id": "Detail", "en": "Details" },
+      "add_to_cart": { "id": "Tambah ke Keranjang", "en": "Add to Cart" }
+    },
+    "dashboard": { "en": "Dashboard","id": "Dasbor"},
+    "orders": { "en": "Orders","id": "Pesanan"},
+    "profile": {"en": "Profile","id": "Profil"}
+  },
+  "footer": {
+    "sections": {
+      "shop": { "id": "Toko", "en": "Shop" },
+      "support": { "id": "Bantuan", "en": "Support" },
+      "account": { "id": "Akun", "en": "Account" },
+      "social_media": { "id": "Media Sosial", "en": "Social Media" }
+    },
+    "links": {
+      "policy": { "id": "Kebijakan Privasi", "en": "Policy" },
+      "return_refund": { "id": "Pengembalian & Dana", "en": "Return & Refund" },
+      "guarantee": { "id": "Garansi Hijab", "en": "Hijab Guarantee" },
+      "help_center": { "id": "Pusat Bantuan", "en": "Help Center" },
+      "register": { "id": "Daftar", "en": "Register" },
+      "brand_catalog": { "id": "Katalog Brand", "en": "Brand Catalog" },
+      "shop": { "id": "Toko", "en": "Shop" },
+      "about": { "id": "Tentang", "en": "About" }
+    },
+    "copyright": {
+      "id": "© 2026 Hijab. Hak cipta dilindungi undang-undang.",
+      "en": "© 2026 Hijab. All rights reserved."
+    }
+  },
+  "empty_states": {
+    "no_new_arrivals": { "id": "Belum ada produk terbaru", "en": "No new arrivals yet" },
+    "no_shoes": { "id": "Produk sepatu belum tersedia.", "en": "Shoes products not available yet." },
+    "no_accessories": { "id": "Produk aksesoris belum tersedia.", "en": "Accessories products not available yet." },
+    "no_testimonials": { "id": "Belum ada testimoni.", "en": "No testimonials yet." }
+  }
+}

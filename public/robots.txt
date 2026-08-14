@@ -1,0 +1,21 @@
+User-agent: *
+Disallow: /customer/
+Disallow: /admin/
+Disallow: /api/
+Disallow: /chatbot
+Disallow: /translation/
+Disallow: /*search_term_string*
+Disallow: /*&locale=*
+Disallow: /translation/*.json
+
+# --- Blocking filter facet: DITAHAN untuk P1 (Audit SEO Sesi 2, Bagian 2.4-B) ---
+# Urutan aman: pasang canonical (A/C) DULU -> biarkan Google re-crawl & konsolidasi -> BARU aktifkan blok di bawah.
+# Pola /*param= agar cocok di posisi ? maupun &. page= sengaja TIDAK diblok (pagination asli -> self-canonical).
+# Disallow: /*shape=
+# Disallow: /*brand=
+# Disallow: /*hardness=
+# Disallow: /*carbon_type=
+# Disallow: /*level=
+# Disallow: /*q=
+
+Sitemap: https://hijab.com/sitemap.xml

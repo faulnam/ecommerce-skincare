@@ -1,0 +1,45 @@
+{
+  "breadcrumb": {
+    "home": { "id": "Beranda", "en": "Home" },
+    "products": { "id": "Produk", "en": "Products" }
+  },
+  "badges": {
+    "bundle": { "id": "Bundling", "en": "Bundle" },
+    "discount": { "id": "Diskon", "en": "Discount" },
+    "out_of_stock": { "id": "Stok Habis", "en": "Out of Stock" },
+    "best_seller": { "id": "Paling Laris", "en": "Best Seller" },
+    "verified_buyer": { "id": "Pembeli Terverifikasi", "en": "Verified Buyer" }
+  },
+  "info_section": {
+    "sold": { "id": "Terjual", "en": "Sold" },
+    "save_amount": { "id": "Hemat", "en": "Save" },
+    "description_title": { "id": "Deskripsi Produk", "en": "Product Description" },
+    "no_description": { "id": "Deskripsi produk belum tersedia.", "en": "No description available." },
+    "details_title": { "id": "Detail Produk", "en": "Product Details" },
+    "weight": { "id": "Berat", "en": "Weight" },
+    "stock": { "id": "Stok", "en": "Stock" }
+  },
+  "actions": {
+    "add_to_cart": { "id": "Tambah ke Keranjang", "en": "Add to Cart" },
+    "out_of_stock_btn": { "id": "Stok Habis", "en": "Out of Stock" },
+    "add_to_wishlist_alert": { "id": "Produk berhasil ditambahkan ke favorit!", "en": "Product successfully added to wishlist!" },
+    "already_wishlist_alert": { "id": "Produk sudah ada di favorit", "en": "Product already in wishlist" },
+    "cart_success_alert": { "id": "Produk berhasil ditambahkan ke keranjang!", "en": "Product successfully added to cart!" }
+  },
+  "reviews": {
+    "title_section": { "id": "Ulasan Pelanggan", "en": "Customer Reviews" },
+    "review_count_single": { "id": "Ulasan", "en": "Review" },
+    "review_count_plural": { "id": "Ulasan", "en": "Reviews" },
+    "write_review": { "id": "Tulis Ulasan", "en": "Write a Review" },
+    "login_to_review": { "id": "Masuk untuk Mengulas", "en": "Login to Review" },
+    "search_placeholder": { "id": "Cari ulasan...", "en": "Search reviews" },
+    "filter_all": { "id": "Semua bintang", "en": "All ratings" },
+    "filter_stars": { "id": "Bintang", "en": "stars" },
+    "filter_star_single": { "id": "Bintang", "en": "star" },
+    "no_reviews": { "id": "Belum ada ulasan. Jadilah yang pertama mengulas produk ini!", "en": "No reviews yet. Be the first to review this product!" }
+  },
+  "related_products": {
+    "title": { "id": "Produk Terkait", "en": "Related Products" },
+    "subtitle": { "id": "Produk lain yang mungkin Anda suka", "en": "Other products you might like" }
+  }
+}

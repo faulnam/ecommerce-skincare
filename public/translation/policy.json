@@ -1,0 +1,78 @@
+{
+  "section_badge": {
+    "id": "Hukum",
+    "en": "Legal"
+  },
+  "page_title": {
+    "id": "Kebijakan Privasi",
+    "en": "Privacy Policy"
+  },
+  "page_subtitle": {
+    "id": "Terakhir diperbarui:",
+    "en": "Last updated:"
+  },
+  "title_collect": {
+    "id": "1. Pengumpulan Informasi",
+    "en": "1. Information Collection"
+  },
+  "desc_collect": {
+    "id": "Saat menggunakan layanan Hijab, kami kumpulkan informasi berupa nama, email, nomor telepon, alamat pengiriman, dan data pembayaran.",
+    "en": "When using Hijab services, we collect information such as your name, email address, telephone number, shipping address, and payment details."
+  },
+  "title_use": {
+    "id": "2. Penggunaan Informasi",
+    "en": "2. Use Of Information"
+  },
+  "desc_use": {
+    "id": "Informasi digunakan untuk mempertimbangkan layanan terbaik apa yang diberikan, dalam memproses pesanan, mengatur pengiriman, dan verifikasi pembayaran. Informasi juga digunakan untuk menjawab pertanyaan, meningkatkan kualitas website dan layanan, dan menyampaikan promosi dan penawaran khusus kepada pelanggan.",
+    "en": "This information is used to determine the best service to provide, process orders, arrange shipping, and verify payments. It is also used to answer questions, improve the quality of our website and services, and communicate promotions and special offers to customers."
+  },
+  "title_sharing": {
+    "id": "3. Pembagian Informasi",
+    "en": "3. Information Sharing"
+  },
+  "desc_sharing": {
+    "id": "Kami menjamin keamanan dan privasi informasi, tidak menjual data pribadi kepada khalayak umum. Dalam situasi tertentu, kami sebarkan informasi hanya pada pihak ketiga seperti penyedia layanan  yang mendukung proses layanan dan memastikan kerahasiaan data tetap terjaga.",
+    "en": "We guarantee the security and privacy of information and do not sell personal data to the public. In certain situations, we share information only with third parties, such as service providers who support the service process and ensure data confidentiality is maintained."
+  },
+  "title_security": {
+    "id": "4. Keamanan Data",
+    "en": "4. Data Security"
+  },
+  "desc_security": {
+    "id": "Kami melakukan prosedur cara untuk melindungi informasi pribadi milik pelanggan dari akses tidak dikenal, kehilangan, penyalahgunaan, dan perubahan. Langkah keamanan tetap dilakukan pemantauan dan evaluasi untuk memastikan data pelanggan tetap terjaga.",
+    "en": "We implement procedures to protect customers' personal information from unauthorized access, loss, misuse, and alteration. Security measures are continuously monitored and evaluated to ensure customer data remains secure."
+  },
+  "title_rights": {
+    "id": "5. Hak Pengguna",
+    "en": "5. User Rights"
+  },
+  "desc_rights": {
+    "id": "Anda dapat meminta akses untuk mengubah informasi pribadi apabila datanya tidak sesuai, melakukan update, mengajukan untuk dihapus informasi sesuai ketentuan hukum yang berlaku, dan meminta salinan data pribadi yang tersedia di dalam sistem.",
+    "en": "You can request access to change your personal information if it is inaccurate, make updates, request deletion of information in accordance with applicable law, and request a copy of your personal data available in the system."
+  },
+  "title_cookies": {
+    "id": "6. Penggunaan Cookies",
+    "en": "6. Use Of Cookies"
+  },
+  "desc_cookies": {
+    "id": "Website kami menggunakan cookies dan teknologi untuk peningkatan pengalaman pengguna (User Experience) dalam mengakses web. Cookies membantu pengguna untuk mengerti cara penggunaan website, simpan preferensi, dan menyediakan konten yang lebih bermanfaat untuk pengguna. \n\nAnda dapat mengatur atau mematikan cookies di pengaturan browser, tetapi beberapa fitur website ada yang tidak berjalan dengan baik apabila dinonaktifkan cookies nya.",
+    "en": "Our website uses cookies and other technologies to improve the user experience. Cookies help users understand how to use the website, store preferences, and provide more useful content. \n\nYou can manage or disable cookies in your browser settings, but some website features may not function properly if cookies are disabled."
+  },
+  "title_changes": {
+    "id": "7. Pembaharuan Kebijakan Privasi",
+    "en": "7. Privacy Policy Updates"
+  },
+  "desc_changes": {
+    "id": "Kami akan memperbarui kebijakan privasi sewaktu-waktu sesuai dengan kebutuhan operasional, perkembangan layanan, dan perubahan aturan yang berlaku. Pembaruan akan ditampilkan di website dan berlaku sejak tanggal penerbitan. \n\nKami sarankan anda untuk melihat halaman ini secara berkala supaya tetap mendapatkan informasi terbaru.",
+    "en": "We will update our privacy policy from time to time based on operational needs, service developments, and changes in applicable regulations. Updates will be displayed on the website and will be effective from the date of publication. \n\nWe recommend that you review this page periodically to stay informed."
+  },
+  "title_contact": {
+    "id": "8. Hubungi Kami",
+    "en": "8. Contact Us"
+  },
+  "desc_contact": {
+    "id": "Apabila ada pertanyaan mengenai kebijakan privasi, silahkan hubungi kami di platform berikut:\n\nEmail: support@hijab.com\nWhatsApp: +62 812 7788 9900\n\nTim customer service senang untuk melayani dan menjawab pertanyaan yang anda berikan mengenai privasi dan keamanan data.",
+    "en": "If you have any questions regarding our privacy policy, please contact us on the following platforms:\n\nEmail: support@hijab.com\nWhatsApp: +62 812 7788 9900\n\nOur customer service team is happy to assist you and answer any questions you may have regarding privacy and data security."
+  }
+}

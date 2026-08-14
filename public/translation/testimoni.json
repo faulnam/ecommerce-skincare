@@ -1,0 +1,12 @@
+{
+  "meta_title": { "id": "Testimoni - Hijab", "en": "Testimonials - Hijab" },
+  "badge": { "id": "Testimoni", "en": "Testimonials" },
+  "hero_title_1": { "id": "Apa Kata", "en": "What" },
+  "hero_title_2": { "id": "Mereka?", "en": "They Say?" },
+  "hero_desc": { "id": "Review jujur dari pelanggan Hijab", "en": "Honest reviews from Hijab customers" },
+  "stat_reviews": { "id": "Review", "en": "Reviews" },
+  "stat_rating": { "id": "Rating ⭐", "en": "Rating ⭐" },
+  "stat_satisfied": { "id": "Puas", "en": "Satisfied" },
+  "empty_title": { "id": "Belum Ada Testimoni", "en": "No Testimonials Yet" },
+  "empty_desc": { "id": "Jadilah yang pertama memberikan review!", "en": "Be the first to leave a review!" }
+}

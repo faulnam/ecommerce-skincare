@@ -1,0 +1,20 @@
+{
+  "page_title": { "id": "Voucher Saya", "en": "My Vouchers" },
+  "btn_back_profile": { "id": "Kembali ke Profil", "en": "Back to Profile" },
+  "stat_total_vouchers": { "id": "Total Voucher", "en": "Total Vouchers" },
+  "stat_available": { "id": "Tersedia", "en": "Available" },
+  "badge_used": { "id": "Digunakan", "en": "Used" },
+  "badge_available": { "id": "Tersedia", "en": "Available" },
+  "label_code": { "id": "Kode", "en": "Code" },
+  "label_discount": { "id": "Diskon", "en": "Discount" },
+  "label_min_purchase": { "id": "Min. Pembelian", "en": "Min. Purchase" },
+  "label_max_discount": { "id": "Maks. Diskon", "en": "Max. Discount" },
+  "suffix_coins": { "id": "Koin", "en": "Coins" },
+  "time_claimed": { "id": "Klaim:", "en": "Claimed:" },
+  "time_used": { "id": "Digunakan:", "en": "Used:" },
+  "btn_copy": { "id": "Salin", "en": "Copy" },
+  "empty_title": { "id": "Belum Ada Voucher", "en": "No Vouchers Yet" },
+  "empty_desc": { "id": "Klaim voucher menarik untuk mendapatkan potongan harga pada pesananmu!", "en": "Claim vouchers to get discounts on your orders!" },
+  "btn_browse": { "id": "Lihat Voucher", "en": "Browse Vouchers" },
+  "toast_copied": { "id": "Kode voucher berhasil disalin: ", "en": "Voucher code copied: " }
+}

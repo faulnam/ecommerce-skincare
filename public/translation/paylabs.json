@@ -1,0 +1,18 @@
+{
+  "page_title": { "id": "Pilih Metode Pembayaran", "en": "Select Payment Method" },
+  "label_order": { "id": "Pesanan:", "en": "Order:" },
+  "title_va": { "id": "Virtual Account", "en": "Virtual Account" },
+  "title_qris": { "id": "QRIS", "en": "QRIS" },
+  "title_ewallet": { "id": "E-Wallet", "en": "E-Wallet" },
+  "title_retail": { "id": "Gerai Retail", "en": "Retail" },
+  "btn_back": { "id": "Kembali", "en": "Back" },
+  "btn_continue": { "id": "Lanjutkan", "en": "Continue" },
+  "gateway_desc": { "id": "Virtual Account, QRIS, E-Wallet, Gerai Retail", "en": "Virtual Account, QRIS, E-Wallet, Retail" },
+  "badge_recommended": { "id": "Rekomendasi", "en": "Recommended" },
+  "nav_home": { "id": "Home", "en": "Home" },
+  "nav_new_arrivals": { "id": "New Arrivals", "en": "New Arrivals" },
+  "nav_brand_catalog": { "id": "Brand Catalog", "en": "Brand Catalog" },
+  "nav_about": { "id": "About", "en": "About" },
+  "nav_contact": { "id": "Contact", "en": "Contact" },
+  "btn_login": { "id": "Masuk", "en": "Login" }
+}

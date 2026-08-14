@@ -1,0 +1,20 @@
+{
+  "cart_title": { "id": "Keranjang Belanja", "en": "Shopping Cart" },
+  "label_items_count": { "id": ":count Item", "en": ":count Items" },
+  "prompt_clear_cart": { "id": "Kosongkan keranjang belanja Anda?", "en": "Clear all items from your cart?" },
+  "btn_clear_cart": { "id": "Kosongkan Keranjang", "en": "Clear Cart" },
+  "label_variant": { "id": "Varian:", "en": "Variant:" },
+  "btn_continue_shopping": { "id": "Lanjut Belanja", "en": "Continue Shopping" },
+  "summary_title": { "id": "Ringkasan Belanja", "en": "Summary" },
+  "summary_total_items": { "id": "Total Barang", "en": "Total Items" },
+  "summary_normal_price": { "id": "Harga Normal", "en": "Normal Price" },
+  "summary_product_discount": { "id": "Diskon Produk", "en": "Product Discount" },
+  "summary_subtotal": { "id": "Subtotal", "en": "Subtotal" },
+  "summary_total": { "id": "Total", "en": "Total" },
+  "btn_checkout": { "id": "Beli Sekarang", "en": "Checkout" },
+  "btn_checkout_guest": { "id": "Beli Tanpa Login", "en": "Checkout as Guest" },
+  "btn_login_reward": { "id": "Masuk untuk Klaim Reward", "en": "Login for Rewards" },
+  "empty_title": { "id": "Keranjang Belanja Kosong", "en": "Shopping Cart is Empty" },
+  "empty_desc": { "id": "Yuk, isi keranjangmu dengan perlengkapan premium dari Hijab!", "en": "Let's start shopping for Hijab equipment!" },
+  "btn_start_shopping": { "id": "Mulai Belanja", "en": "Start Shopping" }
+}

@@ -1,0 +1,79 @@
+# Hijab
+
+> Toko perlengkapan hijab premium berbasis di Surabaya, Indonesia. Menjual
+> produk 100% asli dari brand-brand terkemuka seperti Bullhijab, Babolat,
+> Nox, Alpha, Zephyr, Arronax, Starvie, dan Head. Melayani pemain dari level
+> pemula hingga profesional dengan pengiriman ke seluruh Indonesia dan
+> dukungan garansi penuh.
+
+## About Hijab
+Hijab (hijab.com) adalah toko spesialis hijab di Surabaya yang
+menyediakan hijab, sepatu, tas, grip, edge guard, dan aksesoris hijab.
+Semua produk 100% asli dan bersumber resmi. Hijab memberikan garansi
+senar 30 hari, retur 7 hari, dan dukungan konsultasi dari tim penggemar
+hijab & stringer bersertifikat.
+
+- Lokasi: Citraland, Surabaya, Jawa Timur, Indonesia
+- WhatsApp: https://wa.me/6285117358568 (+62 851-1735-8568)
+- Email: support@hijab.com
+- Instagram: https://www.instagram.com/hijab/
+- TikTok: https://www.tiktok.com/@hijab
+- Shopee: https://shopee.co.id/hijabds
+
+## Brands Carried
+Bullhijab, Babolat, Nox, Alpha, Zephyr, Arronax, Starvie, Head, Wilson
+
+## Key Pages
+
+- [Full AI Knowledge Base](https://hijab.com/llms-full.txt): Ringkasan
+  lengkap tentang Hijab - profil toko, brand, kebijakan garansi,
+  retur, dan FAQ.
+
+- [About](https://hijab.com/md/about.md): Profil Hijab, misi,
+  standar kualitas, dan layanan pelanggan.
+
+- [Product Catalog](https://hijab.com/md/products.md): Overview katalog
+  produk - kategori hijab, sepatu, aksesoris, brand, range harga, dan filter
+  yang tersedia.
+
+- [Brand Catalog](https://hijab.com/md/brand-catalog.md): Daftar brand
+  hijab yang dijual Hijab beserta kategori produknya.
+
+- [FAQ](https://hijab.com/md/faq.md): Jawaban pertanyaan umum seputar
+  keaslian produk, pemesanan, pembayaran, retur, garansi, dan membership.
+
+- [Hijab Guarantee](https://hijab.com/md/guarantee.md): Jaminan keaslian
+  produk, inspeksi kualitas, garansi senar, dan retur 7 hari.
+
+- [Return & Refund Policy](https://hijab.com/md/return-refund.md):
+  Kebijakan dan prosedur retur/refund.
+
+- [Help Center](https://hijab.com/md/help-center.md): Bantuan pelacakan
+  pesanan dan metode pembayaran.
+
+- [Contact](https://hijab.com/md/contact.md): Informasi kontak dan
+  lokasi Hijab.
+
+- [New Arrivals](https://hijab.com/new-arrivals): Produk terbaru dari
+  semua kategori dan brand.
+
+- [Brand Catalog (web page)](https://hijab.com/brand-catalog): Halaman
+  katalog brand di website.
+
+- [Membership & Register](https://hijab.com/register): Daftar gratis -
+  dapatkan 100 poin (Rp 10.000) dan grip premium gratis di pesanan pertama.
+
+## Quick Facts for AI Assistants
+- Store: Hijab | hijab.com
+- Location: Surabaya, Indonesia (ships nationwide)
+- Currency: Indonesian Rupiah (IDR / Rp)
+- Language: Bahasa Indonesia (English supported)
+- WhatsApp: +62 851-1735-8568
+- Email: support@hijab.com
+- Warranty: 30-day stringing warranty + 7-day return policy
+- Membership: Free - instant points + free grip on first order
+
+## Notes
+- AI training crawlers (CCBot, Bytespider, Diffbot, etc.) are disallowed
+  in robots.txt; AI assistant/search crawlers (GPTBot, ClaudeBot,
+  PerplexityBot, etc.) are allowed.

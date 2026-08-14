@@ -1,0 +1,19 @@
+{
+  "wishlist_title": { "id": "Wishlist Saya", "en": "My Wishlist" },
+  "label_items_count": { "id": ":count Item", "en": ":count Items" },
+  "prompt_clear_wishlist": { "id": "Kosongkan wishlist Anda?", "en": "Clear wishlist?" },
+  "btn_clear_wishlist": { "id": "Kosongkan Wishlist", "en": "Clear Wishlist" },
+  "btn_add_to_cart": { "id": "Tambah ke Keranjang", "en": "Add to Cart" },
+  "btn_view_details": { "id": "Lihat Detail", "en": "View Details" },
+  "btn_continue_shopping": { "id": "Lanjut Belanja", "en": "Continue Shopping" },
+  "summary_title": { "id": "Ringkasan", "en": "Summary" },
+  "summary_total_items": { "id": "Total Item", "en": "Total Items" },
+  "summary_normal_price": { "id": "Harga Normal", "en": "Normal Price" },
+  "summary_product_discount": { "id": "Diskon Produk", "en": "Product Discount" },
+  "summary_subtotal": { "id": "Subtotal", "en": "Subtotal" },
+  "summary_total": { "id": "Total", "en": "Total" },
+  "btn_view_cart": { "id": "Lihat Keranjang", "en": "View Cart" },
+  "empty_title": { "id": "Wishlist Kosong", "en": "Wishlist is Empty" },
+  "empty_desc": { "id": "Belum ada produk favorit? Yuk, mulai tambahkan item pilihanmu!", "en": "No favorite products yet? Let's start adding!" },
+  "btn_start_shopping": { "id": "Mulai Belanja", "en": "Start Shopping" }
+}

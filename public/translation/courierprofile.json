@@ -1,0 +1,21 @@
+{
+  "bc_dashboard": { "id": "Dashboard", "en": "Dashboard" },
+  "bc_profile": { "id": "Profil", "en": "Profile" },
+  "page_title": { "id": "Profil Saya", "en": "My Profile" },
+  "page_subtitle": { "id": "Kelola informasi akun Anda", "en": "Manage your account information" },
+  "role_courier": { "id": "Kurir", "en": "Courier" },
+  "stat_completed": { "id": "Pengiriman Selesai", "en": "Completed Deliveries" },
+  "stat_assigned": { "id": "Total Ditugaskan", "en": "Total Assigned" },
+  "btn_logout": { "id": "Keluar", "en": "Sign Out" },
+  "card_edit_title": { "id": "Update Profil", "en": "Update Profile" },
+  "label_name": { "id": "Nama Lengkap", "en": "Full Name" },
+  "label_email": { "id": "Email", "en": "Email" },
+  "label_phone": { "id": "No. Telepon", "en": "Phone Number" },
+  "label_address": { "id": "Alamat", "en": "Address" },
+  "btn_save": { "id": "Simpan Perubahan", "en": "Save Changes" },
+  "card_pwd_title": { "id": "Ubah Password", "en": "Change Password" },
+  "label_curr_pwd": { "id": "Password Saat Ini", "en": "Current Password" },
+  "label_new_pwd": { "id": "Password Baru", "en": "New Password" },
+  "label_conf_pwd": { "id": "Konfirmasi Password Baru", "en": "Confirm New Password" },
+  "btn_change_pwd": { "id": "Ubah Password", "en": "Update Password" }
+}

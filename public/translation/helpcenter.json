@@ -1,0 +1,14 @@
+{
+  "section_badge": { "id": "Dukungan", "en": "Support" },
+  "page_title": { "id": "Pusat Bantuan", "en": "Help Center" },
+  "page_subtitle": { "id": "Butuh bantuan terkait pesanan, pengiriman, atau pembayaran? Temukan jawaban cepat di sini.", "en": "Need help with orders, shipping, or payment? Find quick answers here." },
+  "title_track": { "id": "Cara melacak pesanan", "en": "How to track order" },
+  "desc_track": { "id": "Masuk ke akun Anda, buka menu riwayat pesanan, lalu pilih pesanan untuk melihat status pengambilan, pengiriman, dan penyelesaian.", "en": "Log in to your account, open order history menu, then select order to view pickup, shipping, and completion status." },
+  "title_payment": { "id": "Informasi Pembayaran", "en": "Payment Information" },
+  "desc_payment": { "id": "Kami mendukung pembayaran melalui transfer bank serta online payment gateway.", "en": "We support bank transfers, online payment gateway." },
+  "title_return": { "id": "Kebijakan Pengembalian", "en": "Return policy" },
+  "desc_return": { "id": "Pengajuan pengembalian dapat dilakukan maksimal 7 hari setelah produk diterima, selama produk belum digunakan dan kemasan masih lengkap.", "en": "Return requests can be made maximum 7 days after product is received, as long as product hasn't been used and packaging is still complete." },
+  "title_need_help": { "id": "Masih butuh bantuan?", "en": "Still need help?" },
+  "desc_need_help": { "id": "Tim dukungan kami siap membantu Anda melalui halaman kontak untuk pertanyaan teknis atau konsultasi produk.", "en": "Our support team is ready to help you through the contact page for technical questions or product consultation." },
+  "btn_contact": { "id": "Hubungi Kami", "en": "Contact Us" }
+}

@@ -1,0 +1,23 @@
+{
+  "page_title": { "id": "Riwayat Pesanan", "en": "Order History" },
+  "filter_all": { "id": "Semua Status", "en": "All Status" },
+  "filter_pending": { "id": "Menunggu Pembayaran", "en": "Waiting Payment" },
+  "filter_paid": { "id": "Dibayar", "en": "Paid" },
+  "filter_completed": { "id": "Selesai", "en": "Completed" },
+  "filter_cancelled": { "id": "Dibatalkan", "en": "Cancelled" },
+  "btn_filter": { "id": "Filter", "en": "Filter" },
+  "label_other_items": { "id": "+:count item lainnya", "en": "+:count other items" },
+  "label_total_pay": { "id": "Total Pembayaran", "en": "Total Payment" },
+  "btn_view_details": { "id": "Lihat Detail", "en": "View Details" },
+  "empty_title": { "id": "Belum Ada Pesanan", "en": "No Orders Yet" },
+  "empty_desc": { "id": "Yuk, mulai belanja perlengkapan hijab premium pilihanmu!", "en": "Let's start shopping for hijab equipment!" },
+  "btn_start_shopping": { "id": "Mulai Belanja", "en": "Start Shopping" },
+  "foot_support": { "id": "Dukungan", "en": "Support" },
+  "foot_policy": { "id": "Kebijakan Privasi", "en": "Policy" },
+  "foot_return": { "id": "Pengembalian & Refund", "en": "Return & Refund" },
+  "foot_guarantee": { "id": "Garansi Hijab", "en": "Hijab Guarantee" },
+  "foot_help": { "id": "Pusat Bantuan", "en": "Help Center" },
+  "foot_account": { "id": "Akun", "en": "Account" },
+  "foot_profile": { "id": "Profil", "en": "Profile" },
+  "foot_rights": { "id": "Hak Cipta Dilindungi Undang-Undang.", "en": "All rights reserved." }
+}

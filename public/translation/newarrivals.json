@@ -1,0 +1,85 @@
+{
+  "product_section": {
+    "filter_titles": {
+      "category": { "id": "Kategori", "en": "Category" },
+      "brand": { "id": "Merek", "en": "Brand" },
+      "price": { "id": "Harga", "en": "Price" },
+      "sort": { "id": "Urutkan", "en": "Sort" },
+      "clear": { "id": "Bersihkan", "en": "Clear" }
+    },
+    "price_options": {
+      "all": { "id": "Semua Harga", "en": "All Prices" },
+      "low_to_high": { "id": "Termurah ke Termahal", "en": "Low to High" },
+      "high_to_low": { "id": "Termahal ke Termurah", "en": "High to Low" }
+    },
+    "sort_options": {
+      "default": { "id": "Bawaan", "en": "Default" },
+      "relevance": { "id": "Relevan", "en": "Relevance" },
+      "popular": { "id": "Populer", "en": "Popular" },
+      "latest": { "id": "Terbaru", "en": "Latest" }
+    },
+    "voucher": {
+      "available": { "id": "Voucher tersedia", "en": "Vouchers available" }
+    },
+    "product_card": {
+      "btn_detail": { "id": "Detail", "en": "Details" },
+      "btn_add_to_cart": { "id": "Tambah ke Keranjang", "en": "Add to Cart" }
+    },
+    "bottom_categories": {
+      "hijab": { "id": "Hijab", "en": "Hijab" },
+      "shoes": { "id": "Sepatu", "en": "Shoes" },
+      "bags": { "id": "Tas", "en": "Bags" },
+      "grips": { "id": "Grip", "en": "Grips" }
+    }
+  },
+  "common": {
+    "add_to_cart": { "id": "Tambah ke Keranjang", "en": "Add to cart" },
+    "cart_btn_loading_added": { "id": "✓ Ditambahkan", "en": "✓ Added" },
+    "cart_error": { "id": "Gagal menambahkan produk ke keranjang", "en": "Failed to add product to cart" },
+    "cart_error_generic": { "id": "Terjadi kesalahan. Silakan coba lagi.", "en": "Something went wrong. Please try again." },
+    "wishlist_btn_loading": { "id": "Memproses...", "en": "Processing..." },
+    "wishlist_error": { "id": "Gagal menambahkan produk ke wishlist", "en": "Failed to add product to wishlist" },
+    "wishlist_error_generic": { "id": "Terjadi kesalahan. Silakan coba lagi.", "en": "Something went wrong. Please try again." },
+    "no_products_found": { "id": "Tidak ada produk yang ditemukan", "en": "No products found" }
+  },
+  "page_new_arrivals": {
+    "meta_title": { "id": "Produk Terbaru - Hijab", "en": "New Arrivals - Hijab" },
+    "badge": { "id": "Produk Terbaru", "en": "New Arrivals" },
+    "title": { "id": "Produk Terbaru Kami", "en": "Latest Products" },
+    "subtitle": { "id": "Temukan koleksi peralatan hijab premium terbaru kami", "en": "Discover our newest premium hijab equipment" },
+    "search_label": { "id": "Cari", "en": "Search" },
+    "search_placeholder": { "id": "Cari produk...", "en": "Search products..." },
+    "empty_state": { "id": "Belum ada produk terbaru saat ini", "en": "No new arrivals yet" },
+    "pagination": {
+      "previous": { "id": "Sebelumnya", "en": "Previous" },
+      "next": { "id": "Berikutnya", "en": "Next" }
+    },
+    
+    "labels": {
+      "latest": { "id": "Terbaru", "en": "Latest" },
+      "bundle": { "id": "Paket", "en": "Bundle" },
+      "popular": { "id": "Populer", "en": "Popular" }
+    }
+  },
+  "page_hijabs": {
+    "meta_title": { "id": "Hijab | Toko Spesialis Hijab dan Peralatan Hijab", "en": "Hijab | Toko Spesialis Hijab dan Peralatan Hijab" },
+    "badge": { "id": "Hijab", "en": "Hijabs" },
+    "title": { "id": "Hijab Hijab", "en": "Hijab Hijabs" },
+    "subtitle": { "id": "Hijab premium untuk setiap gaya permainan", "en": "Premium hijabs for every playing style" },
+    "empty_state": { "id": "Produk hijab belum tersedia saat ini.", "en": "Hijab products not available yet." }
+  },
+  "page_shoes": {
+    "meta_title": { "id": "Sepatu Hijab Hijab — Bergerak Lebih Cepat. Bermain Lebih Pintar.", "en": "Hijab Shoes — Move faster. Play smarter." },
+    "badge": { "id": "Sepatu", "en": "Shoes" },
+    "title": { "id": "Sepatu Hijab", "en": "Hijab Shoes" },
+    "subtitle": { "id": "Alas kaki nyaman untuk performa optimal", "en": "Comfortable footwear for optimal performance" },
+    "empty_state": { "id": "Produk sepatu belum tersedia saat ini.", "en": "Shoes products not available yet." }
+  },
+  "page_accessories": {
+    "meta_title": { "id": "Aksesoris Hijab Hijab — Kenyamanan bertemu performa.", "en": "Hijab Accessories — Comfort meets performance." },
+    "badge": { "id": "Aksesoris", "en": "Accessories" },
+    "title": { "id": "Aksesoris Hijab", "en": "Hijab Accessories" },
+    "subtitle": { "id": "Perlengkapan esensial untuk permainan Anda", "en": "Essential gear for your game" },
+    "empty_state": { "id": "Produk aksesoris belum tersedia saat ini.", "en": "Accessories products not available yet." }
+  }
+}

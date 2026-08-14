@@ -1,0 +1,86 @@
+{
+  "section_badge": {
+    "id": "Layanan Pelanggan",
+    "en": "Customer Service"
+  },
+  "page_title": {
+    "id": "Kebijakan Pengembalian & Dana",
+    "en": "Return & Refund Policy"
+  },
+  "page_subtitle": {
+    "id": "Kami ingin Anda merasa sepenuhnya puas dengan pembelian Anda.",
+    "en": "We want you to be completely satisfied with your purchase."
+  },
+  "title_eligibility": {
+    "id": "1. Pengembalian Barang",
+    "en": "1. Return Eligibility"
+  },
+  "desc_eligibility": {
+    "id": "Kami tahu bahwa produk yang dikirim terkadang tidak sesuai dengan harapan. Oleh karena itu, kami menerima pengembalian barang dengan Waktu 5-7 hari setelah barang sampai dalam keadaan asli, tidak terpakai, dan masih terpasang label. Tidak menerima barang bekas dan rusak.",
+    "en": "You may return most new, unopened items within 7 days of delivery for a full refund. Items must be in their original packaging with all tags attached. Used, damaged, or altered products are not eligible for return."
+  },
+  "title_non_returnable": {
+    "id": "2. Produk yang Tidak Dapat Dikembalikan",
+    "en": "2. Non-Returnable Items"
+  },
+  "desc_non_returnable": {
+    "id": "Produk berikut ini yang tidak memenuhi syarat untuk diajukan dan dilakukannya pengembalian:",
+    "en": "The following items cannot be returned:"
+  },
+  "item_consumable": {
+    "id": "Grip, overgrip, dan aksesori yang sudah digunakan.",
+    "en": "Grips, overgrips, and other consumable accessories that have been opened or used"
+  },
+  "item_custom": {
+    "id": "Hijab yang telah dipasang senar berdasarkan permintaan pelanggan.",
+    "en": "Custom strung hijabs at customer specification"
+  },
+  "item_sale": {
+    "id": "Produk yang dijual dalam program cuci gudang, clearance sale, atau final sale.",
+    "en": "Items marked as \"Final Sale\" or \"Clearance\""
+  },
+  "item_vouchers": {
+    "id": "Gift card maupun voucher promosi.",
+    "en": "Gift cards and promotional vouchers"
+  },
+  "title_how_to": {
+    "id": "3. Cara Mengajukan Pengembalian",
+    "en": "3. How to Request a Return"
+  },
+  "desc_how_to": {
+    "id": "Anda bisa mengirim pesan via:\nWhatsApp: +62 812 7788 9900 \natau\nEmail: support@hijab.com\nDengan menuliskan subjek: Permohonan Pengembalian Barang, dan message dengan format:\nNomor Pesanan: ....\nAlasan Pengembalian: rusak/bekas, keterangan tambahan berupa bukti foto dan alasan lanjutan",
+    "en": "To initiate a return, please contact our customer service team via:  \nWhatsApp: +62 812 7788 9900 \nor\nEmail: support@hijab.com\nWith the subject: Return Request, and a message with the format:\nOrder Number: ....\nReason for Return: damaged/used, with additional information in the form of photo evidence and further explanation."
+  },
+  "title_process": {
+    "id": "4. Proses Pengembalian Dana",
+    "en": "4. Refund Process"
+  },
+  "desc_process": {
+    "id": "Setelah permohonan dan barang diterima, barang diperiksa dulu oleh tim kami. Setelah pemeriksaan selesai, kami akan memberi informasi melalui email dan WhatsApp mengenai disetujui atau tidak disetujui nya pengajuan pengembalian barang. \n\nApabila disetujui, uang dikembalikan sesuai dengan metode pembayaran yang customer telah lakukan dalam waktu kurang lebih 5-7 hari kerja. Lama pengembalian uang tergantung kebijakan masing-masing layanan pembayaran. Biaya pengiriman tetap menjadi tanggung jawab pelanggan, kecuali produk dalam keadaan cacat produksi.",
+    "en": "Once we receive and inspect your returned item, we will notify you of the approval or rejection of your refund. If approved, your refund will be processed within 5-7 business days to your original payment method. Shipping costs for returns are the responsibility of the customer unless the item was defective or incorrect."
+  },
+  "title_exchanges": {
+    "id": "5. Penukaran",
+    "en": "5. Exchanges"
+  },
+  "desc_exchanges": {
+    "id": "Penukaran barang dilakukan apabila barang yang diterima dalam kondisi cacat, rusak, dan tidak sesuai dengan pesanan.",
+    "en": "We only replace items if they are defective or damaged. If you need to exchange an item for the same product, contact us with your order details and photos of the defect."
+  },
+  "title_damaged": {
+    "id": "6. Barang Rusak atau Salah Kirim",
+    "en": "6. Damaged or Incorrect Items"
+  },
+  "desc_damaged": {
+    "id": "Customer harap segera memeriksa kondisi barang setelah pesanan diterima. Apabila barang salah kirim atau rusak, segera menghubungi kami maksimal 48 jam setelah barang diterima.",
+    "en": "If you receive a damaged or incorrect item, please contact us within 48 hours of delivery with photos. We will arrange a replacement or full refund at no additional cost, including return shipping."
+  },
+  "title_contact": {
+    "id": "7. Hubungi Kami",
+    "en": "7. Contact Us"
+  },
+  "desc_contact": {
+    "id": "Jika memiliki pertanyaan lebih dalam tentang kebijakan refund, segera hubungi kami di platform:\nEmail: support@hijab.com\nWhatsApp: +62 812 7788 9900\nHari-Jam Operasional: Senin-Sabtu, 9.00-18.00 WIB",
+    "en": "For any return or refund inquiries, reach out to us at:\nEmail: support@hijab.com\nWhatsApp: +62 812 7788 9900\nWorkdays-Hours: Monday-Saturday, 9.00-18.00 WIB"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "bc_dashboard": { "id": "Dashboard", "en": "Dashboard" },
+  "bc_overview": { "id": "Ringkasan", "en": "Overview" },
+  "welcome_prefix": { "id": "Selamat datang,", "en": "Welcome back," },
+  "welcome_subtitle": { "id": "Berikut ringkasan pengiriman Anda hari ini", "en": "Here is your delivery summary for today" },
+  "stat_pending": { "id": "Menunggu Diambil", "en": "Waiting for Pickup" },
+  "stat_on_progress": { "id": "Sedang Diantar", "en": "On Delivery" },
+  "stat_delivered_today": { "id": "Selesai Hari Ini", "en": "Completed Today" },
+  "stat_total_completed": { "id": "Total Selesai", "en": "Total Completed" },
+  "card_active_title": { "id": "Pengiriman Aktif", "en": "Active Deliveries" },
+  "card_recent_title": { "id": "Baru Selesai", "en": "Recently Completed" },
+  "btn_view_all": { "id": "Lihat Semua", "en": "View All" },
+  "btn_view_history": { "id": "Lihat Semua Riwayat", "en": "View Full History" },
+  "status_assigned": { "id": "Menunggu Diambil", "en": "Assigned" },
+  "status_picked_up": { "id": "Sudah Diambil", "en": "Picked Up" },
+  "status_on_delivery": { "id": "Sedang Diantar", "en": "In Transit" },
+  "status_delivered": { "id": "Sudah Sampai", "en": "Delivered" },
+  "action_pickup": { "id": "Ambil Barang", "en": "Confirm Pickup" },
+  "action_start": { "id": "Mulai Antar", "en": "Start Delivery" },
+  "action_complete": { "id": "Selesaikan", "en": "Complete Delivery" },
+  "empty_active": { "id": "Tidak ada pengiriman aktif saat ini", "en": "No active deliveries at the moment" },
+  "empty_recent": { "id": "Belum ada pengiriman selesai", "en": "No completed deliveries found" }
+}

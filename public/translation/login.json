@@ -1,0 +1,17 @@
+{
+  "meta_title": { "id": "Masuk - Hijab", "en": "Login - Hijab" },
+  "welcome_title_1": { "id": "Selamat datang", "en": "Welcome" },
+  "welcome_title_2": { "id": "kembali", "en": "back" },
+  "welcome_desc": { "id": "Akses akun Anda dan lanjutkan perjalanan Anda bersama Hijab.", "en": "Access your account and continue your journey with Hijab." },
+  "label_email": { "id": "Alamat Email", "en": "Email Address" },
+  "placeholder_email": { "id": "Masukkan alamat email Anda", "en": "Enter your email address" },
+  "label_password": { "id": "Kata Sandi", "en": "Password" },
+  "placeholder_password": { "id": "Masukkan kata sandi Anda", "en": "Enter your password" },
+  "remember_me": { "id": "Tetap masuk", "en": "Keep me signed in" },
+  "btn_reset": { "id": "Atur ulang kata sandi", "en": "Reset password" },
+  "btn_submit": { "id": "Masuk", "en": "Sign In" },
+  "divider_text": { "id": "Atau lanjutkan dengan", "en": "Or continue with" },
+  "btn_google": { "id": "Masuk dengan Google", "en": "Sign in with Google" },
+  "footer_text": { "id": "Baru di Hijab?", "en": "New to Hijab?" },
+  "btn_register": { "id": "Buat Akun", "en": "Create Account" }
+}
