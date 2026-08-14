@@ -31,7 +31,7 @@ class DatabaseSeeder extends Seeder
         $this->call(PointTransactionSeeder::class);
 
         // Seed Brand Catalogs
-        $this->call(BrandCatalogSeeder::class);
+        // $this->call(BrandCatalogSeeder::class);
 
         // Seed Banners & Models
         $this->call(BannerSeeder::class);
