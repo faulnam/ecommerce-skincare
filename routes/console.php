@@ -31,3 +31,10 @@ Schedule::command('sitemap:generate')
     ->dailyAt('01:00')
     ->withoutOverlapping()
     ->runInBackground();
+
+// Schedule auto-clean demo content older than 3 minutes
+Schedule::command('demo:clean')
+    ->everyMinute()
+    ->withoutOverlapping()
+    ->runInBackground();
+

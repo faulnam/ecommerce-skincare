@@ -102,6 +102,16 @@ class User extends Authenticatable
     }
 
     /**
+     * Check if user is a demo account
+     */
+    public function isDemo(): bool
+    {
+        return str_starts_with($this->email, 'demo') || 
+               str_contains($this->email, 'demo') || 
+               str_contains(strtolower($this->name), 'demo');
+    }
+
+    /**
      * Get orders for the user (customer)
      */
     public function orders()

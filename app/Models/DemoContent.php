@@ -1,0 +1,23 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class DemoContent extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'user_id',
+        'content_type',
+        'content_id',
+        'created_at',
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+}

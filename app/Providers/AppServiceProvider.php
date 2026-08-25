@@ -42,6 +42,30 @@ class AppServiceProvider extends ServiceProvider
         // Register Order Observer for push notifications
         Order::observe(OrderObserver::class);
 
+        // Register Demo Content Observer for automatic 3-minute cleanup
+        $demoTrackedModels = [
+            \App\Models\Product::class,
+            \App\Models\ProductVariant::class,
+            \App\Models\Insight::class,
+            \App\Models\Voucher::class,
+            \App\Models\Gallery::class,
+            \App\Models\Banner::class,
+            \App\Models\Specification::class,
+            \App\Models\ProductFilter::class,
+            \App\Models\ShippingDiscount::class,
+            \App\Models\Testimonial::class,
+            \App\Models\Review::class,
+            \App\Models\Order::class,
+            \App\Models\BrandCatalog::class,
+            \App\Models\LiveChatMessage::class,
+        ];
+
+        foreach ($demoTrackedModels as $modelClass) {
+            if (class_exists($modelClass)) {
+                $modelClass::observe(\App\Observers\DemoContentObserver::class);
+            }
+        }
+
         // Register Notification Log Listener
         \Illuminate\Support\Facades\Event::listen(
             \Illuminate\Mail\Events\MessageSent::class,

@@ -84,7 +84,22 @@ Sekarang Anda bisa mengakses aplikasi melalui browser di: `http://localhost:8000
 
 ---
 
+## Akun Pengguna Asli (Default)
+
+Berikut adalah daftar akun peran asli untuk pengujian sistem:
+
+| Peran (Role) | Email | Password |
+| :--- | :--- | :--- |
+| Admin | admin@hijab.id | qwertyu123 |
+| Customer | customer@hijab.id | qwertyu123 |
+| Kurir | courier@hijab.id | qwertyu123 |
+| Developer | developer@hijab.id | qwertyu123 |
+| Blogger | blogger@hijab.id | qwertyu123 |
+
+---
+
 ## Troubleshooting Umum
 - **Error 500 / Layar Putih**: Coba cek *file* `storage/logs/laravel.log` atau pastikan Anda sudah menjalankan perintah `php artisan key:generate`.
 - **Database tidak terhubung / Access denied**: Pastikan service database (MySQL) berjalan dan kredensial (`DB_USERNAME`, `DB_PASSWORD`, `DB_DATABASE`) di `.env` sudah benar. 
 - **Tampilan berantakan (CSS/JS tidak termuat)**: Pastikan Anda sudah menjalankan perintah `npm run dev` atau `npm run build`.
+
