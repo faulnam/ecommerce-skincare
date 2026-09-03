@@ -1,15 +1,15 @@
 @extends('layouts.app')
 
-@section('title', 'Products - Hijab')
-@section('og_description', 'Jelajahi semua produk hijab di Hijab. Hijab, sepatu, tas, grip, dan aksesoris hijab berkualitas dengan harga kompetitif.')
+@section('title', 'Katalog Produk - LUMINA Skincare')
+@section('og_description', 'Jelajahi seluruh rangkaian perawatan kulit di LUMINA Skincare. Serum, toner, moisturizer, dan sunscreen teruji klinis dan terdaftar resmi BPOM.')
 
 @section('content')
 <!-- Hero -->
 <section class="page-hero">
     <div class="container">
         <span class="section-badge">Our Products</span>
-        <h1 class="page-title">Hijab <span class="text-primary">Gear Selection</span></h1>
-        <p class="page-subtitle">Find your favorite Hijab hijabs and accessories</p>
+        <h1 class="page-title">LUMINA <span class="text-primary">Skincare Routine</span></h1>
+        <p class="page-subtitle">Temukan formula perawatan kulit terbaik untuk kilau alami dan skin barrier sehatmu.</p>
     </div>
 </section>
 

@@ -12,27 +12,29 @@ class BannerSeeder extends Seeder
      */
     public function run(): void
     {
+        \Illuminate\Support\Facades\Schema::disableForeignKeyConstraints();
         Banner::truncate();
+        \Illuminate\Support\Facades\Schema::enableForeignKeyConstraints();
 
         // Hero Banners
         $heroBanners = [
             [
                 'type' => 'hero',
-                'title' => 'SHOP NOW',
+                'title' => 'BELANJA SEKARANG',
                 'image' => 'banner-1.jpg',
                 'is_active' => true,
                 'sort_order' => 1,
             ],
             [
                 'type' => 'hero',
-                'title' => 'NEW ARRIVALS',
+                'title' => 'FORMULASI TERBARU',
                 'image' => 'banner-2.jpg',
                 'is_active' => true,
                 'sort_order' => 2,
             ],
             [
                 'type' => 'hero',
-                'title' => 'DISCOVER',
+                'title' => 'KULIT GLOWING ALAMI',
                 'image' => 'banner-3.jpg',
                 'is_active' => true,
                 'sort_order' => 3,
@@ -47,32 +49,32 @@ class BannerSeeder extends Seeder
         $splitBanners = [
             [
                 'type' => 'split',
-                'title' => 'SEAMLESS COLLECTION',
-                'button_text' => 'SHOP SEAMLESS',
+                'title' => 'BARRIER REPAIR ESSENTIALS',
+                'button_text' => 'LIHAT KOLEKSI',
                 'image' => 'model-1.jpg',
                 'is_active' => true,
                 'sort_order' => 1,
             ],
             [
                 'type' => 'split',
-                'title' => 'DESIGNED TO LAYER',
-                'button_text' => 'SHOP STYLES',
+                'title' => 'DAILY UV SHIELD CARE',
+                'button_text' => 'PILIH SUNSCREEN',
                 'image' => 'model-2.jpg',
                 'is_active' => true,
                 'sort_order' => 2,
             ],
             [
                 'type' => 'split',
-                'title' => 'KOLEKSI TERBARU',
-                'button_text' => 'BELANJA SEKARANG',
+                'title' => 'GLOWING SERUM LAB',
+                'button_text' => 'TEMUKAN SERUM',
                 'image' => 'model-3.jpg',
                 'is_active' => true,
                 'sort_order' => 3,
             ],
             [
                 'type' => 'split',
-                'title' => 'HIJAB PREMIUM',
-                'button_text' => 'BELANJA SEKARANG',
+                'title' => 'CLEAN BEAUTY ROUTINE',
+                'button_text' => 'MULAI PERAWATAN',
                 'image' => 'model-4.jpg',
                 'is_active' => true,
                 'sort_order' => 4,

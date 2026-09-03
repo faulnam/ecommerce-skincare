@@ -1,23 +1,74 @@
 {
-  "meta_title": { "id": "Tentang Kami", "en": "About Us" },
-  "badge": { "id": "Tentang Kami", "en": "About Us" },
-  "hero_title": { "id": "Tentang Kami", "en": "About Us" },
-  "hero_desc": { "id": "Kami hadir sebagai mitra gaya hidup Anda dalam menyediakan koleksi fashion hijab premium. Kami berdedikasi untuk menghadirkan pakaian muslimah, kerudung, tas, sepatu, dan aksesoris berkualitas tinggi yang dirancang untuk mendukung kenyamanan dan keanggunan Anda di setiap kesempatan.", "en": "We are your lifestyle partner in providing premium modest fashion collections. Dedicated to delivering high-quality Muslim wear, hijabs, bags, shoes, and accessories designed to support your comfort and elegance on every occasion." },
-  "mission_title": { "id": "Misi Kami", "en": "Our Mission" },
-  "mission_desc": { "id": "Menyediakan produk terbaik dengan pengalaman berbelanja yang cepat, aman, dan memuaskan.", "en": "Providing the best products with a fast, safe, and satisfying shopping experience." },
-  "quality_title": { "id": "Standar Kualitas", "en": "Quality Standards" },
-  "quality_desc": { "id": "Setiap produk melalui kurasi ketat untuk memastikan performa optimal, kenyamanan, dan daya tahan.", "en": "Every product undergoes strict curation to ensure optimal performance, comfort, and durability." },
-  "service_title": { "id": "Layanan Pelanggan", "en": "Customer Service" },
-  "service_desc": { "id": "Tim kami siap membantu kebutuhan Anda, mulai dari konsultasi produk hingga dukungan purnajual.", "en": "Our team is ready to help your needs, from product consultation to after-sales support." },
-  
-  "card1_stat1_num": { "id": "100%", "en": "100%" },
-  "card1_stat1_text": { "id": "Produk Original", "en": "Original Products" },
-  "card1_stat2_num": { "id": "7 Hari", "en": "7 Days" },
-  "card1_stat2_text": { "id": "Garansi Retur", "en": "Return Guarantee" },
-
-  "card2_title": { "id": "Koleksi Fashion & Aksesoris Premium", "en": "Premium Fashion & Accessories Collection" },
-  "card2_desc": { "id": "Temukan koleksi pilihan pakaian muslimah, tas, sepatu, dan aksesoris eksklusif dari brand-brand terkemuka. Segala yang Anda butuhkan untuk tampil anggun dan percaya diri ada di sini.", "en": "Discover our curated collection of exclusive modest fashion, bags, shoes, and accessories from leading brands. Everything you need to look elegant and confident is right here." },
-
-  "card3_title": { "id": "Konsultasi Gaya & Layanan Terbaik", "en": "Style Consultation & Best Services" },
-  "card3_desc": { "id": "Berbelanja dengan percaya diri — spesialis fashion kami siap membantu Anda menemukan gaya yang paling sesuai dengan kepribadian Anda, didukung garansi pengembalian dan layanan pelanggan yang responsif.", "en": "Shop with confidence — our fashion specialists will help you find the perfect style for your personality, backed by a return guarantee and responsive customer service." }
+    "meta_title": {
+        "id": "Tentang Kami - LUMINA Skincare",
+        "en": "About Us - LUMINA Skincare"
+    },
+    "badge": {
+        "id": "Tentang Kami",
+        "en": "About Us"
+    },
+    "hero_title": {
+        "id": "Tentang Kami",
+        "en": "About Us"
+    },
+    "hero_desc": {
+        "id": "Kami hadir sebagai mitra terpercaya Anda dalam merawat kesehatan dan kecantikan kulit. Berdedikasi menghadirkan serum, toner, moisturizer, dan pembersih wajah dengan standar dermatologi tertinggi, 100% teruji klinis dan tersertifikasi resmi BPOM.",
+        "en": "We are your trusted partner in nurturing healthy, radiant skin. Dedicated to formulating serums, toners, moisturizers, and facial cleansers with the highest dermatological standards, 100% clinically tested and BPOM certified."
+    },
+    "mission_title": {
+        "id": "Misi Kami",
+        "en": "Our Mission"
+    },
+    "mission_desc": {
+        "id": "Menyediakan produk terbaik dengan pengalaman berbelanja yang cepat, aman, dan memuaskan.",
+        "en": "Providing the best products with a fast, safe, and satisfying shopping experience."
+    },
+    "quality_title": {
+        "id": "Standar Kualitas",
+        "en": "Quality Standards"
+    },
+    "quality_desc": {
+        "id": "Setiap produk melalui kurasi ketat untuk memastikan performa optimal, kenyamanan, dan daya tahan.",
+        "en": "Every product undergoes strict curation to ensure optimal performance, comfort, and durability."
+    },
+    "service_title": {
+        "id": "Layanan Pelanggan",
+        "en": "Customer Service"
+    },
+    "service_desc": {
+        "id": "Tim kami siap membantu kebutuhan Anda, mulai dari konsultasi produk hingga dukungan purnajual.",
+        "en": "Our team is ready to help your needs, from product consultation to after-sales support."
+    },
+    "card1_stat1_num": {
+        "id": "100%",
+        "en": "100%"
+    },
+    "card1_stat1_text": {
+        "id": "Produk Original",
+        "en": "Original Products"
+    },
+    "card1_stat2_num": {
+        "id": "7 Hari",
+        "en": "7 Days"
+    },
+    "card1_stat2_text": {
+        "id": "Garansi Retur",
+        "en": "Return Guarantee"
+    },
+    "card2_title": {
+        "id": "Formulasi Terkurasi & Bahan Aktif Pilihan",
+        "en": "Curated Formulations & Active Ingredients"
+    },
+    "card2_desc": {
+        "id": "Temukan kombinasi sinergis bahan aktif terbaik seperti Centella Asiatica, Ceramide Complex, Niacinamide, dan Hyaluronic Acid untuk hasil nyata tanpa kompromi.",
+        "en": "Discover synergistic blends of premium active ingredients like Centella Asiatica, Ceramide Complex, Niacinamide, and Hyaluronic Acid for uncompromised results."
+    },
+    "card3_title": {
+        "id": "Konsultasi Kulit Bersama Beauty Advisor",
+        "en": "Skin Consultation with Beauty Advisors"
+    },
+    "card3_desc": {
+        "id": "Belanja dengan tenang — tim konsultan kecantikan kami siap membantu menganalisis kondisi kulit Anda dan merekomendasikan tahapan rutinitas yang tepat.",
+        "en": "Shop with confidence — our beauty advisors are ready to assess your skin needs and guide you toward the optimal daily regimen."
+    }
 }

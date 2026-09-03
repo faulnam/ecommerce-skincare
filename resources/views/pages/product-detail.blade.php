@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title', $product->name . ' - Hijab')
+@section('title', $product->name . ' - LUMINA Skincare')
 @section('og_type', 'product')
-@section('og_title', $product->name . ' - Hijab')
+@section('og_title', $product->name . ' - LUMINA Skincare')
 @section('og_description'){{ Str::limit(strip_tags($product->description ?? $product->name), 160) }}@endsection
 @section('og_image', $product->image_url)
 @section('og_image_width', '1200')
@@ -17,9 +17,8 @@
 
 @php
     $benefitsStr = $product->benefits ? strtolower($product->benefits) : \Illuminate\Support\Str::limit(strip_tags($product->description ?? ''), 50, '');
-    $playerStr = $product->player_type ? strtolower($product->player_type) : 'semua level';
     $priceStr = $product->hasActiveDiscount() ? $product->formatted_discounted_price : $product->formatted_price;
-    $metaDesc = "{$product->name} — {$benefitsStr}. Cocok untuk {$playerStr}. Harga {$priceStr}. Beli di Hijab!";
+    $metaDesc = "{$product->name} — {$benefitsStr}. Harga {$priceStr}. Beli produk original teruji BPOM di LUMINA Skincare!";
     $metaDesc = \Illuminate\Support\Str::limit($metaDesc, 155, '');
 @endphp
 @section('meta_description', $metaDesc)
@@ -225,7 +224,7 @@
                         @endif
 
                         <!-- Specifications Table -->
-                        @if($product->category === 'hijab')
+                        @if($product->brand || $product->category)
                         <div class="border-t border-zinc-200 pt-4">
                             <h3 class="text-[10px] font-semibold text-black uppercase tracking-wider mb-3">Specifications</h3>
                             <div class="overflow-x-auto">
@@ -233,34 +232,22 @@
                                     <tbody>
                                         @php
                                             $primarySpecs = [
-                                                'Brand' => $product->brand,
-                                                'Series' => $product->series,
-                                                'Shape' => $product->shape,
-                                                'Balance' => $product->balance,
-                                                'Weight' => $product->hijab_weight,
+                                                'Brand' => $product->brand ?? 'LUMINA Skincare',
+                                                'Kategori' => $product->category_label,
+                                                'Tipe Kulit' => $product->skin_type ?? $product->level_label,
+                                                'Netto / Berat' => $product->weight ? $product->formatted_weight : null,
+                                                'Manfaat Utama' => $product->benefits,
                                             ];
                                             $allSpecs = [
-                                                'Brand' => $product->brand,
-                                                'Series' => $product->series,
-                                                'Shape' => $product->shape,
-                                                'Balance' => $product->balance,
-                                                'Weight' => $product->hijab_weight,
-                                                'Level' => $product->level ? ucfirst($product->level) : null,
-                                                'Play Style' => $product->play_style,
-                                                'Player Type' => $product->player_type,
-                                                'Core' => $product->core,
-                                                'Faces' => $product->faces,
-                                                'Frame' => $product->frame,
-                                                'Surface' => $product->surface,
-                                                'Feel' => $product->feel,
-                                                'Power' => $product->power,
-                                                'Control' => $product->control,
-                                                'Maneuverability' => $product->maneuverability,
-                                                'Comfort' => $product->comfort,
-                                                'Technology' => $product->technology,
-                                                'Benefits' => $product->benefits,
-                                                'Suitable For' => $product->suitable_for,
-                                                'Collection' => $product->collection,
+                                                'Brand' => $product->brand ?? 'LUMINA Skincare',
+                                                'Kategori' => $product->category_label,
+                                                'Tipe Kulit' => $product->skin_type ?? $product->level_label,
+                                                'Netto / Berat' => $product->weight ? $product->formatted_weight : null,
+                                                'Bahan Utama' => $product->material ?? $product->core,
+                                                'Manfaat Utama' => $product->benefits,
+                                                'Cocok Untuk' => $product->suitable_for ?? $product->player_type,
+                                                'Teknologi / Formulasi' => $product->technology,
+                                                'Koleksi' => $product->collection ?? 'LUMINA Daily Ritual',
                                             ];
                                         @endphp
                                         @foreach($primarySpecs as $label => $value)
@@ -511,7 +498,7 @@ $schema = [
     'description' => strip_tags($product->description ?? $product->name),
     'brand' => [
         '@type' => 'Brand',
-        'name' => $product->brand ?? 'Hijab'
+        'name' => $product->brand ?? 'LUMINA Skincare'
     ],
     'offers' => [
         '@type' => 'Offer',

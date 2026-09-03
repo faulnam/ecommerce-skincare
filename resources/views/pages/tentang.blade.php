@@ -1,15 +1,15 @@
 @extends('layouts.app')
 
-@section('title', 'Tentang Kami - Hijab')
-@section('og_description', 'Kenali Hijab lebih dekat — brand perlengkapan hijab premium Indonesia yang mengutamakan kualitas, performa, dan kepuasan pelanggan.')
+@section('title', 'Tentang Kami - LUMINA Skincare')
+@section('og_description', 'Kenali LUMINA Skincare lebih dekat — brand perawatan kulit dermatologis Indonesia yang mengutamakan kualitas, keamanan BPOM, dan hasil nyata.')
 
 @section('content')
 <!-- Hero -->
 <section class="page-hero">
     <div class="container">
         <span class="section-badge">Tentang Kami</span>
-    <h1 class="page-title">Kenali <span class="text-primary">Hijab</span></h1>
-    <p class="page-subtitle">Mitra peralatan hijab premium untuk performa optimal</p>
+    <h1 class="page-title">Kenali <span class="text-primary">LUMINA Skincare</span></h1>
+    <p class="page-subtitle">Solusi perawatan kulit terpercaya untuk kilau alami dan skin barrier sehat</p>
     </div>
 </section>
 
@@ -18,19 +18,18 @@
     <div class="container">
         <div class="row align-items-center g-5">
             <div class="col-lg-6">
-             <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=900"
-                 alt="Tim Hijab" class="img-fluid rounded-4">
+             <img src="{{ asset('storage/model-1.jpg') }}"
+                 alt="LUMINA Skincare" class="img-fluid rounded-4">
             </div>
             <div class="col-lg-6">
                 <h2 class="section-title">Kisah Kami</h2>
                 <p class="text-gray mb-4">
-                    Hijab was born from the spirit of presenting quality hijab equipment that is easily accessible to Indonesian players. Starting from a small community in Surabaya in 2023,
-                    we focus on curating products that truly support performance on the field.
+                    LUMINA Skincare lahir dari semangat menghadirkan produk perawatan kulit berstandar dermatologi yang aman, efektif, dan terjangkau bagi masyarakat Indonesia. Berawal dari kepedulian terhadap tingginya permasalahan skin barrier dan sensitivitas kulit di iklim tropis,
+                    kami fokus mengkurasi bahan aktif yang terbukti secara klinis.
                 </p>
                 <p class="text-gray mb-4">
-                    The name "Hijab" represents modern energy, sportiveness, and quality consistency.
-                    We believe every player—from beginners to professionals—deserves the best gear
-                    so the learning, training, and competing process feels more comfortable and enjoyable.
+                    Nama "LUMINA" mencerminkan cahaya, kejernihan, dan vitalitas kulit yang sehat.
+                    Kami percaya setiap orang berhak memiliki rutinitas perawatan kulit yang menenangkan tanpa rasa khawatir akan bahan kimia berbahaya.
                 </p>
                 <div class="story-stats">
                     <div class="story-stat">
@@ -38,12 +37,8 @@
                         <span class="stat-label">Tahun Berdiri</span>
                     </div>
                     <div class="story-stat">
-                        <span class="stat-number">100+</span>
-                        <span class="stat-label">Pelanggan</span>
-                    </div>
-                    <div class="story-stat">
-                        <span class="stat-number">5+</span>
-                        <span class="stat-label">Varian Produk</span>
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Teruji BPOM</span>
                     </div>
                 </div>
             </div>
@@ -60,7 +55,7 @@
                     
                     <h3>Visi Kami</h3>
                     <p class="text-gray mb-0">
-                        To become a trusted hijab equipment store in Indonesia that supports the growth of the hijab community from beginner to professional levels.
+                        Menjadi brand perawatan kulit terpercaya di Indonesia yang mendefinisikan standar kecantikan sehat, inklusif, dan berbasis sains dermatologi.
                     </p>
                 </div>
             </div>
@@ -69,10 +64,10 @@
                     
                     <h3>Misi Kami</h3>
                     <ul class="text-gray mb-0 ps-3">
-                        <li>Provide high-quality hijab hijabs, balls, shoes, bags, and accessories</li>
-                        <li>Provide product consultation that matches the customer's playing style</li>
-                        <li>Present a fast, safe, and transparent shopping experience</li>
-                        <li>Support the hijab ecosystem through education and community events</li>
+                        <li>Menghadirkan serum, moisturizer, cleanser, dan sunscreen bersertifikasi resmi BPOM</li>
+                        <li>Memberikan edukasi kesehatan kulit yang transparan dan berbasis riset ilmiah</li>
+                        <li>Menyediakan konsultasi ramah bersama Beauty Advisor untuk setiap tipe kulit</li>
+                        <li>Menjamin pengalaman belanja online yang aman, cepat, dan terpercaya</li>
                     </ul>
                 </div>
             </div>

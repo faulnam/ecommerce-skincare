@@ -1,135 +1,320 @@
 {
-  "hero": {
-    "search_placeholder": {
-      "id": "Cari...",
-      "en": "Search..."
+    "hero": {
+        "search_placeholder": {
+            "id": "Cari...",
+            "en": "Search..."
+        },
+        "title": {
+            "id": "LUMINA Skincare | Solusi Kulit Sehat, Cerah & Glowing",
+            "en": "LUMINA Skincare | Healthy, Bright & Glowing Skin Solutions"
+        },
+        "subtitle": {
+            "id": "Rawat dan lindungi skin barrier Anda dengan rangkaian skincare dermatologis terbaik. 100% original, terdaftar BPOM resmi, dan pengiriman aman ke seluruh Indonesia.",
+            "en": "Nourish and protect your skin barrier with clinically tested dermatological skincare. 100% authentic, BPOM certified, and fast shipping nationwide."
+        },
+        "search_button": {
+            "id": "Cari",
+            "en": "Search"
+        }
     },
-    "title": {
-      "id": "Toko Hijab Hijab Online Indonesia | Hijab",
-      "en": "Indonesia's Online Hijab Hijab Store | Hijab"
+    "product_section": {
+        "filter_titles": {
+            "category": {
+                "id": "Kategori",
+                "en": "Category"
+            },
+            "brand": {
+                "id": "Merek",
+                "en": "Brand"
+            },
+            "price": {
+                "id": "Harga",
+                "en": "Price"
+            },
+            "sort": {
+                "id": "Urutkan",
+                "en": "Sort"
+            },
+            "clear": {
+                "id": "Bersihkan",
+                "en": "Clear"
+            },
+            "advanced": {
+                "id": "Filter Lanjutan",
+                "en": "Advanced Filter"
+            },
+            "shape": {
+                "id": "Bentuk",
+                "en": "Shape"
+            },
+            "hardness": {
+                "id": "Kepadatan",
+                "en": "Hardness"
+            },
+            "carbon_type": {
+                "id": "Tipe Karbon",
+                "en": "Carbon Type"
+            }
+        },
+        "price_options": {
+            "all": {
+                "id": "Semua Harga",
+                "en": "All Prices"
+            },
+            "low_to_high": {
+                "id": "Termurah ke Termahal",
+                "en": "Low to High"
+            },
+            "high_to_low": {
+                "id": "Termahal ke Termurah",
+                "en": "High to Low"
+            }
+        },
+        "sort_options": {
+            "relevance": {
+                "id": "Relevan",
+                "en": "Relevance"
+            },
+            "popular": {
+                "id": "Populer",
+                "en": "Popular"
+            },
+            "latest": {
+                "id": "Terbaru",
+                "en": "Latest"
+            }
+        },
+        "voucher": {
+            "available": {
+                "id": "Voucher tersedia",
+                "en": "Vouchers available"
+            }
+        },
+        "product_card": {
+            "btn_detail": {
+                "id": "Detail",
+                "en": "Details"
+            },
+            "btn_add_to_cart": {
+                "id": "Tambah ke Keranjang",
+                "en": "Add to Cart"
+            }
+        },
+        "bottom_categories": {
+            "serum": {
+                "id": "Serum",
+                "en": "Serum"
+            },
+            "moisturizer": {
+                "id": "Moisturizer",
+                "en": "Moisturizer"
+            },
+            "cleanser": {
+                "id": "Cleanser",
+                "en": "Cleanser"
+            },
+            "sunscreen": {
+                "id": "Sunscreen",
+                "en": "Sunscreen"
+            }
+        }
     },
-    "subtitle": {
-      "id": "Lengkapi permainan hijab Anda dengan peralatan berkualitas terbaik. Produk original, pilihan lengkap, harga terbaik, dan pengiriman cepat ke seluruh Indonesia.",
-      "en": "Complete your hijab game with the best quality equipment. Original products, a wide selection, the best prices, and fast shipping throughout Indonesia."
+    "search": {
+        "placeholder_nav": {
+            "id": "Cari serum, moisturizer, sunscreen...",
+            "en": "Search serums, moisturizers, sunscreens..."
+        },
+        "overlay": {
+            "placeholder": {
+                "id": "Cari produk, brand, atau kategori...",
+                "en": "Search products, brands, or categories..."
+            },
+            "close_aria": {
+                "id": "Tutup",
+                "en": "Close"
+            },
+            "esc_short": {
+                "id": "ESC",
+                "en": "ESC"
+            },
+            "initial_state_1": {
+                "id": "Mulai mengetik untuk mencari produk",
+                "en": "Start typing to search for products"
+            },
+            "initial_state_2": {
+                "id": "Cari berdasarkan nama, brand, atau kategori",
+                "en": "Search by name, brand, or category"
+            },
+            "empty_title": {
+                "id": "Tidak ada produk",
+                "en": "No products found"
+            },
+            "empty_hint": {
+                "id": "Coba kata kunci lain",
+                "en": "Try a different keyword"
+            }
+        }
     },
-    "search_button": {
-      "id": "Cari",
-      "en": "Search"
-    }
-  },
-  "product_section": {
-    "filter_titles": {
-      "category": { "id": "Kategori", "en": "Category" },
-      "brand": { "id": "Merek", "en": "Brand" },
-      "price": { "id": "Harga", "en": "Price" },
-      "sort": { "id": "Urutkan", "en": "Sort" },
-      "clear": { "id": "Bersihkan", "en": "Clear" },
-      "advanced": { "id": "Filter Lanjutan", "en": "Advanced Filter" },
-      "shape": { "id": "Bentuk", "en": "Shape" },
-      "hardness": { "id": "Kepadatan", "en": "Hardness" },
-      "carbon_type": { "id": "Tipe Karbon", "en": "Carbon Type" }
+    "common": {
+        "add_to_cart": {
+            "id": "Tambah ke Keranjang",
+            "en": "Add to cart"
+        },
+        "cart_btn_loading_added": {
+            "id": "✓ Ditambahkan",
+            "en": "✓ Added"
+        },
+        "cart_error": {
+            "id": "Gagal menambahkan produk ke keranjang",
+            "en": "Failed to add product to cart"
+        },
+        "cart_error_generic": {
+            "id": "Terjadi kesalahan. Silakan coba lagi.",
+            "en": "Something went wrong. Please try again."
+        },
+        "wishlist_btn_loading": {
+            "id": "Memproses...",
+            "en": "Processing..."
+        },
+        "wishlist_error": {
+            "id": "Gagal menambahkan produk ke wishlist",
+            "en": "Failed to add product to wishlist"
+        },
+        "wishlist_error_generic": {
+            "id": "Terjadi kesalahan. Silakan coba lagi.",
+            "en": "Something went wrong. Please try again."
+        },
+        "voucher_claim": {
+            "loading": {
+                "id": "Memproses...",
+                "en": "Processing..."
+            },
+            "success": {
+                "id": "✓ Diklaim",
+                "en": "✓ Claimed"
+            },
+            "error": {
+                "id": "Gagal mengklaim voucher",
+                "en": "Failed to claim voucher"
+            }
+        },
+        "no_products_found": {
+            "id": "Tidak ada produk yang ditemukan",
+            "en": "No products found"
+        }
     },
-    "price_options": {
-      "all": { "id": "Semua Harga", "en": "All Prices" },
-      "low_to_high": { "id": "Termurah ke Termahal", "en": "Low to High" },
-      "high_to_low": { "id": "Termahal ke Termurah", "en": "High to Low" }
+    "welcome_bonus": {
+        "title": {
+            "id": "Selamat!",
+            "en": "Welcome!"
+        },
+        "subtitle": {
+            "id": "Bonus Spesial Untuk Anda",
+            "en": "Special Bonus For You"
+        },
+        "first_purchase_bonus": {
+            "id": "🎁 First Purchase Bonus",
+            "en": "🎁 First Purchase Bonus"
+        },
+        "bonus_points_title": {
+            "id": "100 Poin Gratis",
+            "en": "100 Free Points"
+        },
+        "bonus_points_hint": {
+            "id": "Senilai Rp 10,000 untuk diskon",
+            "en": "Worth Rp 10,000 for discount"
+        },
+        "bonus_grip_title": {
+            "id": "Grip Gratis",
+            "en": "Free Grip"
+        },
+        "bonus_grip_hint": {
+            "id": "Grip gratis untuk pembelian pertama",
+            "en": "Free grip on first purchase"
+        },
+        "bonus_only_first": {
+            "id": "* Bonus hanya berlaku untuk pembelian pertama Anda",
+            "en": "* Bonus only applies to your first purchase"
+        },
+        "claim_now": {
+            "id": "Klaim Bonus Sekarang",
+            "en": "Claim Bonus Now"
+        },
+        "maybe_later": {
+            "id": "Nanti Saja",
+            "en": "Maybe Later"
+        }
     },
-    "sort_options": {
-      "relevance": { "id": "Relevan", "en": "Relevance" },
-      "popular": { "id": "Populer", "en": "Popular" },
-      "latest": { "id": "Terbaru", "en": "Latest" }
+    "level_up": {
+        "title": {
+            "id": "Raih Kulit Glowing Impian Anda",
+            "en": "Achieve Your Dream Glowing Skin"
+        },
+        "subtitle": {
+            "id": "Diformulasikan dengan bahan aktif terpilih untuk merawat skin barrier, mengatasi kemerahan, dan memberi kilau sehat alami.",
+            "en": "Formulated with active ingredients to restore the skin barrier, calm redness, and deliver a healthy natural glow."
+        },
+        "cta": {
+            "id": "Shop Collection",
+            "en": "Shop Collection"
+        }
+    },
+    "category_grid": {
+        "cleanser": {
+            "id": "Cleanser",
+            "en": "Cleanser"
+        },
+        "toner": {
+            "id": "Toner & Essence",
+            "en": "Toner & Essence"
+        },
+        "serum": {
+            "id": "Serum & Ampoule",
+            "en": "Serum & Ampoule"
+        },
+        "moisturizer": {
+            "id": "Moisturizer & UV",
+            "en": "Moisturizer & UV"
+        }
     },
     "voucher": {
-      "available": { "id": "Voucher tersedia", "en": "Vouchers available" }
+        "status_used": {
+            "id": "Digunakan",
+            "en": "Used"
+        },
+        "status_claimed": {
+            "id": "Diklaim",
+            "en": "Claimed"
+        },
+        "status_expired": {
+            "id": "Expired",
+            "en": "Expired"
+        },
+        "status_quota_finished": {
+            "id": "Habis",
+            "en": "Finished"
+        },
+        "status_soon": {
+            "id": "Segera",
+            "en": "Soon"
+        },
+        "claim": {
+            "id": "Klaim",
+            "en": "Claim"
+        }
     },
-    "product_card": {
-      "btn_detail": { "id": "Detail", "en": "Details" },
-      "btn_add_to_cart": { "id": "Tambah ke Keranjang", "en": "Add to Cart" }
-    },
-    "bottom_categories": {
-      "hijab": { "id": "Hijab", "en": "Hijab" },
-      "shoes": { "id": "Sepatu", "en": "Shoes" },
-      "bags": { "id": "Tas", "en": "Bags" },
-      "grips": { "id": "Grip", "en": "Grips" }
+    "testimonials": {
+        "badge": {
+            "id": "Pilihan Pecinta Skincare",
+            "en": "Skincare Enthusiast Choice"
+        },
+        "title": {
+            "id": "Testimoni",
+            "en": "Testimonials"
+        },
+        "subtitle": {
+            "id": "Apa kata mereka yang telah merasakan perubahan nyata bersama LUMINA Skincare.",
+            "en": "What our valued customers say about their results with LUMINA Skincare."
+        }
     }
-  },
-  "search": {
-    "placeholder_nav": {
-      "id": "Cari hijab, sepatu, atau aksesoris...",
-      "en": "Search for hijabs, shoes, or accessories..."
-    },
-    "overlay": {
-      "placeholder": {
-        "id": "Cari produk, brand, atau kategori...",
-        "en": "Search products, brands, or categories..."
-      },
-      "close_aria": { "id": "Tutup", "en": "Close" },
-      "esc_short": { "id": "ESC", "en": "ESC" },
-      "initial_state_1": { "id": "Mulai mengetik untuk mencari produk", "en": "Start typing to search for products" },
-      "initial_state_2": { "id": "Cari berdasarkan nama, brand, atau kategori", "en": "Search by name, brand, or category" },
-      "empty_title": { "id": "Tidak ada produk", "en": "No products found" },
-      "empty_hint": { "id": "Coba kata kunci lain", "en": "Try a different keyword" }
-    }
-  },
-  "common": {
-    "add_to_cart": { "id": "Tambah ke Keranjang", "en": "Add to cart" },
-    "cart_btn_loading_added": { "id": "✓ Ditambahkan", "en": "✓ Added" },
-    "cart_error": { "id": "Gagal menambahkan produk ke keranjang", "en": "Failed to add product to cart" },
-    "cart_error_generic": { "id": "Terjadi kesalahan. Silakan coba lagi.", "en": "Something went wrong. Please try again." },
-    "wishlist_btn_loading": { "id": "Memproses...", "en": "Processing..." },
-    "wishlist_error": { "id": "Gagal menambahkan produk ke wishlist", "en": "Failed to add product to wishlist" },
-    "wishlist_error_generic": { "id": "Terjadi kesalahan. Silakan coba lagi.", "en": "Something went wrong. Please try again." },
-    "voucher_claim": {
-      "loading": { "id": "Memproses...", "en": "Processing..." },
-      "success": { "id": "✓ Diklaim", "en": "✓ Claimed" },
-      "error": { "id": "Gagal mengklaim voucher", "en": "Failed to claim voucher" }
-    },
-    "no_products_found": { "id": "Tidak ada produk yang ditemukan", "en": "No products found" }
-  },
-  "welcome_bonus": {
-    "title": { "id": "Selamat!", "en": "Welcome!" },
-    "subtitle": { "id": "Bonus Spesial Untuk Anda", "en": "Special Bonus For You" },
-    "first_purchase_bonus": { "id": "🎁 First Purchase Bonus", "en": "🎁 First Purchase Bonus" },
-    "bonus_points_title": { "id": "100 Poin Gratis", "en": "100 Free Points" },
-    "bonus_points_hint": { "id": "Senilai Rp 10,000 untuk diskon", "en": "Worth Rp 10,000 for discount" },
-    "bonus_grip_title": { "id": "Grip Gratis", "en": "Free Grip" },
-    "bonus_grip_hint": { "id": "Grip gratis untuk pembelian pertama", "en": "Free grip on first purchase" },
-    "bonus_only_first": { "id": "* Bonus hanya berlaku untuk pembelian pertama Anda", "en": "* Bonus only applies to your first purchase" },
-    "claim_now": { "id": "Klaim Bonus Sekarang", "en": "Claim Bonus Now" },
-    "maybe_later": { "id": "Nanti Saja", "en": "Maybe Later" }
-  },
-  "level_up": {
-    "title": { "id": "Level up game Anda", "en": "Level up your game" },
-    "subtitle": { "id": "Dirancang untuk pemain yang mengutamakan presisi, craftsmanship, dan performa kelas dunia di setiap detail.", "en": "Designed for players who expect precision craftsmanship and world-class performance in every detail." },
-    "cta": { "id": "Shop Collection", "en": "Shop Collection" }
-  },
-  "category_grid": {
-    "hijab": { "id": "Hijab", "en": "Hijab" },
-    "shoes": { "id": "Sepatu", "en": "Shoes" },
-    "bags": { "id": "Tas", "en": "Bags" },
-    "grips": { "id": "Grip", "en": "Grips" }
-  },
-  "voucher": {
-    "status_used": { "id": "Digunakan", "en": "Used" },
-    "status_claimed": { "id": "Diklaim", "en": "Claimed" },
-    "status_expired": { "id": "Expired", "en": "Expired" },
-    "status_quota_finished": { "id": "Habis", "en": "Finished" },
-    "status_soon": { "id": "Segera", "en": "Soon" },
-    "claim": { "id": "Klaim", "en": "Claim" }
-  },
-  "testimonials": {
-    "badge": {
-      "id": "Pilihan Para Pemain",
-      "en": "Player Approved"
-    },
-    "title": {
-      "id": "Testimoni",
-      "en": "Testimonials"
-    },
-    "subtitle": {
-      "id": "Apa kata mereka yang sudah berbelanja di Hijab Shopee Store.",
-      "en": "What they say about their shopping experience at Hijab Shopee Store."
-    }
-  }
 }
-

@@ -5,8 +5,8 @@
     $trans = file_exists($jsonPath) ? json_decode(file_get_contents($jsonPath), true) : [];
 @endphp
 
-@section('title', $trans['meta_title'][$lang] ?? 'Testimoni - Hijab')
-@section('og_description', $trans['meta_description'][$lang] ?? 'Ribuan pelanggan puas dengan produk dan layanan Hijab. Baca testimoni nyata dari komunitas hijab Indonesia.')
+@section('title', $trans['meta_title'][$lang] ?? 'Testimoni - LUMINA Skincare')
+@section('og_description', $trans['meta_description'][$lang] ?? 'Ribuan pelanggan puas dengan formula dan hasil perawatan LUMINA Skincare. Baca ulasan nyata pelanggan kami.')
 
 @section('content')
 <!-- Hero -->
@@ -14,7 +14,7 @@
     <div class="container">
         <span class="section-badge">{{ $trans['badge'][$lang] ?? 'Testimoni' }}</span>
         <h1 class="page-title">{{ $trans['hero_title_1'][$lang] ?? 'Apa Kata' }} <span class="text-primary">{{ $trans['hero_title_2'][$lang] ?? 'Mereka?' }}</span></h1>
-        <p class="page-subtitle">{{ $trans['hero_desc'][$lang] ?? 'Review jujur dari pelanggan Hijab' }}</p>
+        <p class="page-subtitle">{{ $trans['hero_desc'][$lang] ?? 'Review jujur dari pelanggan setia LUMINA Skincare' }}</p>
     </div>
 </section>
 

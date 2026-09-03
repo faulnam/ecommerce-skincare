@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
-@section('title', 'Shop - Hijab')
-@section('og_description', 'Jelajahi koleksi perlengkapan hijab Hijab berdasarkan kategori — hijab, sepatu, tas, grip, aksesoris, dan apparel hijab terbaik.')
+@section('title', 'Katalog Produk - LUMINA Skincare')
+@section('og_description', 'Jelajahi koleksi perawatan kulit LUMINA Skincare berdasarkan kategori — serum, moisturizer, cleanser, toner, dan sunscreen terbaik.')
 
 @section('content')
 <div class="min-h-screen bg-white">
     <div class="bg-zinc-900 py-16 text-white">
         <div class="mx-auto max-w-7xl px-6 md:px-10 lg:px-12">
-            <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">Shop</h1>
-            <p class="mt-4 text-lg text-zinc-300">Explore our complete collection</p>
+            <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">Koleksi Produk</h1>
+            <p class="mt-4 text-lg text-zinc-300">Temukan formula skincare terbaik untuk kesehatan kulit Anda</p>
         </div>
     </div>
 
@@ -17,19 +17,27 @@
         <div class="mb-8 flex flex-wrap gap-3">
             <a href="{{ route('shop.category') }}" 
                 class="rounded-full px-6 py-2.5 text-sm font-semibold transition duration-300 {{ !request('category') ? 'bg-black text-white' : 'border border-black/15 bg-white text-black hover:bg-black hover:text-white' }}">
-                All Products
+                Semua Produk
             </a>
-            <a href="{{ route('shop.category', ['category' => 'hijab']) }}" 
-                class="rounded-full px-6 py-2.5 text-sm font-semibold transition duration-300 {{ request('category') === 'hijab' ? 'bg-black text-white' : 'border border-black/15 bg-white text-black hover:bg-black hover:text-white' }}">
-                Hijab
+            <a href="{{ route('shop.category', ['category' => 'serum']) }}" 
+                class="rounded-full px-6 py-2.5 text-sm font-semibold transition duration-300 {{ request('category') === 'serum' ? 'bg-black text-white' : 'border border-black/15 bg-white text-black hover:bg-black hover:text-white' }}">
+                Serum
             </a>
-            <a href="{{ route('shop.category', ['category' => 'shoes']) }}" 
-                class="rounded-full px-6 py-2.5 text-sm font-semibold transition duration-300 {{ request('category') === 'shoes' ? 'bg-black text-white' : 'border border-black/15 bg-white text-black hover:bg-black hover:text-white' }}">
-                Shoes
+            <a href="{{ route('shop.category', ['category' => 'moisturizer']) }}" 
+                class="rounded-full px-6 py-2.5 text-sm font-semibold transition duration-300 {{ request('category') === 'moisturizer' ? 'bg-black text-white' : 'border border-black/15 bg-white text-black hover:bg-black hover:text-white' }}">
+                Moisturizer
             </a>
-            <a href="{{ route('shop.category', ['category' => 'accessories']) }}" 
-                class="rounded-full px-6 py-2.5 text-sm font-semibold transition duration-300 {{ request('category') === 'accessories' ? 'bg-black text-white' : 'border border-black/15 bg-white text-black hover:bg-black hover:text-white' }}">
-                Accessories
+            <a href="{{ route('shop.category', ['category' => 'cleanser']) }}" 
+                class="rounded-full px-6 py-2.5 text-sm font-semibold transition duration-300 {{ request('category') === 'cleanser' ? 'bg-black text-white' : 'border border-black/15 bg-white text-black hover:bg-black hover:text-white' }}">
+                Cleanser
+            </a>
+            <a href="{{ route('shop.category', ['category' => 'sunscreen']) }}" 
+                class="rounded-full px-6 py-2.5 text-sm font-semibold transition duration-300 {{ request('category') === 'sunscreen' ? 'bg-black text-white' : 'border border-black/15 bg-white text-black hover:bg-black hover:text-white' }}">
+                Sunscreen
+            </a>
+            <a href="{{ route('shop.category', ['category' => 'bundle']) }}" 
+                class="rounded-full px-6 py-2.5 text-sm font-semibold transition duration-300 {{ request('category') === 'bundle' ? 'bg-black text-white' : 'border border-black/15 bg-white text-black hover:bg-black hover:text-white' }}">
+                Bundle
             </a>
         </div>
 

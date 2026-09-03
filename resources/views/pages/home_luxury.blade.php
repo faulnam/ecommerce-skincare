@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Hijab | Premium Activewear')
+@section('title', 'LUMINA Skincare | Solusi Perawatan Kulit Sehat & Glowing')
 
 @section('content')
 <style>
@@ -539,10 +539,10 @@
 <section style="padding: 20px 20px 80px 20px; background-color: #ffffff; max-width: 1400px; margin: 0 auto;">
         @php
             $categories = [
-                ['name' => 'Atas', 'img' => asset('storage/Atas.png')],
-                ['name' => 'Tengah', 'img' => asset('storage/Tengah.png')],
-                ['name' => 'Accecories', 'img' => asset('storage/Accecories.png')],
-                ['name' => 'Bawah', 'img' => asset('storage/Bawah.png')]
+                ['name' => 'CLEANSER', 'img' => asset('storage/Atas.png'), 'filter' => 'cleanser'],
+                ['name' => 'TONER & ESSENCE', 'img' => asset('storage/Tengah.png'), 'filter' => 'toner'],
+                ['name' => 'SERUM & TREATMENT', 'img' => asset('storage/Accecories.png'), 'filter' => 'serum'],
+                ['name' => 'MOISTURIZER & SUNSCREEN', 'img' => asset('storage/Bawah.png'), 'filter' => 'moisturizer']
             ];
         @endphp
 
@@ -592,7 +592,7 @@
 
         <div class="cat-container">
             @foreach($categories as $cat)
-            <a href="#" class="cat-link">
+            <a href="{{ route('produk.index') }}?category={{ $cat['filter'] }}" class="cat-link">
                 <div class="cat-item cat-img-wrapper">
                     <img src="{{ $cat['img'] }}" alt="{{ $cat['name'] }}" style="max-width: 100%; max-height: 100%; object-fit: contain; mix-blend-mode: multiply; filter: contrast(1.1);">
                 </div>
@@ -608,7 +608,7 @@
     <!-- Banner Left -->
     <div onclick="window.location.href='{{ $splitBanners[0]->link ?? route('produk.index') }}'" style="position: relative; flex: 1 1 50%; min-width: 300px; aspect-ratio: 3 / 4; min-height: 95vh; overflow: hidden; cursor: pointer;" onmouseover="this.querySelector('img').style.transform='scale(1.05)'" onmouseout="this.querySelector('img').style.transform='scale(1)'">
         <img src="{{ $splitBanners[0]->image_url }}" alt="{{ $splitBanners[0]->title }}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease;">
-        <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 40%; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%); pointer-events: none;"></div>
+        <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 40%; background: rgba(0, 0, 0, 0.65); pointer-events: none;"></div>
         <div style="position: absolute; bottom: 45px; left: 0; width: 100%; text-align: center; display: flex; flex-direction: column; align-items: center; padding: 0 20px;">
             <h3 style="color: #fff; font-size: 22px; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 24px; font-family: Arial, sans-serif;">{{ $splitBanners[0]->title }}</h3>
             <button style="background-color: #fff; color: #000; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; padding: 14px 40px; border: none; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#000'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='#fff'; this.style.color='#000';">{{ $splitBanners[0]->button_text }}</button>
@@ -618,7 +618,7 @@
     <!-- Banner Right -->
     <div onclick="window.location.href='{{ $splitBanners[1]->link ?? route('produk.index') }}'" style="position: relative; flex: 1 1 50%; min-width: 300px; aspect-ratio: 3 / 4; min-height: 95vh; overflow: hidden; cursor: pointer;" onmouseover="this.querySelector('img').style.transform='scale(1.05)'" onmouseout="this.querySelector('img').style.transform='scale(1)'">
         <img src="{{ $splitBanners[1]->image_url }}" alt="{{ $splitBanners[1]->title }}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease;">
-        <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 40%; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%); pointer-events: none;"></div>
+        <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 40%; background: rgba(0, 0, 0, 0.65); pointer-events: none;"></div>
         <div style="position: absolute; bottom: 45px; left: 0; width: 100%; text-align: center; display: flex; flex-direction: column; align-items: center; padding: 0 20px;">
             <h3 style="color: #fff; font-size: 22px; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 24px; font-family: Arial, sans-serif;">{{ $splitBanners[1]->title }}</h3>
             <button style="background-color: #fff; color: #000; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; padding: 14px 40px; border: none; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#000'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='#fff'; this.style.color='#000';">{{ $splitBanners[1]->button_text }}</button>
@@ -807,7 +807,7 @@
         <h2 class="font-bold text-black" style="font-size: clamp(2rem, 3.5vw, 2.5rem); line-height: 1.1; font-family: 'Inter', sans-serif; letter-spacing: -0.02em;">
             Apa Kata Mereka
         </h2>
-        <p class="text-gray-500 mt-4" style="font-family: 'Inter', sans-serif;">Ulasan jujur dari pelanggan setia Hijab Fashion.</p>
+        <p class="text-gray-500 mt-4" style="font-family: 'Inter', sans-serif;">Ulasan jujur dari pelanggan setia mengenai hasil nyata perawatan kulit bersama LUMINA Skincare.</p>
     </div>
     
     <div class="testimonial-marquee-wrapper">
@@ -815,7 +815,7 @@
             <!-- Testimonial Items (Original Set) -->
             <div class="testimonial-card">
                 <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"Kualitas bahan pasmina silk-nya luar biasa! Jatuh dengan sempurna dan tidak menerawang sama sekali. Sangat elegan untuk dipakai ke acara formal."</p>
+                <p class="testimonial-text">"Centella Calming Serum-nya penyelamat saat kulit lagi iritasi dan kemerahan parah! Dalam 3 hari pemakaian kemerahan langsung reda."</p>
                 <div class="testimonial-author">
                     <div class="testimonial-avatar">A</div>
                     <div>
@@ -827,7 +827,7 @@
             
             <div class="testimonial-card">
                 <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"Desain bajunya sangat modern namun tetap syar'i. Jahitannya rapi, dan warna nude-nya cantik banget. Pengirimannya juga sangat cepat, terima kasih!"</p>
+                <p class="testimonial-text">"Ceramide Barrier Moisture Gel teksturnya seringan air dan cepat meresap. Bikin kulit kenyal dan lembap seharian tanpa minyak berlebih."</p>
                 <div class="testimonial-author">
                     <div class="testimonial-avatar">F</div>
                     <div>
@@ -839,7 +839,7 @@
 
             <div class="testimonial-card">
                 <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"Nyaman banget dipakai seharian. Bahannya adem dan tidak bikin gerah, cocok untuk cuaca tropis. Pasti akan order warna lainnya."</p>
+                <p class="testimonial-text">"Sunscreen SPF 50+ ini juara banget! No whitecast, nggak bikin kusam atau pedih di mata. Sangat nyaman untuk re-apply setiap siang."</p>
                 <div class="testimonial-author">
                     <div class="testimonial-avatar">N</div>
                     <div>
@@ -851,7 +851,7 @@
 
             <div class="testimonial-card">
                 <div class="testimonial-stars">★★★★☆</div>
-                <p class="testimonial-text">"Suka banget sama tas selempang quilted-nya. Ukurannya pas untuk bawa perlengkapan esensial, dan modelnya nggak kalah sama brand internasional."</p>
+                <p class="testimonial-text">"Serum Niacinamide 10%-nya benar-benar ampuh memudarkan bekas jerawat PIE. Kulit wajah kelihatan jauh lebih cerah dan glowing natural."</p>
                 <div class="testimonial-author">
                     <div class="testimonial-avatar">D</div>
                     <div>
@@ -863,7 +863,7 @@
 
             <div class="testimonial-card">
                 <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"Rok plisketnya juara! Lipatannya rapi dan permanen meskipun sudah dicuci berkali-kali. Flowy banget dan bikin look makin anggun."</p>
+                <p class="testimonial-text">"Paket 4-Step Routine sangat praktis dan hemat. Skin barrier yang tadinya reaktif sekarang jauh lebih sehat dan tahan banting."</p>
                 <div class="testimonial-author">
                     <div class="testimonial-avatar">R</div>
                     <div>
@@ -876,7 +876,7 @@
             <!-- Duplicate Set for Infinite Scroll -->
             <div class="testimonial-card">
                 <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"Kualitas bahan pasmina silk-nya luar biasa! Jatuh dengan sempurna dan tidak menerawang sama sekali. Sangat elegan untuk dipakai ke acara formal."</p>
+                <p class="testimonial-text">"Centella Calming Serum-nya penyelamat saat kulit lagi iritasi dan kemerahan parah! Dalam 3 hari pemakaian kemerahan langsung reda."</p>
                 <div class="testimonial-author">
                     <div class="testimonial-avatar">A</div>
                     <div>
@@ -888,7 +888,7 @@
             
             <div class="testimonial-card">
                 <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"Desain bajunya sangat modern namun tetap syar'i. Jahitannya rapi, dan warna nude-nya cantik banget. Pengirimannya juga sangat cepat, terima kasih!"</p>
+                <p class="testimonial-text">"Ceramide Barrier Moisture Gel teksturnya seringan air dan cepat meresap. Bikin kulit kenyal dan lembap seharian tanpa minyak berlebih."</p>
                 <div class="testimonial-author">
                     <div class="testimonial-avatar">F</div>
                     <div>
@@ -900,7 +900,7 @@
 
             <div class="testimonial-card">
                 <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"Nyaman banget dipakai seharian. Bahannya adem dan tidak bikin gerah, cocok untuk cuaca tropis. Pasti akan order warna lainnya."</p>
+                <p class="testimonial-text">"Sunscreen SPF 50+ ini juara banget! No whitecast, nggak bikin kusam atau pedih di mata. Sangat nyaman untuk re-apply setiap siang."</p>
                 <div class="testimonial-author">
                     <div class="testimonial-avatar">N</div>
                     <div>
@@ -912,7 +912,7 @@
 
             <div class="testimonial-card">
                 <div class="testimonial-stars">★★★★☆</div>
-                <p class="testimonial-text">"Suka banget sama tas selempang quilted-nya. Ukurannya pas untuk bawa perlengkapan esensial, dan modelnya nggak kalah sama brand internasional."</p>
+                <p class="testimonial-text">"Serum Niacinamide 10%-nya benar-benar ampuh memudarkan bekas jerawat PIE. Kulit wajah kelihatan jauh lebih cerah dan glowing natural."</p>
                 <div class="testimonial-author">
                     <div class="testimonial-avatar">D</div>
                     <div>
@@ -924,7 +924,7 @@
 
             <div class="testimonial-card">
                 <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"Rok plisketnya juara! Lipatannya rapi dan permanen meskipun sudah dicuci berkali-kali. Flowy banget dan bikin look makin anggun."</p>
+                <p class="testimonial-text">"Paket 4-Step Routine sangat praktis dan hemat. Skin barrier yang tadinya reaktif sekarang jauh lebih sehat dan tahan banting."</p>
                 <div class="testimonial-author">
                     <div class="testimonial-avatar">R</div>
                     <div>
@@ -940,18 +940,18 @@
 <!-- CTA SECTION -->
 <section class="mx-auto text-center py-16 px-6 sm:py-24" style="max-width: 950px;">
     <h2 class="font-bold tracking-tight text-black" style="font-size: clamp(2rem, 4vw, 3rem); line-height: 1.2; margin-bottom: 1rem; font-family: 'Inter', sans-serif;">
-        Siap Memperbarui Koleksi dan Tampil <br class="hidden sm:block">
-        <span style="color: #9ca3af; font-style: italic;">Maksimal?</span>
+        Waktunya Menyayangi Kulitmu & Tampil <br class="hidden sm:block">
+        <span style="color: #2D4C41; font-style: italic;">Glowing Alami</span>
     </h2>
     <p class="text-gray-500 leading-relaxed mx-auto" style="max-width: 800px; font-size: 1rem; margin-bottom: 2.5rem; font-family: 'Inter', sans-serif;">
-        Temukan koleksi hijab premium, pakaian, sepatu, dan aksesoris pilihan dari brand ternama. Dapatkan jaminan produk 100% original dan layanan pengiriman cepat ke seluruh Indonesia.
+        Temukan rangkaian skincare premium dengan formulasi dermatologis teruji klinis dan bersertifikasi BPOM. Dapatkan jaminan 100% original serta konsultasi gratis bersama Beauty Advisor kami.
     </p>
     <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-        <a href="{{ route('produk.index') }}" class="inline-flex items-center justify-center rounded-full text-white font-medium transition-all" style="background-color: #18181b; padding: 14px 32px; font-size: 0.95rem; min-width: 180px; font-family: 'Inter', sans-serif; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.1);" onmouseover="this.style.transform='translateY(-2px)';" onmouseout="this.style.transform='translateY(0)';">
+        <a href="{{ route('produk.index') }}" class="inline-flex items-center justify-center rounded-full text-white font-medium transition-all" style="background-color: #18181b; padding: 14px 32px; font-size: 0.95rem; min-width: 180px; font-family: 'Inter', sans-serif; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);" onmouseover="this.style.transform='translateY(-2px)';" onmouseout="this.style.transform='translateY(0)';">
             Belanja Sekarang <span style="margin-left: 8px;">&rarr;</span>
         </a>
         <a href="{{ route('login') }}" class="inline-flex items-center justify-center rounded-full text-black font-medium transition-all" style="background-color: #fff; padding: 14px 32px; font-size: 0.95rem; border: 1px solid #e4e4e7; min-width: 180px; font-family: 'Inter', sans-serif;" onmouseover="this.style.backgroundColor='#f4f4f5';" onmouseout="this.style.backgroundColor='#fff';">
-            Masuk Sekarang <span style="margin-left: 8px; color: #71717a;">&rarr;</span>
+            Masuk Akun <span style="margin-left: 8px; color: #71717a;">&rarr;</span>
         </a>
     </div>
 </section>

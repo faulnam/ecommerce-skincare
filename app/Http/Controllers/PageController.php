@@ -57,17 +57,21 @@ class PageController extends Controller
         // NOTE: kolom 'level' sudah di-drop (migration 2026_07_05_000001). Param ?level= legacy
         // sengaja diabaikan agar URL lama yang masih di-crawl Google tidak 500 dan canonical->base ter-render.
 
-        // Apply category filter from sidebar (uses 'type' field in DB)
+        // Apply category filter from sidebar (uses 'type' or 'category' field in DB)
         if ($request->filled('filter_category')) {
+            $cat = strtolower($request->filter_category);
             $typeMap = [
-                'hijab' => 'hijab',
-                'shoes' => 'shoes',
-                'apparel' => 'accessories',
+                'serum' => 'serum',
+                'moisturizer' => 'moisturizer',
+                'cleanser' => 'cleanser',
+                'toner' => 'toner',
+                'sunscreen' => 'sunscreen',
+                'bundle' => 'bundle',
             ];
-            $type = $typeMap[$request->filter_category] ?? null;
-            if ($type) {
-                $shopProductsQuery->where('type', $type);
-            }
+            $type = $typeMap[$cat] ?? $cat;
+            $shopProductsQuery->where(function($q) use ($type, $cat) {
+                $q->where('type', $type)->orWhere('category', 'like', "%{$cat}%");
+            });
         }
 
         if ($request->filled('filter_brand')) {
@@ -210,14 +214,19 @@ class PageController extends Controller
 
         // Category filter
         if ($request->filled('category')) {
-            $category = $request->category;
-            if ($category === 'hijab') {
-                $query->where('type', 'hijab');
-            } elseif ($category === 'shoes') {
-                $query->where('type', 'shoes');
-            } elseif ($category === 'apparel') {
-                $query->whereIn('type', ['bag', 'grip', 'apparel']);
-            }
+            $category = strtolower($request->category);
+            $typeMap = [
+                'serum' => 'serum',
+                'moisturizer' => 'moisturizer',
+                'cleanser' => 'cleanser',
+                'toner' => 'toner',
+                'sunscreen' => 'sunscreen',
+                'bundle' => 'bundle',
+            ];
+            $type = $typeMap[$category] ?? $category;
+            $query->where(function($q) use ($type, $category) {
+                $q->where('type', $type)->orWhere('category', 'like', "%{$category}%");
+            });
         }
 
         // Brand filter

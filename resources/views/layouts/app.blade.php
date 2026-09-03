@@ -37,19 +37,19 @@
     @hasSection('og_description')
     <meta name="description" content="@yield('og_description')">
     @else
-    <meta name="description" content="@yield('meta_description', config('branding.name', 'Hijab') . ' - ' . config('branding.tagline', 'Performa Maksimal, Game Makin Total') . '. Toko perlengkapan hijab premium untuk pemula hingga profesional.')">
+    <meta name="description" content="@yield('meta_description', config('branding.name', 'LUMINA Skincare') . ' - ' . config('branding.tagline', 'Perawatan Kulit Terpercaya untuk Kilau Alami & Sehat') . '. Toko online produk skincare dan perawatan kulit premium original teruji BPOM.')">
     @endif
     <meta property="og:locale" content="id_ID">
-    <meta property="og:site_name" content="Hijab">
+    <meta property="og:site_name" content="LUMINA Skincare">
     <meta property="og:type" content="@yield('og_type', 'website')">
     @hasSection('og_title')
     <meta property="og:title" content="@yield('og_title')">
     @else
-    <meta property="og:title" content="@yield('title', config('branding.name', 'Hijab'))">
+    <meta property="og:title" content="@yield('title', config('branding.name', 'LUMINA Skincare'))">
     @endif
-    <meta property="og:description" content="@yield('og_description', config('branding.tagline', 'Performa Maksimal, Game Makin Total'))">
-    <meta property="og:image" content="@yield('og_image', config('filesystems.disks.r2.url') . '/logo.png?v=3')">
-    <meta property="og:image:alt" content="@yield('og_image_alt', 'Hijab')">
+    <meta property="og:description" content="@yield('og_description', config('branding.tagline', 'Perawatan Kulit Terpercaya untuk Kilau Alami & Sehat'))">
+    <meta property="og:image" content="@yield('og_image', asset('images/logo.png'))">
+    <meta property="og:image:alt" content="@yield('og_image_alt', 'LUMINA Skincare')">
     @hasSection('og_image_width')
     <meta property="og:image:width" content="@yield('og_image_width')">
     <meta property="og:image:height" content="@yield('og_image_height')">
@@ -60,10 +60,10 @@
     @hasSection('og_title')
     <meta name="twitter:title" content="@yield('og_title')">
     @else
-    <meta name="twitter:title" content="@yield('title', config('branding.name', 'Hijab'))">
+    <meta name="twitter:title" content="@yield('title', config('branding.name', 'LUMINA Skincare'))">
     @endif
-    <meta name="twitter:description" content="@yield('og_description', config('branding.tagline', 'Performa Maksimal, Game Makin Total'))">
-    <meta name="twitter:image" content="@yield('og_image', config('filesystems.disks.r2.url') . '/logo.png?v=3')">
+    <meta name="twitter:description" content="@yield('og_description', config('branding.tagline', 'Perawatan Kulit Terpercaya untuk Kilau Alami & Sehat'))">
+    <meta name="twitter:image" content="@yield('og_image', asset('images/logo.png'))">
     
     <!-- SEO Canonical and Hreflang Tags for Bilingual Content -->
     @php
@@ -78,10 +78,10 @@
     <link rel="canonical" href="{{ $canonicalUrl }}" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ config('filesystems.disks.r2.url').'/logo.png?v=3' }}">
-    <link rel="icon" type="image/png" sizes="192x192" href="{{ config('filesystems.disks.r2.url').'/logo.png?v=3' }}">
+    <link rel="icon" type="image/svg+xml" href="{{ asset('images/lumina-skincare-favicon.svg') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/logo.png') }}">
 
-    <title>@yield('title', 'Hijab - Performa Maksimal, Game Makin Total')</title>
+    <title>@yield('title', 'LUMINA Skincare - Perawatan Kulit Terpercaya untuk Kilau Alami & Sehat')</title>
     
     <!-- Bootstrap 5 CSS (Non-blocking) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" media="print" onload="this.media='all'">
@@ -94,20 +94,20 @@
     
     <style>
         :root {
-            --primary: #16a34a;
-            --primary-dark: #15803d;
-            --primary-light: #dcfce7;
-            --accent: #f97316;
-            --accent-light: #ffedd5;
-            --dark: #1f2937;
-            --gray: #6b7280;
-            --gray-light: #f3f4f6;
+            --primary: #2D4C41;
+            --primary-dark: #1E332B;
+            --primary-light: #E8EFEA;
+            --accent: #C86F5C;
+            --accent-light: #F7EAE6;
+            --dark: #18181B;
+            --gray: #71717A;
+            --gray-light: #F4F4F5;
             --white: #ffffff;
-            --off-white: #fafafa;
+            --off-white: #FBF9F6;
             --radius: 12px;
             --radius-sm: 8px;
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
             --transition: all 0.3s ease;
         }
         
@@ -939,7 +939,7 @@
     </script>
     @endif
     <script>
-        window.showHijabToast = function(message, type = 'error') {
+        window.showSkincareToast = window.showToast = window.showHijabToast = function(message, type = 'error') {
             var existing = document.getElementById('hijab-toast-js');
             if (existing) existing.remove();
 

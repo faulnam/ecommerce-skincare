@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Shop - Hijab')
-@section('og_description', 'Temukan koleksi lengkap perlengkapan hijab di Hijab. Hijab, sepatu, tas, aksesoris, dan lebih banyak lagi dengan kualitas premium dan harga terbaik.')
+@section('title', 'Katalog Produk - LUMINA Skincare')
+@section('og_description', 'Temukan koleksi lengkap perawatan kulit di LUMINA Skincare. Serum, moisturizer, cleanser, toner, sunscreen teruji BPOM.')
 
 @section('content')
 <style>
@@ -14,7 +14,7 @@
         <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-10 lg:px-12 py-4 lg:hidden">
             <p class="text-xs font-semibold uppercase tracking-[0.18em] text-zinc-500">Products</p>
             <h1 class="mt-2 text-2xl font-semibold tracking-tight text-black sm:text-3xl">Shop Our Collection</h1>
-            <p class="mt-2 text-zinc-600 text-sm">Discover premium hijab equipment designed for champions</p>
+            <p class="mt-2 text-zinc-600 text-sm">Discover premium skincare formulations designed for healthy glowing skin</p>
         </div>
 
         <!-- Main Layout: Sidebar + Grid -->
@@ -37,9 +37,12 @@
                                 <i class="fas fa-chevron-down text-xs text-zinc-400 transition-transform duration-200"></i>
                             </button>
                             <div class="filter-content mt-3 flex flex-wrap gap-2">
-                                <a href="{{ request()->fullUrlWithQuery(['category' => 'hijab']) }}" class="filter-chip rounded-full border border-zinc-200 px-3 py-1 text-xs text-zinc-600 transition hover:border-black hover:text-black {{ request()->get('category') === 'hijab' ? 'bg-black text-white border-black' : '' }}">Hijab</a>
-                                <a href="{{ request()->fullUrlWithQuery(['category' => 'shoes']) }}" class="filter-chip rounded-full border border-zinc-200 px-3 py-1 text-xs text-zinc-600 transition hover:border-black hover:text-black {{ request()->get('category') === 'shoes' ? 'bg-black text-white border-black' : '' }}">Shoes</a>
-                                <a href="{{ request()->fullUrlWithQuery(['category' => 'apparel']) }}" class="filter-chip rounded-full border border-zinc-200 px-3 py-1 text-xs text-zinc-600 transition hover:border-black hover:text-black {{ request()->get('category') === 'apparel' ? 'bg-black text-white border-black' : '' }}">Accessories</a>
+                                <a href="{{ request()->fullUrlWithQuery(['category' => 'serum']) }}" class="filter-chip rounded-full border border-zinc-200 px-3 py-1 text-xs text-zinc-600 transition hover:border-black hover:text-black {{ request()->get('category') === 'serum' ? 'bg-black text-white border-black' : '' }}">Serum</a>
+                                <a href="{{ request()->fullUrlWithQuery(['category' => 'moisturizer']) }}" class="filter-chip rounded-full border border-zinc-200 px-3 py-1 text-xs text-zinc-600 transition hover:border-black hover:text-black {{ request()->get('category') === 'moisturizer' ? 'bg-black text-white border-black' : '' }}">Moisturizer</a>
+                                <a href="{{ request()->fullUrlWithQuery(['category' => 'cleanser']) }}" class="filter-chip rounded-full border border-zinc-200 px-3 py-1 text-xs text-zinc-600 transition hover:border-black hover:text-black {{ request()->get('category') === 'cleanser' ? 'bg-black text-white border-black' : '' }}">Cleanser</a>
+                                <a href="{{ request()->fullUrlWithQuery(['category' => 'toner']) }}" class="filter-chip rounded-full border border-zinc-200 px-3 py-1 text-xs text-zinc-600 transition hover:border-black hover:text-black {{ request()->get('category') === 'toner' ? 'bg-black text-white border-black' : '' }}">Toner</a>
+                                <a href="{{ request()->fullUrlWithQuery(['category' => 'sunscreen']) }}" class="filter-chip rounded-full border border-zinc-200 px-3 py-1 text-xs text-zinc-600 transition hover:border-black hover:text-black {{ request()->get('category') === 'sunscreen' ? 'bg-black text-white border-black' : '' }}">Sunscreen</a>
+                                <a href="{{ request()->fullUrlWithQuery(['category' => 'bundle']) }}" class="filter-chip rounded-full border border-zinc-200 px-3 py-1 text-xs text-zinc-600 transition hover:border-black hover:text-black {{ request()->get('category') === 'bundle' ? 'bg-black text-white border-black' : '' }}">Bundle</a>
                                 @if(request()->get('category'))
                                     <a href="{{ request()->fullUrlWithQuery(['category' => null]) }}" class="filter-chip rounded-full border border-zinc-200 px-3 py-1 text-xs text-rose-600 transition hover:border-rose-600 hover:text-rose-600">Clear</a>
                                 @endif
@@ -53,12 +56,11 @@
                                 <i class="fas fa-chevron-down text-xs text-zinc-400 transition-transform duration-200"></i>
                             </button>
                             <div class="filter-content mt-3 flex flex-wrap gap-2">
-                                <a href="{{ request()->fullUrlWithQuery(['brand' => 'Bullhijab']) }}" class="filter-chip rounded-full border border-zinc-200 px-3 py-1 text-xs text-zinc-600 transition hover:border-black hover:text-black {{ request()->get('brand') === 'Bullhijab' ? 'bg-black text-white border-black' : '' }}">Bullhijab</a>
-                                <a href="{{ request()->fullUrlWithQuery(['brand' => 'Babolat']) }}" class="filter-chip rounded-full border border-zinc-200 px-3 py-1 text-xs text-zinc-600 transition hover:border-black hover:text-black {{ request()->get('brand') === 'Babolat' ? 'bg-black text-white border-black' : '' }}">Babolat</a>
-                                <a href="{{ request()->fullUrlWithQuery(['brand' => 'Nox']) }}" class="filter-chip rounded-full border border-zinc-200 px-3 py-1 text-xs text-zinc-600 transition hover:border-black hover:text-black {{ request()->get('brand') === 'Nox' ? 'bg-black text-white border-black' : '' }}">Nox</a>
-                                <a href="{{ request()->fullUrlWithQuery(['brand' => 'Alpha']) }}" class="filter-chip rounded-full border border-zinc-200 px-3 py-1 text-xs text-zinc-600 transition hover:border-black hover:text-black {{ request()->get('brand') === 'Alpha' ? 'bg-black text-white border-black' : '' }}">Alpha</a>
-                                <a href="{{ request()->fullUrlWithQuery(['brand' => 'Zephyr']) }}" class="filter-chip rounded-full border border-zinc-200 px-3 py-1 text-xs text-zinc-600 transition hover:border-black hover:text-black {{ request()->get('brand') === 'Zephyr' ? 'bg-black text-white border-black' : '' }}">Zephyr</a>
-                                <a href="{{ request()->fullUrlWithQuery(['brand' => 'Arronax']) }}" class="filter-chip rounded-full border border-zinc-200 px-3 py-1 text-xs text-zinc-600 transition hover:border-black hover:text-black {{ request()->get('brand') === 'Arronax' ? 'bg-black text-white border-black' : '' }}">Arronax</a>
+                                <a href="{{ request()->fullUrlWithQuery(['brand' => 'LUMINA']) }}" class="filter-chip rounded-full border border-zinc-200 px-3 py-1 text-xs text-zinc-600 transition hover:border-black hover:text-black {{ request()->get('brand') === 'LUMINA' ? 'bg-black text-white border-black' : '' }}">LUMINA</a>
+                                <a href="{{ request()->fullUrlWithQuery(['brand' => 'Avoskin']) }}" class="filter-chip rounded-full border border-zinc-200 px-3 py-1 text-xs text-zinc-600 transition hover:border-black hover:text-black {{ request()->get('brand') === 'Avoskin' ? 'bg-black text-white border-black' : '' }}">Avoskin</a>
+                                <a href="{{ request()->fullUrlWithQuery(['brand' => 'Somethinc']) }}" class="filter-chip rounded-full border border-zinc-200 px-3 py-1 text-xs text-zinc-600 transition hover:border-black hover:text-black {{ request()->get('brand') === 'Somethinc' ? 'bg-black text-white border-black' : '' }}">Somethinc</a>
+                                <a href="{{ request()->fullUrlWithQuery(['brand' => 'COSRX']) }}" class="filter-chip rounded-full border border-zinc-200 px-3 py-1 text-xs text-zinc-600 transition hover:border-black hover:text-black {{ request()->get('brand') === 'COSRX' ? 'bg-black text-white border-black' : '' }}">COSRX</a>
+                                <a href="{{ request()->fullUrlWithQuery(['brand' => 'Skintific']) }}" class="filter-chip rounded-full border border-zinc-200 px-3 py-1 text-xs text-zinc-600 transition hover:border-black hover:text-black {{ request()->get('brand') === 'Skintific' ? 'bg-black text-white border-black' : '' }}">Skintific</a>
                                 @if(request()->get('brand'))
                                     <a href="{{ request()->fullUrlWithQuery(['brand' => null]) }}" class="filter-chip rounded-full border border-zinc-200 px-3 py-1 text-xs text-rose-600 transition hover:border-rose-600 hover:text-rose-600">Clear</a>
                                 @endif
@@ -121,18 +123,20 @@
                         <div class="flex gap-2 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                             <select id="filterBrand" class="px-2 py-1.5 border border-zinc-300 rounded-lg text-xs focus:outline-none focus:border-blue-500 transition bg-white shrink-0 min-w-[100px]" onchange="applyShopFilters()">
                                 <option value="">Brand</option>
-                                <option value="Bullhijab" {{ request()->get('brand') === 'Bullhijab' ? 'selected' : '' }}>Bullhijab</option>
-                                <option value="Babolat" {{ request()->get('brand') === 'Babolat' ? 'selected' : '' }}>Babolat</option>
-                                <option value="Nox" {{ request()->get('brand') === 'Nox' ? 'selected' : '' }}>Nox</option>
-                                <option value="Alpha" {{ request()->get('brand') === 'Alpha' ? 'selected' : '' }}>Alpha</option>
-                                <option value="Zephyr" {{ request()->get('brand') === 'Zephyr' ? 'selected' : '' }}>Zephyr</option>
-                                <option value="Arronax" {{ request()->get('brand') === 'Arronax' ? 'selected' : '' }}>Arronax</option>
+                                <option value="LUMINA" {{ request()->get('brand') === 'LUMINA' ? 'selected' : '' }}>LUMINA</option>
+                                <option value="Avoskin" {{ request()->get('brand') === 'Avoskin' ? 'selected' : '' }}>Avoskin</option>
+                                <option value="Somethinc" {{ request()->get('brand') === 'Somethinc' ? 'selected' : '' }}>Somethinc</option>
+                                <option value="COSRX" {{ request()->get('brand') === 'COSRX' ? 'selected' : '' }}>COSRX</option>
+                                <option value="Skintific" {{ request()->get('brand') === 'Skintific' ? 'selected' : '' }}>Skintific</option>
                             </select>
                             <select id="filterCategory" class="px-2 py-1.5 border border-zinc-300 rounded-lg text-xs focus:outline-none focus:border-blue-500 transition bg-white shrink-0 min-w-[100px]" onchange="applyShopFilters()">
                                 <option value="">Category</option>
-                                <option value="hijab" {{ request()->get('category') === 'hijab' ? 'selected' : '' }}>Hijab</option>
-                                <option value="shoes" {{ request()->get('category') === 'shoes' ? 'selected' : '' }}>Shoes</option>
-                                <option value="apparel" {{ request()->get('category') === 'apparel' ? 'selected' : '' }}>Accessories</option>
+                                <option value="serum" {{ request()->get('category') === 'serum' ? 'selected' : '' }}>Serum</option>
+                                <option value="moisturizer" {{ request()->get('category') === 'moisturizer' ? 'selected' : '' }}>Moisturizer</option>
+                                <option value="cleanser" {{ request()->get('category') === 'cleanser' ? 'selected' : '' }}>Cleanser</option>
+                                <option value="toner" {{ request()->get('category') === 'toner' ? 'selected' : '' }}>Toner</option>
+                                <option value="sunscreen" {{ request()->get('category') === 'sunscreen' ? 'selected' : '' }}>Sunscreen</option>
+                                <option value="bundle" {{ request()->get('category') === 'bundle' ? 'selected' : '' }}>Bundle</option>
                             </select>
                             <select id="filterPrice" class="px-2 py-1.5 border border-zinc-300 rounded-lg text-xs focus:outline-none focus:border-blue-500 transition bg-white shrink-0 min-w-[100px]" onchange="applyShopFilters()">
                                 <option value="">Price</option>

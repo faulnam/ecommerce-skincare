@@ -18,14 +18,19 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        \Illuminate\Support\Facades\Schema::disableForeignKeyConstraints();
+
         // Seed Users (Admin & Customer)
         $this->call(UserSeeder::class);
 
-        // Seed Vouchers
-        $this->call(VoucherSeeder::class);
+        // Seed Luxury Products (Must run before reviews)
+        $this->call(LuxuryProductSeeder::class);
 
         // Seed Reviews
         $this->call(ReviewSeeder::class);
+
+        // Seed Vouchers
+        $this->call(VoucherSeeder::class);
 
         // Seed Point Transactions
         $this->call(PointTransactionSeeder::class);
@@ -36,10 +41,9 @@ class DatabaseSeeder extends Seeder
         // Seed Banners & Models
         $this->call(BannerSeeder::class);
 
-        // Seed Luxury Products
-        $this->call(LuxuryProductSeeder::class);
-
-        //seed insights
+        // Seed Insights
         $this->call(InsightSeeder::class);
+
+        \Illuminate\Support\Facades\Schema::enableForeignKeyConstraints();
     }
 }

@@ -101,11 +101,15 @@ class Product extends Model
     }
 
     // Categories
-    const CATEGORY_HIJAB = 'hijab';
-    const CATEGORY_ACCESSORIES = 'accessories';
-    const CATEGORY_NEW_ARRIVALS = 'new-arrivals';
+    const CATEGORY_SERUM = 'Serum';
+    const CATEGORY_MOISTURIZER = 'Moisturizer';
+    const CATEGORY_CLEANSER = 'Cleanser';
+    const CATEGORY_TONER = 'Toner';
+    const CATEGORY_TREATMENT = 'Treatment';
+    const CATEGORY_SUNSCREEN = 'Sunscreen';
+    const CATEGORY_BUNDLE = 'Paket Bundel';
 
-    // Levels
+    // Levels / Skin Types
     const LEVEL_BEGINNER = 'beginner';
     const LEVEL_INTERMEDIATE = 'intermediate';
     const LEVEL_PRO = 'pro';
@@ -113,18 +117,21 @@ class Product extends Model
     public static function levels(): array
     {
         return [
-            self::LEVEL_BEGINNER => 'Beginner',
-            self::LEVEL_INTERMEDIATE => 'Intermediate',
-            self::LEVEL_PRO => 'Pro',
+            self::LEVEL_BEGINNER => 'All Skin Types',
+            self::LEVEL_INTERMEDIATE => 'Sensitive & Dry',
+            self::LEVEL_PRO => 'Oily & Acne Prone',
         ];
     }
 
     public static function categories(): array
     {
         return [
-            self::CATEGORY_HIJAB => 'Hijab',
-            self::CATEGORY_NEW_ARRIVALS => 'New Arrivals',
-            self::CATEGORY_ACCESSORIES => 'Accessories',
+            self::CATEGORY_SERUM => 'Serum & Treatment',
+            self::CATEGORY_MOISTURIZER => 'Moisturizer',
+            self::CATEGORY_CLEANSER => 'Cleanser',
+            self::CATEGORY_TONER => 'Toner & Essence',
+            self::CATEGORY_SUNSCREEN => 'Sunscreen',
+            self::CATEGORY_BUNDLE => 'Paket Bundel',
         ];
     }
 

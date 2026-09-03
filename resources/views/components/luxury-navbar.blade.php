@@ -15,16 +15,14 @@
         }
     </style>
     <div class="whitespace-nowrap animate-marquee flex gap-12 items-center font-bold uppercase text-gray-600" style="font-size: 10px; letter-spacing: 0.2em;">
-        <span>Koleksi Terbaru Sudah Tersedia</span>
-        <span>Pengiriman Ke Seluruh Indonesia</span>
-        <span>Koleksi Terbaru Sudah Tersedia</span>
-        <span>Pengiriman Ke Seluruh Indonesia</span>
-        <span>Koleksi Terbaru Sudah Tersedia</span>
-        <span>Pengiriman Ke Seluruh Indonesia</span>
-        <span>Koleksi Terbaru Sudah Tersedia</span>
-        <span>Pengiriman Ke Seluruh Indonesia</span>
-        <span>Koleksi Terbaru Sudah Tersedia</span>
-        <span>Pengiriman Ke Seluruh Indonesia</span>
+        <span>Koleksi Skincare Terbaru Sudah Tersedia</span>
+        <span>Gratis Ongkir Ke Seluruh Indonesia</span>
+        <span>100% Produk Original & Teruji BPOM</span>
+        <span>Konsultasi Kulit Gratis Bersama Beauty Advisor</span>
+        <span>Koleksi Skincare Terbaru Sudah Tersedia</span>
+        <span>Gratis Ongkir Ke Seluruh Indonesia</span>
+        <span>100% Produk Original & Teruji BPOM</span>
+        <span>Konsultasi Kulit Gratis Bersama Beauty Advisor</span>
     </div>
 </div>
 
@@ -74,7 +72,7 @@
         <!-- Desktop Only -->
         <div class="hidden lg:flex">
             <a href="{{ route('home') }}" class="flex items-center w-fit group" style="gap: 2px;">
-                <span class="text-3xl text-black leading-none tracking-widest group-hover:text-gray-600 transition-colors" style="font-family: 'Playfair Display', serif; font-weight: 800;">HIJAB</span>
+                <span class="text-3xl text-black leading-none tracking-widest group-hover:text-gray-600 transition-colors" style="font-family: 'Playfair Display', serif; font-weight: 800;">LUMINA</span>
             </a>
         </div>
     </div>
@@ -84,7 +82,7 @@
         <!-- Mobile Only -->
         <div class="flex lg:hidden">
             <a href="{{ route('home') }}" class="flex items-center w-fit group" style="gap: 2px;">
-                <span class="text-3xl text-black leading-none tracking-widest group-hover:text-gray-600 transition-colors" style="font-family: 'Playfair Display', serif; font-weight: 800;">HIJAB</span>
+                <span class="text-3xl text-black leading-none tracking-widest group-hover:text-gray-600 transition-colors" style="font-family: 'Playfair Display', serif; font-weight: 800;">LUMINA</span>
             </a>
         </div>
         <!-- Desktop Only -->
@@ -165,7 +163,7 @@
         </div>
         <!-- Center: Logo -->
         <div class="flex-[2] flex justify-center">
-            <span class="text-3xl text-black leading-none tracking-widest" style="font-family: 'Playfair Display', serif; font-weight: 800;">HIJAB</span>
+            <span class="text-3xl text-black leading-none tracking-widest" style="font-family: 'Playfair Display', serif; font-weight: 800;">LUMINA</span>
         </div>
         <!-- Right: Wishlist & Cart -->
         <div class="flex flex-1 justify-end items-center gap-3 text-black">

@@ -11,7 +11,7 @@ return [
     |
     */
 
-    'name' => env('BRAND_NAME', 'Hijab'),
+    'name' => env('BRAND_NAME', 'LUMINA Skincare'),
 
     /*
     |--------------------------------------------------------------------------
@@ -22,7 +22,7 @@ return [
     |
     */
 
-    'tagline' => env('BRAND_TAGLINE', 'Performa Maksimal, Game Makin Total'),
+    'tagline' => env('BRAND_TAGLINE', 'Perawatan Kulit Terpercaya untuk Kilau Alami & Sehat'),
 
     /*
     |--------------------------------------------------------------------------
@@ -37,13 +37,13 @@ return [
     |
     */
 
-    'logo' => env('BRAND_LOGO', 'storage/logo.png'),
+    'logo' => env('BRAND_LOGO', 'images/logo.png'),
 
-    'logo_dark' => env('BRAND_LOGO_DARK', 'storage/logo.png'),
+    'logo_dark' => env('BRAND_LOGO_DARK', 'images/logo.png'),
 
-    'logo_white' => env('BRAND_LOGO_WHITE', 'storage/logo.png'),
+    'logo_white' => env('BRAND_LOGO_WHITE', 'images/logo.png'),
     
-    'favicon' => env('BRAND_FAVICON', 'images/hijab-hijab-favicon.svg'),
+    'favicon' => env('BRAND_FAVICON', 'images/lumina-skincare-favicon.svg'),
 
     /*
     |--------------------------------------------------------------------------
@@ -67,9 +67,9 @@ return [
     |--------------------------------------------------------------------------
     */
 
-    'email' => env('BRAND_EMAIL', 'hello@hijab.id'),
-    'phone' => env('BRAND_PHONE', '+62 812 7788 9900'),
-    'address' => env('BRAND_ADDRESS', 'Jl. Hijab Arena No. 21, Surabaya'),
+    'email' => env('BRAND_EMAIL', 'hello@luminaskincare.id'),
+    'phone' => env('BRAND_PHONE', '+62 812 3456 7890'),
+    'address' => env('BRAND_ADDRESS', 'Lumina Beauty Tower Lt. 5, Jl. Darmo No. 88, Surabaya, Jawa Timur'),
 
     /*
     |--------------------------------------------------------------------------
@@ -91,9 +91,9 @@ return [
     */
 
     'social' => [
-        'instagram' => env('BRAND_INSTAGRAM', '@hijab.id'),
-        'facebook' => env('BRAND_FACEBOOK', ''),
-        'whatsapp' => env('BRAND_WHATSAPP', '6281277889900'),
+        'instagram' => env('BRAND_INSTAGRAM', '@luminaskincare.id'),
+        'facebook' => env('BRAND_FACEBOOK', 'luminaskincare.official'),
+        'whatsapp' => env('BRAND_WHATSAPP', '6281234567890'),
     ],
 
     /*
@@ -107,9 +107,9 @@ return [
     |
     */
     'home_mobile_slides' => [
-        env('HOME_MOBILE_SLIDE_1', 'storage/2.png'),
-        env('HOME_MOBILE_SLIDE_2', 'storage/shoes.png'),
-        env('HOME_MOBILE_SLIDE_3', 'storage/3.png'),
+        env('HOME_MOBILE_SLIDE_1', 'storage/banner-1.jpg'),
+        env('HOME_MOBILE_SLIDE_2', 'storage/banner-2.jpg'),
+        env('HOME_MOBILE_SLIDE_3', 'storage/banner-3.jpg'),
     ],
 
 ];

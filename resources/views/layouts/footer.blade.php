@@ -49,16 +49,16 @@
                     {{ $common['footer']['sections']['social_media'][$lang] ?? 'Media Sosial' }}
                 </h3>
                 <div class="mt-4 flex gap-3">
-                    <a href="https://www.instagram.com/hijab/" target="_blank" rel="noopener" class="flex h-9 w-9 items-center justify-center rounded-full bg-black/5 text-black transition-all duration-200 hover:bg-zinc-200">
+                    <a href="https://www.instagram.com/luminaskincare.id/" target="_blank" rel="noopener" class="flex h-9 w-9 items-center justify-center rounded-full bg-black/5 text-black transition-all duration-200 hover:bg-zinc-200">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://www.tiktok.com/@hijab" target="_blank" rel="noopener" class="flex h-9 w-9 items-center justify-center rounded-full bg-black/5 text-black transition-all duration-200 hover:bg-zinc-200">
+                    <a href="https://www.tiktok.com/@luminaskincare" target="_blank" rel="noopener" class="flex h-9 w-9 items-center justify-center rounded-full bg-black/5 text-black transition-all duration-200 hover:bg-zinc-200">
                         <i class="fab fa-tiktok"></i>
                     </a>
-                    <a href="https://shopee.co.id/hijabds" target="_blank" rel="noopener" class="flex h-9 w-9 items-center justify-center rounded-full bg-black/5 text-black transition-all duration-200 hover:bg-zinc-200">
+                    <a href="https://shopee.co.id/luminaskincare" target="_blank" rel="noopener" class="flex h-9 w-9 items-center justify-center rounded-full bg-black/5 text-black transition-all duration-200 hover:bg-zinc-200">
                         <i class="fas fa-shopping-bag"></i>
                     </a>
-                    <a href="https://wa.me/6285117358568" target="_blank" rel="noopener" class="flex h-9 w-9 items-center justify-center rounded-full bg-black/5 text-black transition-all duration-200 hover:bg-zinc-200">
+                    <a href="https://wa.me/6281234567890" target="_blank" rel="noopener" class="flex h-9 w-9 items-center justify-center rounded-full bg-black/5 text-black transition-all duration-200 hover:bg-zinc-200">
                         <i class="fab fa-whatsapp"></i>
                     </a>
                 </div>
@@ -89,7 +89,7 @@
                 <ul class="mt-3 space-y-2.5 text-sm">
                     <li><a href="{{ route('policy') }}" class="inline-flex transition-colors duration-200 hover:text-black">{{ $common['footer']['links']['policy'][$lang] ?? 'Policy' }}</a></li>
                     <li><a href="{{ route('return-refund') }}" class="inline-flex transition-colors duration-200 hover:text-black">{{ $common['footer']['links']['return_refund'][$lang] ?? 'Return & Refund' }}</a></li>
-                    <li><a href="{{ route('guarantee') }}" class="inline-flex transition-colors duration-200 hover:text-black">{{ $common['footer']['links']['guarantee'][$lang] ?? 'Hijab Guarantee' }}</a></li>
+                    <li><a href="{{ route('guarantee') }}" class="inline-flex transition-colors duration-200 hover:text-black">{{ $common['footer']['links']['guarantee'][$lang] ?? 'BPOM & Quality Guarantee' }}</a></li>
                     <li><a href="{{ route('help-center') }}" class="inline-flex transition-colors duration-200 hover:text-black">{{ $common['footer']['links']['help_center'][$lang] ?? 'Help Center' }}</a></li>
                     <li><a href="{{ route('contact') }}" class="inline-flex transition-colors duration-200 hover:text-black">{{ $common['footer']['links']['contact'][$lang] ?? 'Contact' }}</a></li>
                 </ul>
@@ -114,16 +114,16 @@
                     <i class="fas fa-chevron-down text-[10px] text-zinc-500 transition group-open:rotate-180"></i>
                 </summary>
                 <div class="mt-3 flex gap-3">
-                    <a href="https://www.instagram.com/hijab/" target="_blank" rel="noopener" class="flex h-9 w-9 items-center justify-center rounded-full bg-black/5 text-black transition-all duration-200 hover:bg-zinc-200">
+                    <a href="https://www.instagram.com/luminaskincare.id/" target="_blank" rel="noopener" class="flex h-9 w-9 items-center justify-center rounded-full bg-black/5 text-black transition-all duration-200 hover:bg-zinc-200">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://www.tiktok.com/@hijab" target="_blank" rel="noopener" class="flex h-9 w-9 items-center justify-center rounded-full bg-black/5 text-black transition-all duration-200 hover:bg-zinc-200">
+                    <a href="https://www.tiktok.com/@luminaskincare" target="_blank" rel="noopener" class="flex h-9 w-9 items-center justify-center rounded-full bg-black/5 text-black transition-all duration-200 hover:bg-zinc-200">
                         <i class="fab fa-tiktok"></i>
                     </a>
-                    <a href="https://shopee.co.id/hijabds" target="_blank" rel="noopener" class="flex h-9 w-9 items-center justify-center rounded-full bg-black/5 text-black transition-all duration-200 hover:bg-zinc-200">
+                    <a href="https://shopee.co.id/luminaskincare" target="_blank" rel="noopener" class="flex h-9 w-9 items-center justify-center rounded-full bg-black/5 text-black transition-all duration-200 hover:bg-zinc-200">
                         <i class="fas fa-shopping-bag"></i>
                     </a>
-                    <a href="https://wa.me/6285117358568" target="_blank" rel="noopener" class="flex h-9 w-9 items-center justify-center rounded-full bg-black/5 text-black transition-all duration-200 hover:bg-zinc-200">
+                    <a href="https://wa.me/6281234567890" target="_blank" rel="noopener" class="flex h-9 w-9 items-center justify-center rounded-full bg-black/5 text-black transition-all duration-200 hover:bg-zinc-200">
                         <i class="fab fa-whatsapp"></i>
                     </a>
                 </div>
@@ -154,7 +154,7 @@
 
         <!-- Copyright Section -->
         <div class="mt-6 border-t border-black/10 pt-4 text-center text-sm text-zinc-500">
-            {{ $common['footer']['copyright'][$lang] ?? '© ' . now()->year . ' Hijab. All rights reserved.' }}
+            {{ $common['footer']['copyright'][$lang] ?? '© ' . now()->year . ' LUMINA Skincare. All rights reserved.' }}
         </div>
     </div>
 </footer>

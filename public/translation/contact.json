@@ -1,24 +1,66 @@
 {
-  "contact_page": {
-    "header": {
-      "support": { "id": "Bantuan", "en": "Support" },
-      "title": { "id": "Kontak", "en": "Contact" },
-      "subtitle": {
-        "id": "Punya pertanyaan atau butuh bantuan? Kirimkan pesan Anda dan tim kami akan segera merespons.",
-        "en": "Have a question or need assistance? Drop us a message and our team will get back to you promptly."
-      }
+    "contact_page": {
+        "header": {
+            "support": {
+                "id": "Bantuan",
+                "en": "Support"
+            },
+            "title": {
+                "id": "Kontak",
+                "en": "Contact"
+            },
+            "subtitle": {
+                "id": "Punya pertanyaan atau butuh bantuan? Kirimkan pesan Anda dan tim kami akan segera merespons.",
+                "en": "Have a question or need assistance? Drop us a message and our team will get back to you promptly."
+            }
+        },
+        "info_section": {
+            "title": {
+                "id": "Informasi Kontak",
+                "en": "Contact Information"
+            },
+            "address_label": {
+                "id": "Alamat",
+                "en": "Address"
+            },
+            "address_detail": {
+                "id": "Citraland, Surabaya, Jawa Timur, Indonesia",
+                "en": "Citraland, Surabaya, East Java, Indonesia"
+            }
+        },
+        "form": {
+            "label_name": {
+                "id": "Nama",
+                "en": "Name"
+            },
+            "label_email": {
+                "id": "Email",
+                "en": "Email"
+            },
+            "label_subject": {
+                "id": "Subjek",
+                "en": "Subject"
+            },
+            "label_message": {
+                "id": "Pesan",
+                "en": "Message"
+            },
+            "btn_send": {
+                "id": "Kirim Pesan",
+                "en": "Send Message"
+            }
+        }
     },
-    "info_section": {
-      "title": { "id": "Informasi Kontak", "en": "Contact Information" },
-      "address_label": { "id": "Alamat", "en": "Address" },
-      "address_detail": { "id": "Citraland, Surabaya, Jawa Timur, Indonesia", "en": "Citraland, Surabaya, East Java, Indonesia" }
+    "meta_title": {
+        "id": "Kontak - LUMINA Skincare",
+        "en": "Contact - LUMINA Skincare"
     },
-    "form": {
-      "label_name": { "id": "Nama", "en": "Name" },
-      "label_email": { "id": "Email", "en": "Email" },
-      "label_subject": { "id": "Subjek", "en": "Subject" },
-      "label_message": { "id": "Pesan", "en": "Message" },
-      "btn_send": { "id": "Kirim Pesan", "en": "Send Message" }
+    "hero_title": {
+        "id": "Hubungi LUMINA Skincare",
+        "en": "Contact LUMINA Skincare"
+    },
+    "hero_desc": {
+        "id": "Punya pertanyaan seputar produk, pesanan, atau konsultasi kondisi kulit? Hubungi tim kami sekarang.",
+        "en": "Have questions about products, orders, or need a skin consultation? Get in touch with our team today."
     }
-  }
 }

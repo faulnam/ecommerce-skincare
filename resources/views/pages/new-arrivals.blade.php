@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', $newarrivals['page_new_arrivals']['meta_title'][$lang] ?? 'New Arrivals - Hijab')
-@section('og_description', $newarrivals['page_new_arrivals']['meta_description'][$lang] ?? 'Produk hijab terbaru di Hijab. Dapatkan koleksi hijab, sepatu, dan aksesoris terkini sebelum kehabisan.')
+@section('title', $newarrivals['page_new_arrivals']['meta_title'][$lang] ?? 'New Arrivals - LUMINA Skincare')
+@section('og_description', $newarrivals['page_new_arrivals']['meta_description'][$lang] ?? 'Produk skincare terbaru di LUMINA Skincare. Dapatkan koleksi serum, toner, moisturizer, dan sunscreen terkini sebelum kehabisan.')
 
 @push('og_extra')
 <script type="application/ld+json">
@@ -9,8 +9,8 @@
   "@@context": "https://schema.org",
   "@type": "CollectionPage",
   "url": "{{ url()->current() }}",
-  "name": "{{ $lang === 'id' ? 'Produk Terbaru — Hijab' : 'New Arrivals — Hijab' }}",
-  "description": "{{ $lang === 'id' ? 'Temukan koleksi peralatan hijab premium terbaru kami.' : 'Discover our newest premium hijab equipment collection.' }}",
+  "name": "{{ $lang === 'id' ? 'Produk Terbaru — LUMINA Skincare' : 'New Arrivals — LUMINA Skincare' }}",
+  "description": "{{ $lang === 'id' ? 'Temukan rangkaian produk perawatan kulit premium terbaru kami.' : 'Discover our newest premium skincare collection.' }}",
   "inLanguage": "{{ $lang === 'id' ? 'id-ID' : 'en-US' }}",
   "isPartOf": { "@id": "{{ url('/') }}/#website" },
   "publisher": { "@id": "{{ url('/') }}/#organization" }

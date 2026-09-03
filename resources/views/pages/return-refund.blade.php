@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Return & Refund - Hijab')
-@section('og_description', 'Kebijakan retur dan refund Hijab. Proses pengembalian produk yang mudah, cepat, dan transparan.')
+@section('title', 'Return & Refund - LUMINA Skincare')
+@section('og_description', 'Kebijakan retur dan refund LUMINA Skincare. Proses pengembalian produk yang mudah, aman, dan transparan.')
 
 @push('og_extra')
 <script type="application/ld+json">
@@ -56,14 +56,14 @@
                         <h2 class="mt-6 text-lg font-semibold text-black">{{ $rrTrans['title_non_returnable'][$lang] ?? '2. Non-Returnable Items' }}</h2>
                         <p class="mt-2">{{ $rrTrans['desc_non_returnable'][$lang] ?? 'The following items cannot be returned:' }}</p>
                         <ul class="mt-2 list-disc pl-5">
-                            <li>{{ $rrTrans['item_consumable'][$lang] ?? 'Grips, overgrips, and other consumable accessories that have been opened or used' }}</li>
-                            <li>{{ $rrTrans['item_custom'][$lang] ?? 'Custom strung hijabs at customer specification' }}</li>
+                            <li>{{ $rrTrans['item_consumable'][$lang] ?? 'Produk skincare yang segelnya telah rusak atau kemasan telah dibuka' }}</li>
+                            <li>{{ $rrTrans['item_custom'][$lang] ?? 'Item tester, free sample, atau produk promosi bundling diskon final' }}</li>
                             <li>{{ $rrTrans['item_sale'][$lang] ?? 'Items marked as "Final Sale" or "Clearance"' }}</li>
                             <li>{{ $rrTrans['item_vouchers'][$lang] ?? 'Gift cards and promotional vouchers' }}</li>
                         </ul>
 
                         <h2 class="mt-6 text-lg font-semibold text-black">{{ $rrTrans['title_how_to'][$lang] ?? '3. How to Request a Return' }}</h2>
-                        <p class="mt-2 text-justify">{!! nl2br(e(str_replace(':phone', $brandingPhone, $rrTrans['desc_how_to'][$lang] ?? 'To initiate a return, please contact our customer service team via WhatsApp at ' . $brandingPhone . ' or email at support@hijab.com with your order number and reason for return. We will provide you with a return authorization and instructions.'))) !!}</p>
+                        <p class="mt-2 text-justify">{!! nl2br(e(str_replace(':phone', $brandingPhone, $rrTrans['desc_how_to'][$lang] ?? 'To initiate a return, please contact our customer service team via WhatsApp at ' . $brandingPhone . ' or email at support@luminaskincare.id with your order number and reason for return. We will provide you with a return authorization and instructions.'))) !!}</p>
 
                         <h2 class="mt-6 text-lg font-semibold text-black">{{ $rrTrans['title_process'][$lang] ?? '4. Refund Process' }}</h2>
                         <p class="mt-2 text-justify">{!! nl2br(e($rrTrans['desc_process'][$lang] ?? 'Once we receive and inspect your returned item, we will notify you of the approval or rejection of your refund. If approved, your refund will be processed within 5-7 business days to your original payment method. Shipping costs for returns are the responsibility of the customer unless the item was defective or incorrect.')) !!}</p>
@@ -75,7 +75,7 @@
                         <p class="mt-2 text-justify">{!! nl2br(e($rrTrans['desc_damaged'][$lang] ?? 'If you receive a damaged or incorrect item, please contact us within 48 hours of delivery with photos. We will arrange a replacement or full refund at no additional cost, including return shipping.')) !!}</p>
 
                         <h2 class="mt-6 text-lg font-semibold text-black">{{ $rrTrans['title_contact'][$lang] ?? '7. Contact Us' }}</h2>
-                        <p class="mt-2 text-justify">{!! nl2br(e(str_replace(':phone', $brandingPhone, $rrTrans['desc_contact'][$lang] ?? 'For any return or refund inquiries, reach out to us at support@hijab.com or WhatsApp ' . $brandingPhone . '. Our team is available Monday-Saturday, 9 AM - 6 PM WIB.'))) !!}</p>
+                        <p class="mt-2 text-justify">{!! nl2br(e(str_replace(':phone', $brandingPhone, $rrTrans['desc_contact'][$lang] ?? 'For any return or refund inquiries, reach out to us at support@luminaskincare.id or WhatsApp ' . $brandingPhone . '. Our team is available Monday-Saturday, 9 AM - 6 PM WIB.'))) !!}</p>
                     </div>
                 </div>
             </section>

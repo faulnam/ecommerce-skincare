@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Kontak - Hijab')
-@section('og_description', 'Hubungi Hijab untuk pertanyaan produk, pesanan, dan informasi lainnya. Kami siap membantu kamu!')
+@section('title', 'Kontak - LUMINA Skincare')
+@section('og_description', 'Hubungi LUMINA Skincare untuk pertanyaan produk, pesanan, dan konsultasi jenis kulit. Kami siap membantu kamu!')
 
 @push('og_extra')
 <script type="application/ld+json">
@@ -9,8 +9,8 @@
   "@@context": "https://schema.org",
   "@type": "ContactPage",
   "url": "{{ url()->current() }}",
-  "name": "Hubungi Kami",
-  "description": "Kirim pertanyaan Anda. Kami akan merespons sesegera mungkin selama jam kerja.",
+  "name": "Hubungi Kami — LUMINA Skincare",
+  "description": "Kirim pertanyaan atau konsultasi kulit Anda. Beauty Advisor kami akan merespons sesegera mungkin.",
   "inLanguage": "id-ID",
   "isPartOf": { "@id": "{{ url('/') }}/#website" },
   "mainEntity": {
@@ -19,7 +19,7 @@
     "contactPoint": [
       {
         "@type": "ContactPoint",
-        "telephone": "+62-812-7788-9900",
+        "telephone": "+62-812-3456-7890",
         "contactType": "customer service",
         "contactOption": "TollFree",
         "availableLanguage": ["Indonesian"],
@@ -32,7 +32,7 @@
       },
       {
         "@type": "ContactPoint",
-        "email": "support@hijab.com",
+        "email": "support@luminaskincare.id",
         "contactType": "customer support"
       }
     ]
