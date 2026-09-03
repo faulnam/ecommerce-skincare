@@ -250,7 +250,7 @@
         // Create toast element
         const toast = document.createElement('div');
         toast.className = 'bg-white border-l-4 border-green-500 shadow-lg rounded px-4 py-3 flex items-center transform transition-all duration-300 translate-x-full opacity-0';
-        toast.style.fontFamily = "'Inter', sans-serif";
+        toast.style.fontFamily = "Arial, 'Helvetica Neue', Helvetica, sans-serif";
         toast.style.minWidth = "250px";
         
         toast.innerHTML = `
@@ -300,7 +300,7 @@
             <div class="flex-1 p-4 flex flex-col justify-between" style="background-color: #ffffff;">
                 <div>
                     <div class="flex items-center gap-2 mb-1.5">
-                        <span class="inline-block text-[10px] font-bold tracking-wider uppercase px-2.5 py-0.5 rounded-full" style="background-color: #EBF3EE; color: #2D4C41; font-family: 'Inter', sans-serif;">
+                        <span class="inline-block text-[10px] font-bold tracking-wider uppercase px-2.5 py-0.5 rounded-full" style="background-color: #EBF3EE; color: #2D4C41; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;">
                             @if($voucher->type === 'percent')
                                 DISKON {{ intval($voucher->discount_value) }}%
                             @elseif($voucher->type === 'fixed')
@@ -310,15 +310,15 @@
                             @endif
                         </span>
                     </div>
-                    <h3 class="text-[14px] font-bold text-gray-900 leading-tight truncate mb-1" style="font-family: 'Inter', sans-serif;" title="{{ $voucher->title }}">{{ $voucher->title }}</h3>
-                    <p class="text-xs text-gray-500 mb-2" style="font-family: 'Inter', sans-serif;">Min. belanja Rp{{ number_format($voucher->minimum_purchase, 0, ',', '.') }}</p>
+                    <h3 class="text-[14px] font-bold text-gray-900 leading-tight truncate mb-1" style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;" title="{{ $voucher->title }}">{{ $voucher->title }}</h3>
+                    <p class="text-xs text-gray-500 mb-2" style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;">Min. belanja Rp{{ number_format($voucher->minimum_purchase, 0, ',', '.') }}</p>
                 </div>
                 
                 <div>
                     <div class="w-full bg-gray-100 rounded-full h-1.5 mb-1.5 overflow-hidden">
                         <div class="h-1.5 rounded-full transition-all" style="background-color: #2D4C41; width: {{ max(10, min(100, $voucher->quota_percentage)) }}%;"></div>
                     </div>
-                    <div class="flex items-center justify-between text-[10px] text-gray-400" style="font-family: 'Inter', sans-serif;">
+                    <div class="flex items-center justify-between text-[10px] text-gray-400" style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;">
                         <span>Sisa: <strong class="text-gray-600 font-semibold">{{ $voucher->remaining_quota }}</strong></span>
                         <span>Berlaku s/d {{ $voucher->end_date->format('d.m.Y') }}</span>
                     </div>
@@ -330,11 +330,11 @@
             
             <!-- Right Section (Stub & Action) -->
             <div class="w-24 shrink-0 flex flex-col items-center justify-center p-3 text-center" style="background-color: #FAF8F5;">
-                <span class="text-[9px] font-bold uppercase tracking-wider text-gray-400 mb-1" style="font-family: 'Inter', sans-serif;">KODE</span>
+                <span class="text-[9px] font-bold uppercase tracking-wider text-gray-400 mb-1" style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;">KODE</span>
                 <span class="font-mono font-bold text-[11px] text-gray-900 bg-white border border-gray-200 rounded px-1.5 py-0.5 mb-2.5 tracking-wider select-all shadow-2xs w-full block truncate">
                     {{ $voucher->code }}
                 </span>
-                <button onclick="claimVoucher('{{ $voucher->code }}')" class="inline-flex items-center justify-center gap-1 w-full py-1.5 rounded-md text-[11px] font-semibold text-white transition-all hover:opacity-90 active:scale-95 shadow-xs cursor-pointer" style="background-color: #2D4C41; font-family: 'Inter', sans-serif;" title="Klaim Kode Voucher">
+                <button onclick="claimVoucher('{{ $voucher->code }}')" class="inline-flex items-center justify-center gap-1 w-full py-1.5 rounded-md text-[11px] font-semibold text-white transition-all hover:opacity-90 active:scale-95 shadow-xs cursor-pointer" style="background-color: #2D4C41; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;" title="Klaim Kode Voucher">
                     <i class="far fa-copy text-[10px]"></i> Klaim
                 </button>
             </div>
@@ -797,7 +797,7 @@
         margin-bottom: 1rem;
     }
     .testimonial-text {
-        font-family: 'Inter', sans-serif;
+        font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
         color: #4b5563;
         font-size: 0.95rem;
         line-height: 1.6;
@@ -818,26 +818,26 @@
         align-items: center;
         justify-content: center;
         font-weight: bold;
-        font-family: 'Inter', sans-serif;
+        font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
     }
     .testimonial-name {
-        font-family: 'Inter', sans-serif;
+        font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
         font-weight: 600;
         color: #111;
         font-size: 0.9rem;
     }
     .testimonial-role {
-        font-family: 'Inter', sans-serif;
+        font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
         color: #9ca3af;
         font-size: 0.8rem;
     }
 </style>
 <section class="py-16 md:py-24 bg-white overflow-hidden">
     <div class="text-center mb-12 px-4">
-        <h2 class="font-bold text-black" style="font-size: clamp(2rem, 3.5vw, 2.5rem); line-height: 1.1; font-family: 'Inter', sans-serif; letter-spacing: -0.02em;">
+        <h2 class="font-bold text-black" style="font-size: clamp(2rem, 3.5vw, 2.5rem); line-height: 1.1; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; letter-spacing: -0.02em;">
             Apa Kata Mereka
         </h2>
-        <p class="text-gray-500 mt-4" style="font-family: 'Inter', sans-serif;">Ulasan jujur dari pelanggan setia mengenai hasil nyata perawatan kulit bersama LUMINA Skincare.</p>
+        <p class="text-gray-500 mt-4" style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;">Ulasan jujur dari pelanggan setia mengenai hasil nyata perawatan kulit bersama LUMINA Skincare.</p>
     </div>
     
     <div class="testimonial-marquee-wrapper">
@@ -969,18 +969,18 @@
 
 <!-- CTA SECTION -->
 <section class="mx-auto text-center py-16 px-6 sm:py-24" style="max-width: 950px;">
-    <h2 class="font-bold tracking-tight text-black" style="font-size: clamp(2rem, 4vw, 3rem); line-height: 1.2; margin-bottom: 1rem; font-family: 'Inter', sans-serif;">
+    <h2 class="font-bold tracking-tight text-black" style="font-size: clamp(2rem, 4vw, 3rem); line-height: 1.2; margin-bottom: 1rem; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;">
         Waktunya Menyayangi Kulitmu & Tampil <br class="hidden sm:block">
         <span style="color: #2D4C41; font-style: italic;">Glowing Alami</span>
     </h2>
-    <p class="text-gray-500 leading-relaxed mx-auto" style="max-width: 800px; font-size: 1rem; margin-bottom: 2.5rem; font-family: 'Inter', sans-serif;">
+    <p class="text-gray-500 leading-relaxed mx-auto" style="max-width: 800px; font-size: 1rem; margin-bottom: 2.5rem; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;">
         Temukan rangkaian skincare premium dengan formulasi dermatologis teruji klinis dan bersertifikasi BPOM. Dapatkan jaminan 100% original serta konsultasi gratis bersama Beauty Advisor kami.
     </p>
     <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-        <a href="{{ route('produk.index') }}" class="inline-flex items-center justify-center rounded-full text-white font-medium transition-all" style="background-color: #18181b; padding: 14px 32px; font-size: 0.95rem; min-width: 180px; font-family: 'Inter', sans-serif; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);" onmouseover="this.style.transform='translateY(-2px)';" onmouseout="this.style.transform='translateY(0)';">
+        <a href="{{ route('produk.index') }}" class="inline-flex items-center justify-center rounded-full text-white font-medium transition-all" style="background-color: #18181b; padding: 14px 32px; font-size: 0.95rem; min-width: 180px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);" onmouseover="this.style.transform='translateY(-2px)';" onmouseout="this.style.transform='translateY(0)';">
             Belanja Sekarang <span style="margin-left: 8px;">&rarr;</span>
         </a>
-        <a href="{{ route('login') }}" class="inline-flex items-center justify-center rounded-full text-black font-medium transition-all" style="background-color: #fff; padding: 14px 32px; font-size: 0.95rem; border: 1px solid #e4e4e7; min-width: 180px; font-family: 'Inter', sans-serif;" onmouseover="this.style.backgroundColor='#f4f4f5';" onmouseout="this.style.backgroundColor='#fff';">
+        <a href="{{ route('login') }}" class="inline-flex items-center justify-center rounded-full text-black font-medium transition-all" style="background-color: #fff; padding: 14px 32px; font-size: 0.95rem; border: 1px solid #e4e4e7; min-width: 180px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;" onmouseover="this.style.backgroundColor='#f4f4f5';" onmouseout="this.style.backgroundColor='#fff';">
             Masuk Akun <span style="margin-left: 8px; color: #71717a;">&rarr;</span>
         </a>
     </div>

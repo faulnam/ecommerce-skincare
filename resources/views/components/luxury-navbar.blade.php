@@ -177,7 +177,7 @@
     </div>
     
     <!-- Menu Links -->
-    <div class="flex flex-col px-6 py-4 overflow-y-auto bg-white flex-1" style="font-family: 'Inter', sans-serif;">
+    <div class="flex flex-col px-6 py-4 overflow-y-auto bg-white flex-1" style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;">
         <a href="{{ route('home') }}" class="py-4 border-b border-gray-100 text-[13px] font-semibold tracking-wider text-black flex justify-between items-center hover:bg-gray-50">
             BERANDA
         </a>

@@ -28,7 +28,7 @@
         }
         
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
         }
     </style>
     

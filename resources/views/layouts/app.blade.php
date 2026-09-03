@@ -117,8 +117,11 @@
             box-sizing: border-box;
         }
         
+        body, button, input, select, textarea, h1, h2, h3, h4, h5, h6, .font-heading {
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+        
         body {
-            font-family: 'Inter', sans-serif;
             background-color: var(--off-white);
             color: var(--dark);
             line-height: 1.6;
@@ -919,7 +922,7 @@
         border-radius: 12px;
         font-size: 14px;
         font-weight: 500;
-        font-family: 'Inter', sans-serif;
+        font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
         display: flex;
         align-items: center;
         gap: 10px;
@@ -954,7 +957,7 @@
             t.style.borderRadius = '12px';
             t.style.fontSize = '14px';
             t.style.fontWeight = '500';
-            t.style.fontFamily = "'Inter', sans-serif";
+            t.style.fontFamily = "Arial, 'Helvetica Neue', Helvetica, sans-serif";
             t.style.display = 'flex';
             t.style.alignItems = 'center';
             t.style.gap = '10px';
