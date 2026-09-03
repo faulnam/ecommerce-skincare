@@ -108,6 +108,10 @@ class Product extends Model
     const CATEGORY_TREATMENT = 'Treatment';
     const CATEGORY_SUNSCREEN = 'Sunscreen';
     const CATEGORY_BUNDLE = 'Paket Bundel';
+    // Legacy aliases
+    const CATEGORY_HIJAB = 'Serum';
+    const CATEGORY_ACCESSORIES = 'Sunscreen';
+    const CATEGORY_NEW_ARRIVALS = 'Serum';
 
     // Levels / Skin Types
     const LEVEL_BEGINNER = 'beginner';

@@ -324,15 +324,26 @@ class PageController extends Controller
         }
 
         if ($request->filled('category')) {
+            $catInput = strtolower($request->category);
             $categoryMap = [
-                'new-arrivals' => Product::CATEGORY_NEW_ARRIVALS,
-                'hijab' => Product::CATEGORY_HIJAB,
-                'shoes' => Product::CATEGORY_ACCESSORIES,
-                'accessories' => Product::CATEGORY_ACCESSORIES,
+                'serum' => Product::CATEGORY_SERUM,
+                'moisturizer' => Product::CATEGORY_MOISTURIZER,
+                'cleanser' => Product::CATEGORY_CLEANSER,
+                'toner' => Product::CATEGORY_TONER,
+                'sunscreen' => Product::CATEGORY_SUNSCREEN,
+                'bundle' => Product::CATEGORY_BUNDLE,
+                // legacy aliases
+                'new-arrivals' => Product::CATEGORY_SERUM,
+                'hijab' => Product::CATEGORY_SERUM,
+                'shoes' => Product::CATEGORY_MOISTURIZER,
+                'accessories' => Product::CATEGORY_SUNSCREEN,
             ];
-            $category = $categoryMap[$request->category] ?? null;
+            $category = $categoryMap[$catInput] ?? null;
             if ($category) {
-                $query->where('category', $category);
+                $query->where(function($q) use ($category, $catInput) {
+                    $q->where('category', $category)
+                      ->orWhere('category', 'like', "%{$catInput}%");
+                });
             }
         }
 
@@ -432,9 +443,9 @@ class PageController extends Controller
         };
 
         return [
-            $buildSection('Hijab Terbaru', [], Product::CATEGORY_HIJAB),
-            $buildSection('Shoes Terbaru', ['shoe', 'sepatu', 'nike', 'adidas', 'new balance', 'brooks', 'salomon'], Product::CATEGORY_ACCESSORIES),
-            $buildSection('Accessories Terbaru', ['apparel', 'jersey', 'shirt', 'kaos', 'wear', 'outfit'], Product::CATEGORY_ACCESSORIES),
+            $buildSection('Serum & Ampoule Pilihan', ['serum', 'retinol', 'essence'], Product::CATEGORY_SERUM),
+            $buildSection('Moisturizer & Barrier Cream', ['moisturizer', 'gel', 'cream', 'ceramide'], Product::CATEGORY_MOISTURIZER),
+            $buildSection('Cleanser & UV Sunscreen', ['cleanser', 'sunscreen', 'wash', 'uv'], Product::CATEGORY_SUNSCREEN),
         ];
     }
 
@@ -1056,27 +1067,31 @@ class PageController extends Controller
 
         // Group products by category
         $categoryGroups = [
-            'hijab'      => ['label' => 'Hijab',      'icon' => 'fa-table-tennis', 'products' => []],
-            'shoes'       => ['label' => 'Shoes',        'icon' => 'fa-shoe-prints',  'products' => []],
-            'accessories' => ['label' => 'Accessories',  'icon' => 'fa-shopping-bag', 'products' => []],
+            'serum'       => ['label' => 'Serum & Treatment', 'icon' => 'fa-tint',        'products' => []],
+            'moisturizer' => ['label' => 'Moisturizer',       'icon' => 'fa-feather',     'products' => []],
+            'cleanser'    => ['label' => 'Cleanser',          'icon' => 'fa-pump-soap',   'products' => []],
+            'sunscreen'   => ['label' => 'Sunscreen',         'icon' => 'fa-sun',         'products' => []],
+            'bundle'      => ['label' => 'Paket Bundel',      'icon' => 'fa-gift',        'products' => []],
         ];
 
         foreach ($products as $product) {
-            $cat = $product->category;
-            if ($cat === Product::CATEGORY_HIJAB) {
-                $type = 'hijab';
-            } elseif ($cat === Product::CATEGORY_ACCESSORIES) {
-                $type = 'shoes';
-            } elseif ($cat === Product::CATEGORY_ACCESSORIES) {
-                $type = 'accessories';
+            $cat = strtolower($product->category);
+            if (str_contains($cat, 'serum') || str_contains($cat, 'retinol')) {
+                $type = 'serum';
+            } elseif (str_contains($cat, 'moisturizer') || str_contains($cat, 'gel')) {
+                $type = 'moisturizer';
+            } elseif (str_contains($cat, 'cleanser') || str_contains($cat, 'wash')) {
+                $type = 'cleanser';
+            } elseif (str_contains($cat, 'sunscreen') || str_contains($cat, 'uv')) {
+                $type = 'sunscreen';
             } else {
-                $type = 'hijab';
+                $type = 'bundle';
             }
 
             if (isset($categoryGroups[$type])) {
                 $categoryGroups[$type]['products'][] = $product;
             } else {
-                $categoryGroups['hijab']['products'][] = $product;
+                $categoryGroups['serum']['products'][] = $product;
             }
         }
 
