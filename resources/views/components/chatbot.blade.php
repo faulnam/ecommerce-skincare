@@ -2,13 +2,13 @@
 {{-- Include di layout utama: @include('components.chatbot') --}}
 
 <style>
-    #hijab-chat-widget * {
+    #skincare-chat-widget * {
         box-sizing: border-box;
         font-family: 'Plus Jakarta Sans', sans-serif;
     }
 
     /* Floating Button */
-    #hijab-chat-btn {
+    #skincare-chat-btn {
         position: fixed;
         bottom: 24px;
         right: 24px;
@@ -27,17 +27,17 @@
         transition: all 0.3s ease;
     }
 
-    #hijab-chat-btn:hover {
+    #skincare-chat-btn:hover {
         background: #1f2937;
         transform: scale(1.05);
         box-shadow: 0 6px 20px rgba(55, 65, 81, 0.4);
     }
 
-    #hijab-chat-btn svg { transition: transform 0.3s ease; }
-    #hijab-chat-btn.open svg { transform: rotate(90deg); }
+    #skincare-chat-btn svg { transition: transform 0.3s ease; }
+    #skincare-chat-btn.open svg { transform: rotate(90deg); }
 
     /* Notif dot */
-    #hijab-chat-btn::after {
+    #skincare-chat-btn::after {
         content: '';
         position: absolute;
         top: 4px; right: 4px;
@@ -47,7 +47,7 @@
         border: 2px solid white;
         animation: pulse-dot 2s infinite;
     }
-    #hijab-chat-btn.open::after { display: none; }
+    #skincare-chat-btn.open::after { display: none; }
 
     @keyframes pulse-dot {
         0%, 100% { transform: scale(1); opacity: 1; }
@@ -55,7 +55,7 @@
     }
 
     /* Chat Window */
-    #hijab-chat-window {
+    #skincare-chat-window {
         position: fixed;
         bottom: 92px;
         right: 24px;
@@ -76,14 +76,14 @@
         border: 1px solid rgba(0,0,0,0.06);
     }
 
-    #hijab-chat-window.open {
+    #skincare-chat-window.open {
         transform: scale(1) translateY(0);
         opacity: 1;
         pointer-events: all;
     }
 
     /* Header */
-    .hijab-chat-header {
+    .skincare-chat-header {
         background: #374151;
         padding: 18px 20px;
         display: flex;
@@ -93,7 +93,7 @@
         border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
-    .hijab-avatar {
+    .skincare-avatar {
         width: 42px; height: 42px;
         background: rgba(255,255,255,0.2);
         border-radius: 12px;
@@ -102,17 +102,17 @@
         flex-shrink: 0;
     }
 
-    .hijab-chat-header h4 {
+    .skincare-chat-header h4 {
         margin: 0; font-size: 16px; font-weight: 600;
         letter-spacing: -0.3px;
     }
 
-    .hijab-chat-header p {
+    .skincare-chat-header p {
         margin: 3px 0 0; font-size: 12px; opacity: 0.9;
         font-weight: 400;
     }
 
-    .hijab-online-dot {
+    .skincare-online-dot {
         width: 7px; height: 7px;
         background: #86efac;
         border-radius: 50%;
@@ -122,7 +122,7 @@
     }
 
     /* Messages area */
-    #hijab-messages {
+    #skincare-messages {
         flex: 1;
         overflow-y: auto;
         padding: 20px 20px 16px;
@@ -134,11 +134,11 @@
         min-height: 0;
     }
 
-    #hijab-messages::-webkit-scrollbar { width: 5px; }
-    #hijab-messages::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 5px; }
-    #hijab-messages::-webkit-scrollbar-track { background: transparent; }
+    #skincare-messages::-webkit-scrollbar { width: 5px; }
+    #skincare-messages::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 5px; }
+    #skincare-messages::-webkit-scrollbar-track { background: transparent; }
 
-    .hijab-msg {
+    .skincare-msg {
         max-width: 85%;
         padding: 12px 16px;
         border-radius: 16px;
@@ -153,7 +153,7 @@
         to   { opacity: 1; transform: translateY(0) scale(1); }
     }
 
-    .hijab-msg.bot {
+    .skincare-msg.bot {
         background: white;
         color: #374151;
         border-bottom-left-radius: 6px;
@@ -162,12 +162,12 @@
         border: 1px solid rgba(0,0,0,0.04);
     }
 
-    .hijab-msg.bot strong { color: #111827; font-weight: 600; }
-    .hijab-msg.bot em { font-style: italic; color: #4b5563; }
-    .hijab-msg.bot ul { margin: 6px 0; padding-left: 18px; }
-    .hijab-msg.bot li { margin-bottom: 4px; line-height: 1.5; }
+    .skincare-msg.bot strong { color: #111827; font-weight: 600; }
+    .skincare-msg.bot em { font-style: italic; color: #4b5563; }
+    .skincare-msg.bot ul { margin: 6px 0; padding-left: 18px; }
+    .skincare-msg.bot li { margin-bottom: 4px; line-height: 1.5; }
 
-    .hijab-msg.admin-reply {
+    .skincare-msg.admin-reply {
         background: #e0f2fe;
         color: #0c4a6e;
         border-bottom-left-radius: 6px;
@@ -175,7 +175,7 @@
         border: 1px solid #bae6fd;
     }
 
-    .hijab-msg.user {
+    .skincare-msg.user {
         background: #374151;
         color: white;
         border-bottom-right-radius: 6px;
@@ -184,7 +184,7 @@
     }
 
     /* Product cards inside bot message */
-    .hijab-product-cards {
+    .skincare-product-cards {
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -193,10 +193,10 @@
         overflow-y: auto;
         padding-right: 4px;
     }
-    .hijab-product-cards::-webkit-scrollbar { width: 4px; }
-    .hijab-product-cards::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 4px; }
+    .skincare-product-cards::-webkit-scrollbar { width: 4px; }
+    .skincare-product-cards::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 4px; }
 
-    .hijab-product-card {
+    .skincare-product-card {
         display: flex;
         align-items: center;
         gap: 12px;
@@ -209,14 +209,14 @@
         transition: all 0.2s ease;
     }
 
-    .hijab-product-card:hover {
+    .skincare-product-card:hover {
         background: #f3f4f6;
         border-color: #d1d5db;
         transform: translateY(-1px);
         box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
 
-    .hijab-product-card img {
+    .skincare-product-card img {
         width: 52px;
         height: 52px;
         object-fit: cover;
@@ -225,12 +225,12 @@
         background: #e5e7eb;
     }
 
-    .hijab-product-card .info {
+    .skincare-product-card .info {
         flex: 1;
         min-width: 0;
     }
 
-    .hijab-product-card .info .name {
+    .skincare-product-card .info .name {
         font-size: 13px;
         font-weight: 600;
         color: #111827;
@@ -239,34 +239,34 @@
         text-overflow: ellipsis;
     }
 
-    .hijab-product-card .info .meta {
+    .skincare-product-card .info .meta {
         font-size: 11px;
         color: #6b7280;
         margin-top: 2px;
     }
 
-    .hijab-product-card .info .price {
+    .skincare-product-card .info .price {
         font-size: 13px;
         font-weight: 700;
         color: #059669;
         margin-top: 3px;
     }
 
-    .hijab-product-card .info .price .discount {
+    .skincare-product-card .info .price .discount {
         font-size: 10px;
         color: #dc2626;
         margin-left: 4px;
         font-weight: 600;
     }
 
-    .hijab-product-card .arrow {
+    .skincare-product-card .arrow {
         color: #9ca3af;
         font-size: 14px;
         flex-shrink: 0;
     }
 
     /* Typing indicator */
-    .hijab-typing {
+    .skincare-typing {
         display: flex; gap: 5px; align-items: center;
         padding: 14px 18px;
         background: white;
@@ -277,14 +277,14 @@
         border: 1px solid rgba(0,0,0,0.04);
     }
 
-    .hijab-typing span {
+    .skincare-typing span {
         width: 6px; height: 6px;
         background: #9ca3af;
         border-radius: 50%;
         animation: typing 1.4s infinite;
     }
-    .hijab-typing span:nth-child(2) { animation-delay: 0.2s; }
-    .hijab-typing span:nth-child(3) { animation-delay: 0.4s; }
+    .skincare-typing span:nth-child(2) { animation-delay: 0.2s; }
+    .skincare-typing span:nth-child(3) { animation-delay: 0.4s; }
 
     @keyframes typing {
         0%, 60%, 100% { transform: translateY(0); opacity: 0.5; }
@@ -292,7 +292,7 @@
     }
 
     /* Quick replies */
-    .hijab-quick-replies {
+    .skincare-quick-replies {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 8px;
@@ -302,7 +302,7 @@
         flex-shrink: 0;
     }
 
-    .hijab-quick-btn {
+    .skincare-quick-btn {
         background: white;
         border: 1px solid #e5e7eb;
         color: #374151;
@@ -320,7 +320,7 @@
         text-overflow: ellipsis;
     }
 
-    .hijab-quick-btn:hover {
+    .skincare-quick-btn:hover {
         background: #374151;
         color: white;
         border-color: #374151;
@@ -328,7 +328,7 @@
     }
 
     /* Input area */
-    .hijab-chat-input {
+    .skincare-chat-input {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -338,7 +338,7 @@
         gap: 10px;
         position: relative;
     }
-    .hijab-char-count {
+    .skincare-char-count {
         width: 100%;
         text-align: right;
         font-size: 10px;
@@ -348,7 +348,7 @@
         line-height: 1;
     }
 
-    #hijab-input {
+    #skincare-input {
         flex: 1;
         border: 1.5px solid #e5e7eb;
         border-radius: 24px;
@@ -362,13 +362,13 @@
         background: #fafafa;
     }
 
-    #hijab-input:focus {
+    #skincare-input:focus {
         border-color: #374151;
         background: white;
         box-shadow: 0 0 0 3px rgba(55, 65, 81, 0.1);
     }
 
-    #hijab-send-btn {
+    #skincare-send-btn {
         width: 42px; height: 42px;
         background: #374151;
         color: white;
@@ -380,11 +380,11 @@
         transition: all 0.2s ease;
     }
 
-    #hijab-send-btn:hover {
+    #skincare-send-btn:hover {
         background: #4b5563;
         transform: scale(1.08);
     }
-    #hijab-send-btn:disabled {
+    #skincare-send-btn:disabled {
         opacity: 0.5;
         cursor: not-allowed;
         transform: none;
@@ -392,166 +392,166 @@
     }
 
     @media (max-width: 768px) {
-        #hijab-chat-window {
+        #skincare-chat-window {
             width: calc(100vw - 24px);
             right: 12px;
             bottom: calc(76px + env(safe-area-inset-bottom) + 64px);
             max-height: calc(100vh - 160px - env(safe-area-inset-bottom));
         }
-        #hijab-chat-btn { 
+        #skincare-chat-btn { 
             right: 12px; 
             bottom: calc(76px + env(safe-area-inset-bottom)); 
         }
     }
 
     /* Dark mode support */
-    [data-theme="dark"] #hijab-chat-window {
+    [data-theme="dark"] #skincare-chat-window {
         background: #27272a;
         border-color: #3f3f46;
     }
 
-    [data-theme="dark"] #hijab-messages {
+    [data-theme="dark"] #skincare-messages {
         background: #18181b;
     }
 
-    [data-theme="dark"] .hijab-msg.bot {
+    [data-theme="dark"] .skincare-msg.bot {
         background: #3f3f46;
         color: #fafafa;
         border-color: #52525b;
     }
 
-    [data-theme="dark"] .hijab-msg.bot strong { color: #ffffff; }
-    [data-theme="dark"] .hijab-msg.bot em { color: #d4d4d8; }
-    [data-theme="dark"] .hijab-msg.bot ul { color: #fafafa; }
+    [data-theme="dark"] .skincare-msg.bot strong { color: #ffffff; }
+    [data-theme="dark"] .skincare-msg.bot em { color: #d4d4d8; }
+    [data-theme="dark"] .skincare-msg.bot ul { color: #fafafa; }
 
-    [data-theme="dark"] .hijab-msg.admin-reply {
+    [data-theme="dark"] .skincare-msg.admin-reply {
         background: #1e3a8a;
         color: #eff6ff;
         border-color: #1e40af;
     }
 
-    [data-theme="dark"] .hijab-product-card {
+    [data-theme="dark"] .skincare-product-card {
         background: #3f3f46;
         border-color: #52525b;
     }
-    [data-theme="dark"] .hijab-product-card:hover {
+    [data-theme="dark"] .skincare-product-card:hover {
         background: #52525b;
         border-color: #6b7280;
     }
-    [data-theme="dark"] .hijab-product-card .info .name { color: #fafafa; }
-    [data-theme="dark"] .hijab-product-card .info .meta { color: #a1a1aa; }
-    [data-theme="dark"] .hijab-product-card .info .price { color: #34d399; }
-    [data-theme="dark"] .hijab-product-card .arrow { color: #a1a1aa; }
-    [data-theme="dark"] .hijab-product-cards::-webkit-scrollbar-thumb { background: #52525b; }
+    [data-theme="dark"] .skincare-product-card .info .name { color: #fafafa; }
+    [data-theme="dark"] .skincare-product-card .info .meta { color: #a1a1aa; }
+    [data-theme="dark"] .skincare-product-card .info .price { color: #34d399; }
+    [data-theme="dark"] .skincare-product-card .arrow { color: #a1a1aa; }
+    [data-theme="dark"] .skincare-product-cards::-webkit-scrollbar-thumb { background: #52525b; }
 
-    [data-theme="dark"] .hijab-quick-replies {
+    [data-theme="dark"] .skincare-quick-replies {
         background: #18181b;
         border-top-color: #3f3f46;
     }
 
-    [data-theme="dark"] .hijab-quick-btn {
+    [data-theme="dark"] .skincare-quick-btn {
         background: #3f3f46;
         color: #fafafa;
         border-color: #52525b;
     }
 
-    [data-theme="dark"] .hijab-quick-btn:hover {
+    [data-theme="dark"] .skincare-quick-btn:hover {
         background: #6b7280;
         border-color: #6b7280;
     }
 
-    [data-theme="dark"] .hijab-chat-input {
+    [data-theme="dark"] .skincare-chat-input {
         background: #27272a;
         border-color: #3f3f46;
     }
 
-    [data-theme="dark"] #hijab-input {
+    [data-theme="dark"] #skincare-input {
         background: #3f3f46;
         color: #fafafa;
         border-color: #52525b;
     }
 
-    [data-theme="dark"] #hijab-input:focus {
+    [data-theme="dark"] #skincare-input:focus {
         border-color: #6b7280;
         background: #27272a;
     }
 
-    [data-theme="dark"] .hijab-typing {
+    [data-theme="dark"] .skincare-typing {
         background: #3f3f46;
         border-color: #52525b;
     }
-    [data-theme="dark"] .hijab-char-count {
+    [data-theme="dark"] .skincare-char-count {
         color: #71717a;
     }
 </style>
 
-<div id="hijab-chat-widget">
+<div id="skincare-chat-widget">
     {{-- Floating button --}}
-    <button id="hijab-chat-btn" onclick="hijabChatToggle()" aria-label="Buka chat">
+    <button id="skincare-chat-btn" onclick="skincareChatToggle()" aria-label="Buka chat">
         <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
         </svg>
     </button>
 
     {{-- Chat window --}}
-    <div id="hijab-chat-window">
+    <div id="skincare-chat-window">
         {{-- Header --}}
-        <div class="hijab-chat-header">
-            <div class="hijab-avatar flex items-center justify-center">
+        <div class="skincare-chat-header">
+            <div class="skincare-avatar flex items-center justify-center">
                 <svg viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8 text-white">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
                 </svg>
             </div>
             <div>
                 <h4>Customer Service</h4>
-                <p><span class="hijab-online-dot"></span>Online</p>
+                <p><span class="skincare-online-dot"></span>Online</p>
             </div>
         </div>
 
         {{-- Messages --}}
-        <div id="hijab-messages">
-            <div class="hijab-msg bot">
-                Halo! 👋 Selamat datang di <strong>Hijab</strong>!<br>
-                Saya Hijab, siap bantu kamu temukan perlengkapan hijab yang paling cocok. Mau belanja atau cuma tanya-tanya dulu, silakan ya! 🏓<br><br>
+        <div id="skincare-messages">
+            <div class="skincare-msg bot">
+                Halo! 👋 Selamat datang di <strong>LUMINA</strong>!<br>
+                Saya LUMINA, siap bantu kamu temukan produk perawatan kulit yang paling cocok. Mau belanja atau cuma tanya-tanya dulu, silakan ya! 🏓<br><br>
                 <em>💡 Ketik <strong>"admin"</strong> kapan saja untuk terhubung dengan tim Customer Service kami.</em>
             </div>
         </div>
 
         {{-- Quick replies --}}
-        <div class="hijab-quick-replies" id="hijab-quick">
-            <button class="hijab-quick-btn" onclick="hijabSendQuick('Saya baru mau mulai main hijab, hijab apa yang cocok?')">Hijab untuk pemula</button>
-            <button class="hijab-quick-btn" onclick="hijabSendQuick('Rekomendasi hijab intermediate yang bagus')">Hijab intermediate</button>
-            <button class="hijab-quick-btn" onclick="hijabSendQuick('Ada sepatu hijab yang recommended?')">Sepatu hijab</button>
-            <button class="hijab-quick-btn" onclick="hijabSendQuick('Aksesori hijab apa saja yang perlu dibeli?')">Aksesori wajib</button>
-            <button class="hijab-quick-btn" onclick="hijabSendQuick('Cara order dan pembayaran gimana?')">Cara order & bayar</button>
-            <button class="hijab-quick-btn" onclick="hijabSendQuick('Ada promo atau voucher hari ini?')">Promo & voucher</button>
+        <div class="skincare-quick-replies" id="skincare-quick">
+            <button class="skincare-quick-btn" onclick="skincareSendQuick('Saya baru mau mulai main skincare, skincare apa yang cocok?')">LUMINA untuk pemula</button>
+            <button class="skincare-quick-btn" onclick="skincareSendQuick('Rekomendasi skincare intermediate yang bagus')">LUMINA intermediate</button>
+            <button class="skincare-quick-btn" onclick="skincareSendQuick('Ada sepatu skincare yang recommended?')">Sepatu skincare</button>
+            <button class="skincare-quick-btn" onclick="skincareSendQuick('Aksesori skincare apa saja yang perlu dibeli?')">Aksesori wajib</button>
+            <button class="skincare-quick-btn" onclick="skincareSendQuick('Cara order dan pembayaran gimana?')">Cara order & bayar</button>
+            <button class="skincare-quick-btn" onclick="skincareSendQuick('Ada promo atau voucher hari ini?')">Promo & voucher</button>
         </div>
 
         {{-- Input --}}
-        <div class="hijab-chat-input">
+        <div class="skincare-chat-input">
             <input
                 type="text"
-                id="hijab-input"
+                id="skincare-input"
                 placeholder="Ketik pesan..."
-                onkeydown="if(event.key==='Enter') hijabSendMessage()"
+                onkeydown="if(event.key==='Enter') skincareSendMessage()"
                 maxlength="500"
             />
-            <button id="hijab-send-btn" onclick="hijabSendMessage()" aria-label="Kirim">
+            <button id="skincare-send-btn" onclick="skincareSendMessage()" aria-label="Kirim">
                 <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
                     <line x1="22" y1="2" x2="11" y2="13"/>
                     <polygon points="22 2 15 22 11 13 2 9 22 2"/>
                 </svg>
             </button>
-            <span id="hijab-char-count" class="hijab-char-count">0/500</span>
+            <span id="skincare-char-count" class="skincare-char-count">0/500</span>
         </div>
     </div>
 </div>
 
 <script>
-    let hijabChatOpen   = false;
-    let hijabHistory    = [];
-    let hijabIsLoading  = false;
-    let hijabLastSent   = 0;
+    let skincareChatOpen   = false;
+    let skincareHistory    = [];
+    let skincareIsLoading  = false;
+    let skincareLastSent   = 0;
     
     // Live chat states
     let isLiveChat = false;
@@ -559,13 +559,13 @@
     let lastLiveChatId = 0;
     let liveChatInterval = null;
 
-    function hijabChatToggle() {
-        hijabChatOpen = !hijabChatOpen;
-        document.getElementById('hijab-chat-window').classList.toggle('open', hijabChatOpen);
-        document.getElementById('hijab-chat-btn').classList.toggle('open', hijabChatOpen);
+    function skincareChatToggle() {
+        skincareChatOpen = !skincareChatOpen;
+        document.getElementById('skincare-chat-window').classList.toggle('open', skincareChatOpen);
+        document.getElementById('skincare-chat-btn').classList.toggle('open', skincareChatOpen);
     }
 
-    function hijabFormatText(text) {
+    function skincareFormatText(text) {
         if (!text) return '';
 
         // Escape HTML dulu supaya aman
@@ -614,22 +614,22 @@
         return html;
     }
 
-    function hijabAppendMsg(text, role, products) {
-        const container = document.getElementById('hijab-messages');
+    function skincareAppendMsg(text, role, products) {
+        const container = document.getElementById('skincare-messages');
         const div = document.createElement('div');
-        div.className = `hijab-msg ${role}`;
+        div.className = `skincare-msg ${role}`;
 
         // Hapus baris REKOMENDASI: dari tampilan
         const cleanText = text.replace(/REKOMENDASI:.*/gi, '').trim();
-        div.innerHTML = hijabFormatText(cleanText);
+        div.innerHTML = skincareFormatText(cleanText);
 
         // Jika ada produk rekomendasi, tambahkan cards
         if (products && products.length > 0) {
             const cardsDiv = document.createElement('div');
-            cardsDiv.className = 'hijab-product-cards';
+            cardsDiv.className = 'skincare-product-cards';
             products.forEach(p => {
                 const card = document.createElement('div');
-                card.className = 'hijab-product-card';
+                card.className = 'skincare-product-card';
                 card.style.cursor = 'pointer';
                 card.addEventListener('click', function() {
                     window.open(p.url, '_blank');
@@ -653,50 +653,50 @@
         return div;
     }
 
-    function hijabShowTyping() {
-        const container = document.getElementById('hijab-messages');
+    function skincareShowTyping() {
+        const container = document.getElementById('skincare-messages');
         const div = document.createElement('div');
-        div.className = 'hijab-typing';
-        div.id = 'hijab-typing';
+        div.className = 'skincare-typing';
+        div.id = 'skincare-typing';
         div.innerHTML = '<span></span><span></span><span></span>';
         container.appendChild(div);
         container.scrollTop = container.scrollHeight;
     }
 
-    function hijabHideTyping() {
-        const el = document.getElementById('hijab-typing');
+    function skincareHideTyping() {
+        const el = document.getElementById('skincare-typing');
         if (el) el.remove();
     }
 
-    function hijabSendQuick(text) {
-        document.getElementById('hijab-input').value = text;
+    function skincareSendQuick(text) {
+        document.getElementById('skincare-input').value = text;
         // Sembunyikan quick replies setelah pertama dipakai
-        document.getElementById('hijab-quick').style.display = 'none';
-        hijabSendMessage();
+        document.getElementById('skincare-quick').style.display = 'none';
+        skincareSendMessage();
     }
 
-    async function hijabSendMessage() {
-        const input = document.getElementById('hijab-input');
+    async function skincareSendMessage() {
+        const input = document.getElementById('skincare-input');
         const text  = input.value.trim();
-        if (!text || hijabIsLoading) return;
+        if (!text || skincareIsLoading) return;
 
         const now = Date.now();
         const cooldown = 2000;
-        if (now - hijabLastSent < cooldown) {
-            const sisa = Math.ceil((cooldown - (now - hijabLastSent)) / 1000);
-            hijabAppendMsg('Tunggu ' + sisa + ' detik lagi ya... ⏳', 'bot');
+        if (now - skincareLastSent < cooldown) {
+            const sisa = Math.ceil((cooldown - (now - skincareLastSent)) / 1000);
+            skincareAppendMsg('Tunggu ' + sisa + ' detik lagi ya... ⏳', 'bot');
             return;
         }
-        hijabLastSent = now;
+        skincareLastSent = now;
 
         input.value = '';
-        document.getElementById('hijab-char-count').textContent = '0/500';
-        hijabIsLoading = true;
-        document.getElementById('hijab-send-btn').disabled = true;
-        document.getElementById('hijab-quick').style.display = 'none';
+        document.getElementById('skincare-char-count').textContent = '0/500';
+        skincareIsLoading = true;
+        document.getElementById('skincare-send-btn').disabled = true;
+        document.getElementById('skincare-quick').style.display = 'none';
 
-        hijabAppendMsg(text, 'user');
-        hijabShowTyping();
+        skincareAppendMsg(text, 'user');
+        skincareShowTyping();
 
         try {
             if (isLiveChat && liveChatSessionId) {
@@ -709,10 +709,10 @@
                     body: JSON.stringify({ message: text }),
                 });
                 
-                hijabHideTyping();
+                skincareHideTyping();
                 
                 if (!res.ok) {
-                    hijabAppendMsg('Gagal mengirim pesan ke admin.', 'bot');
+                    skincareAppendMsg('Gagal mengirim pesan ke admin.', 'bot');
                 } else {
                     const data = await res.json();
                     if (data.id > lastLiveChatId) lastLiveChatId = data.id;
@@ -724,7 +724,7 @@
                         'Content-Type': 'application/json',
                         'X-CSRF-TOKEN': '{{ csrf_token() }}',
                     },
-                    body: JSON.stringify({ message: text, history: hijabHistory }),
+                    body: JSON.stringify({ message: text, history: skincareHistory }),
                 });
 
                 const contentType = res.headers.get('content-type') || '';
@@ -738,24 +738,24 @@
                     console.error('Chatbot: server returned non-JSON', res.status, rawText.substring(0, 500));
                 }
 
-                hijabHideTyping();
+                skincareHideTyping();
 
                 if (!res.ok) {
                     if (res.status === 419) {
-                        hijabAppendMsg('Sesi habis, refresh halaman dulu ya! 🔄', 'bot');
+                        skincareAppendMsg('Sesi habis, refresh halaman dulu ya! 🔄', 'bot');
                     } else if (data.error) {
-                        hijabAppendMsg(data.error, 'bot');
+                        skincareAppendMsg(data.error, 'bot');
                     } else {
-                        hijabAppendMsg('Server sibuk (error ' + res.status + '). Coba lagi ya! 😅', 'bot');
+                        skincareAppendMsg('Server sibuk (error ' + res.status + '). Coba lagi ya! 😅', 'bot');
                     }
-                    hijabIsLoading = false;
-                    document.getElementById('hijab-send-btn').disabled = false;
+                    skincareIsLoading = false;
+                    document.getElementById('skincare-send-btn').disabled = false;
                     input.focus();
                     return;
                 }
 
                 const reply = data.reply || data.error || 'Maaf, terjadi kesalahan.';
-                hijabAppendMsg(reply, 'bot', data.products || []);
+                skincareAppendMsg(reply, 'bot', data.products || []);
 
                 if (data.transfer_to_admin) {
                     isLiveChat = true;
@@ -764,31 +764,31 @@
                 }
 
                 // Simpan ke history (hanya teks, tanpa cards)
-                hijabHistory.push({ role: 'user', text });
-                hijabHistory.push({ role: 'model', text: reply });
-                if (hijabHistory.length > 20) hijabHistory = hijabHistory.slice(-20);
+                skincareHistory.push({ role: 'user', text });
+                skincareHistory.push({ role: 'model', text: reply });
+                if (skincareHistory.length > 20) skincareHistory = skincareHistory.slice(-20);
             }
 
         } catch (e) {
-            hijabHideTyping();
+            skincareHideTyping();
             console.error('Chatbot fetch error:', e);
             if (e.name === 'TypeError') {
-                hijabAppendMsg('Maaf, koneksi bermasalah. Periksa internet & coba lagi ya! 😅', 'bot');
+                skincareAppendMsg('Maaf, koneksi bermasalah. Periksa internet & coba lagi ya! 😅', 'bot');
             } else {
-                hijabAppendMsg('Maaf, ada masalah teknis. Coba lagi ya! �️', 'bot');
+                skincareAppendMsg('Maaf, ada masalah teknis. Coba lagi ya! �️', 'bot');
             }
         }
 
-        hijabIsLoading = false;
-        document.getElementById('hijab-send-btn').disabled = false;
+        skincareIsLoading = false;
+        document.getElementById('skincare-send-btn').disabled = false;
         input.focus();
     }
 
     // Character counter
-    document.getElementById('hijab-input').addEventListener('input', function() {
+    document.getElementById('skincare-input').addEventListener('input', function() {
         const len = this.value.length;
         const max = this.getAttribute('maxlength');
-        document.getElementById('hijab-char-count').textContent = len + '/' + max;
+        document.getElementById('skincare-char-count').textContent = len + '/' + max;
     });
 
     function startLiveChatPolling() {
@@ -804,13 +804,13 @@
                             if (msg.id > lastLiveChatId) {
                                 lastLiveChatId = msg.id;
                                 if (msg.sender === 'admin') {
-                                    hijabAppendMsg(msg.text, 'admin-reply');
+                                    skincareAppendMsg(msg.text, 'admin-reply');
                                 }
                             }
                         });
                     }
                     if (data.status === 'closed') {
-                        hijabAppendMsg('Sesi obrolan telah ditutup oleh admin.', 'bot');
+                        skincareAppendMsg('Sesi obrolan telah ditutup oleh admin.', 'bot');
                         isLiveChat = false;
                         clearInterval(liveChatInterval);
                     }

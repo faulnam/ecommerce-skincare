@@ -145,11 +145,11 @@ class BiteshipTestOrderCommand extends Command
         $courierType = $courierTypeMap[$courier] ?? 'reg';
 
         $baseData = [
-            'shipper_contact_name' => config('branding.name', 'Hijab'),
+            'shipper_contact_name' => config('branding.name', 'LUMINA'),
             'shipper_contact_phone' => config('branding.phone', '081234567890'),
-            'shipper_contact_email' => config('mail.from.address', 'test@hijab.test'),
+            'shipper_contact_email' => config('mail.from.address', 'test@skincare.test'),
             
-            'origin_contact_name' => config('branding.name', 'Hijab'),
+            'origin_contact_name' => config('branding.name', 'LUMINA'),
             'origin_contact_phone' => config('branding.phone', '081234567890'),
             'origin_address' => config('branding.address', 'Jl. Test No. 123, Surabaya'),
             'origin_note' => 'Pickup dari toko - TEST ORDER',

@@ -118,7 +118,7 @@ if ($isGuest || $isCustomer) {
                 </div>
             </div>
             
-            <p class="s-tnc">(*Syarat & ketentuan berlaku. Promo khusus untuk pengguna baru aplikasi Hijab)</p>
+            <p class="s-tnc">(*Syarat & ketentuan berlaku. Promo khusus untuk pengguna baru aplikasi LUMINA)</p>
             
             <!-- Button -->
             <div class="s-btn-wrap">
@@ -138,7 +138,7 @@ if ($isGuest || $isCustomer) {
             </div>
             
             <div class="s-footer-tag">
-                <span class="text-red-500">❤️</span> Pilihan Tepat Untuk Hijab Anda
+                <span class="text-red-500">❤️</span> Pilihan Tepat Untuk LUMINA Anda
             </div>
         </div>
     </div>

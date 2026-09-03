@@ -194,7 +194,7 @@ async function sendTestNotification() {
         await registration.showNotification(title, {
             body: message,
             icon: '/storage/logo.png',
-            badge: '/images/hijab-hijab-favicon.svg',
+            badge: '/images/skincare-skincare-favicon.svg',
             vibrate: [200, 100, 200],
             tag: 'test-' + Date.now(),
             data: { url: '/admin/dashboard', type: type }

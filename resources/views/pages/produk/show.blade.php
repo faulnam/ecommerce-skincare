@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title', $product->name . ' - Hijab')
+@section('title', $product->name . ' - LUMINA')
 @section('og_type', 'product')
-@section('og_title', $product->name . ' - Hijab')
+@section('og_title', $product->name . ' - LUMINA')
 @section('og_description'){{ Str::limit(strip_tags($product->description ?? $product->name), 160) }}@endsection
 @section('og_image', $product->image_url)
 @section('og_image_width', '1200')

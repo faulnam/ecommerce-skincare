@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Pesanan Saya - Hijab')
+@section('title', 'Pesanan Saya - LUMINA')
 
 @section('content')
 <div class="container py-4 py-lg-5">
@@ -100,7 +100,7 @@
         <div class="text-center py-5">
             <i class="fas fa-shopping-bag fa-3x fa-lg-4x text-muted mb-3 mb-lg-4"></i>
             <h4 class="text-muted empty-title">Belum Ada Pesanan</h4>
-            <p class="text-muted mb-4 small">Ayo mulai berbelanja perlengkapan Hijab!</p>
+            <p class="text-muted mb-4 small">Ayo mulai berbelanja perlengkapan LUMINA!</p>
             <a href="{{ route('customer.products.index') }}" class="btn btn-success">
                 <i class="fas fa-shopping-cart me-2"></i>Mulai Belanja
             </a>

@@ -54,7 +54,7 @@
                         <div class="mb-3">
                             <label class="form-label">Penulis</label>
                             <input type="text" name="author" class="form-control @error('author') is-invalid @enderror"
-                                value="{{ old('author', 'Hijab Team') }}">
+                                value="{{ old('author', 'LUMINA Team') }}">
                             @error('author') <div class="invalid-feedback">{{ $message }}</div> @enderror
                         </div>
 
@@ -475,7 +475,7 @@
         document.getElementById('previewBtn').addEventListener('click', function () {
             const title = document.querySelector('input[name="title"]').value || 'Judul Belum Diisi';
             const excerpt = document.querySelector('textarea[name="excerpt"]').value || '';
-            const author = document.querySelector('input[name="author"]').value || 'Hijab Team';
+            const author = document.querySelector('input[name="author"]').value || 'LUMINA Team';
 
             let content = '';
             if (typeof tinymce !== 'undefined' && tinymce.get('contentEditor')) {

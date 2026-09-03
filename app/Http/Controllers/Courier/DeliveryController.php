@@ -162,7 +162,7 @@ class DeliveryController extends Controller
             $order->updateDeliveryStatus(Order::STATUS_COMPLETED);
 
             // Notify customer
-            $order->user->notify(new OrderStatusChanged($order, 'Pesanan Anda sudah sampai dan selesai! Terima kasih telah berbelanja di Hijab.'));
+            $order->user->notify(new OrderStatusChanged($order, 'Pesanan Anda sudah sampai dan selesai! Terima kasih telah berbelanja di LUMINA.'));
 
             // Send email notification to customer
             if ($order->user) {
@@ -200,7 +200,7 @@ class DeliveryController extends Controller
         $order->updateDeliveryStatus(Order::STATUS_COMPLETED);
 
         // Notify customer
-        $order->user->notify(new OrderStatusChanged($order, 'Pembayaran COD sudah diterima. Pesanan selesai! Terima kasih telah berbelanja di Hijab.'));
+        $order->user->notify(new OrderStatusChanged($order, 'Pembayaran COD sudah diterima. Pesanan selesai! Terima kasih telah berbelanja di LUMINA.'));
 
         // Send email notification to customer
         if ($order->user) {

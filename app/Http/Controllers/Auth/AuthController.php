@@ -131,10 +131,10 @@ class AuthController extends Controller
 
         try {
             Mail::raw(
-                "Kode OTP registrasi Hijab Anda adalah: {$otpCode}\n\nKode berlaku {$ttlMinutes} menit. Jangan bagikan kode ini ke siapa pun.",
+                "Kode OTP registrasi LUMINA Anda adalah: {$otpCode}\n\nKode berlaku {$ttlMinutes} menit. Jangan bagikan kode ini ke siapa pun.",
                 function ($message) use ($validated) {
                     $message->to($validated['email'])
-                        ->subject('Kode OTP Registrasi Hijab');
+                        ->subject('Kode OTP Registrasi LUMINA');
                 }
             );
         } catch (\Throwable $exception) {
@@ -490,10 +490,10 @@ class AuthController extends Controller
 
         try {
             Mail::raw(
-                "Kode OTP reset password Hijab Anda adalah: {$otpCode}\n\nKode berlaku {$ttlMinutes} menit. Jangan bagikan kode ini ke siapa pun.\n\nJika Anda tidak meminta reset password, abaikan email ini.",
+                "Kode OTP reset password LUMINA Anda adalah: {$otpCode}\n\nKode berlaku {$ttlMinutes} menit. Jangan bagikan kode ini ke siapa pun.\n\nJika Anda tidak meminta reset password, abaikan email ini.",
                 function ($message) use ($validated) {
                     $message->to($validated['email'])
-                        ->subject('Kode OTP Reset Password Hijab');
+                        ->subject('Kode OTP Reset Password LUMINA');
                 }
             );
         } catch (\Throwable $exception) {

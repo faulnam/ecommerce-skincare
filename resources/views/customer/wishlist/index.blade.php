@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'My Wishlist - Hijab')
+@section('title', 'My Wishlist - LUMINA')
 
 @section('content')
 @php

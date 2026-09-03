@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Reward & Points - Hijab')
+@section('title', 'Reward & Points - LUMINA')
 
 @section('content')
 @php

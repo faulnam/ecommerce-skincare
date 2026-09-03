@@ -20,7 +20,7 @@
                 <select class="form-select" name="category">
                     <option value="">Semua Kategori</option>
                     <option value="all" {{ request('category') == 'all' ? 'selected' : '' }}>Semua Kategori</option>
-                    <option value="hijab" {{ request('category') == 'hijab' ? 'selected' : '' }}>Hijab</option>
+                    <option value="skincare" {{ request('category') == 'skincare' ? 'selected' : '' }}>LUMINA</option>
                     <option value="accessories" {{ request('category') == 'accessories' ? 'selected' : '' }}>Accessories</option>
                     <option value="shoes" {{ request('category') == 'shoes' ? 'selected' : '' }}>Shoes</option>
                     <option value="new_arrivals" {{ request('category') == 'new_arrivals' ? 'selected' : '' }}>New Arrivals</option>

@@ -32,8 +32,8 @@
     "en": "Grips, overgrips, and other consumable accessories that have been opened or used"
   },
   "item_custom": {
-    "id": "Hijab yang telah dipasang senar berdasarkan permintaan pelanggan.",
-    "en": "Custom strung hijabs at customer specification"
+    "id": "LUMINA yang telah dipasang senar berdasarkan permintaan pelanggan.",
+    "en": "Custom strung skincares at customer specification"
   },
   "item_sale": {
     "id": "Produk yang dijual dalam program cuci gudang, clearance sale, atau final sale.",
@@ -48,8 +48,8 @@
     "en": "3. How to Request a Return"
   },
   "desc_how_to": {
-    "id": "Anda bisa mengirim pesan via:\nWhatsApp: +62 812 7788 9900 \natau\nEmail: support@hijab.com\nDengan menuliskan subjek: Permohonan Pengembalian Barang, dan message dengan format:\nNomor Pesanan: ....\nAlasan Pengembalian: rusak/bekas, keterangan tambahan berupa bukti foto dan alasan lanjutan",
-    "en": "To initiate a return, please contact our customer service team via:  \nWhatsApp: +62 812 7788 9900 \nor\nEmail: support@hijab.com\nWith the subject: Return Request, and a message with the format:\nOrder Number: ....\nReason for Return: damaged/used, with additional information in the form of photo evidence and further explanation."
+    "id": "Anda bisa mengirim pesan via:\nWhatsApp: +62 812 7788 9900 \natau\nEmail: support@luminaskincare.id\nDengan menuliskan subjek: Permohonan Pengembalian Barang, dan message dengan format:\nNomor Pesanan: ....\nAlasan Pengembalian: rusak/bekas, keterangan tambahan berupa bukti foto dan alasan lanjutan",
+    "en": "To initiate a return, please contact our customer service team via:  \nWhatsApp: +62 812 7788 9900 \nor\nEmail: support@luminaskincare.id\nWith the subject: Return Request, and a message with the format:\nOrder Number: ....\nReason for Return: damaged/used, with additional information in the form of photo evidence and further explanation."
   },
   "title_process": {
     "id": "4. Proses Pengembalian Dana",
@@ -80,7 +80,7 @@
     "en": "7. Contact Us"
   },
   "desc_contact": {
-    "id": "Jika memiliki pertanyaan lebih dalam tentang kebijakan refund, segera hubungi kami di platform:\nEmail: support@hijab.com\nWhatsApp: +62 812 7788 9900\nHari-Jam Operasional: Senin-Sabtu, 9.00-18.00 WIB",
-    "en": "For any return or refund inquiries, reach out to us at:\nEmail: support@hijab.com\nWhatsApp: +62 812 7788 9900\nWorkdays-Hours: Monday-Saturday, 9.00-18.00 WIB"
+    "id": "Jika memiliki pertanyaan lebih dalam tentang kebijakan refund, segera hubungi kami di platform:\nEmail: support@luminaskincare.id\nWhatsApp: +62 812 7788 9900\nHari-Jam Operasional: Senin-Sabtu, 9.00-18.00 WIB",
+    "en": "For any return or refund inquiries, reach out to us at:\nEmail: support@luminaskincare.id\nWhatsApp: +62 812 7788 9900\nWorkdays-Hours: Monday-Saturday, 9.00-18.00 WIB"
   }
 }

@@ -9,10 +9,10 @@ use Illuminate\Support\Str;
 class FillProductSpecs extends Command
 {
     protected $signature = 'products:fill-specs {--dry-run : Preview changes without saving}';
-    protected $description = 'Fill shape, hardness, carbon_type, year, hijabful_rating for existing products';
+    protected $description = 'Fill shape, hardness, carbon_type, year, rating for existing products';
 
-    // Known hijabful ratings mapped by lower-case name fragment -> rating
-    private array $hijabfulRatings = [
+    // Known skincareful ratings mapped by lower-case name fragment -> rating
+    private array $skincarefulRatings = [
         'at10 luxury genius 12k alum xtrem' => 87.0,
         'at10 luxury genius 18k alum' => 87.0,
         'ignis' => 88.0,
@@ -38,8 +38,8 @@ class FillProductSpecs extends Command
         'vertex 03' => 86.5,
         'hack 03' => 86.5,
         'ml10 pro cup' => 86.0,
-        'bullhijab vertex' => 86.0,
-        'bullhijab hack' => 86.0,
+        'bullskincare vertex' => 86.0,
+        'bullskincare hack' => 86.0,
         'babolat viper' => 87.0,
         'babolat air' => 87.0,
         'nox at10' => 87.0,
@@ -110,12 +110,12 @@ class FillProductSpecs extends Command
                 }
             }
 
-            // ===== HIJABFUL RATING =====
-            if (empty($product->hijabful_rating)) {
-                $rating = $this->matchHijabfulRating($name);
+            // ===== LUMINA RATING =====
+            if (empty($product->rating)) {
+                $rating = $this->matchLUMINAfulRating($name);
                 if ($rating) {
-                    $product->hijabful_rating = (float) $rating;
-                    $changes[] = "hijabful_rating: {$rating}";
+                    $product->rating = (float) $rating;
+                    $changes[] = "rating: {$rating}";
                 }
             }
 
@@ -228,11 +228,11 @@ class FillProductSpecs extends Command
         return null;
     }
 
-    private function matchHijabfulRating(string $name): ?float
+    private function matchLUMINAfulRating(string $name): ?float
     {
         $name = strtolower(trim($name));
 
-        foreach ($this->hijabfulRatings as $fragment => $rating) {
+        foreach ($this->skincarefulRatings as $fragment => $rating) {
             if (str_contains($name, $fragment)) {
                 return $rating;
             }
@@ -241,7 +241,7 @@ class FillProductSpecs extends Command
         // Fuzzy: match individual brand-model tokens
         $tokens = preg_split('/[\s\-]+/', $name);
         $scores = [];
-        foreach ($this->hijabfulRatings as $fragment => $rating) {
+        foreach ($this->skincarefulRatings as $fragment => $rating) {
             $fragTokens = preg_split('/[\s\-]+/', $fragment);
             $matchCount = count(array_intersect($tokens, $fragTokens));
             if ($matchCount >= max(2, count($fragTokens) - 1)) {

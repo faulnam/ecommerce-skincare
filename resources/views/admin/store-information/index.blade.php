@@ -116,7 +116,7 @@
 
                                         <div class="mb-3">
                                             <label class="form-label small fw-semibold">Link Tombol</label>
-                                            <input type="text" name="link" class="form-control form-control-sm" value="{{ $banner->link }}" placeholder="Contoh: /kategori/hijab-hijab">
+                                            <input type="text" name="link" class="form-control form-control-sm" value="{{ $banner->link }}" placeholder="Contoh: /kategori/skincare-skincare">
                                         </div>
                                         
                                         <div class="form-check form-switch mb-3">

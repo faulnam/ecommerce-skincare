@@ -37,7 +37,15 @@
                 $uniqueSizes2 = $sizes2->unique();
             @endphp
             @forelse($uniqueSizes2->take(4) as $size)
-                <div class="flex-1 text-center py-2 text-xs font-semibold hover:bg-gray-100" style="border-right: 1px solid #f3f4f6;" onclick="event.stopPropagation(); window.location.href='{{ $product->detail_url }}?size={{ urlencode(trim($size)) }}'">{{ trim($size) }}</div>
+                @php
+                    $displaySize = trim($size);
+                    if (preg_match('/(\d+\s*(?:ml|gr|g|oz))/i', $displaySize, $m)) {
+                        $displaySize = strtolower(str_replace(' ', '', $m[1]));
+                    } else {
+                        $displaySize = preg_replace('/^(Travel|Regular|Jumbo|Mini|Full)\s*/i', '', $displaySize);
+                    }
+                @endphp
+                <div class="flex-1 text-center py-2 text-xs font-semibold hover:bg-gray-100" style="border-right: 1px solid #f3f4f6;" onclick="event.stopPropagation(); window.location.href='{{ $product->detail_url }}?size={{ urlencode(trim($size)) }}'">{{ $displaySize }}</div>
             @empty
                 <div class="flex-1 text-center py-2 text-xs font-semibold hover:bg-gray-100" onclick="event.stopPropagation(); window.location.href='{{ $product->detail_url }}'">All Size</div>
             @endforelse

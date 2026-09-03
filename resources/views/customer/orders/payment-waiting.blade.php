@@ -5,7 +5,7 @@
     $payTrans = file_exists($jsonPath) ? json_decode(file_get_contents($jsonPath), true) : [];
 @endphp
 
-@section('title', ($payTrans['wait_title'][$lang] ?? 'Waiting for Payment') . ' - Hijab')
+@section('title', ($payTrans['wait_title'][$lang] ?? 'Waiting for Payment') . ' - LUMINA')
 
 @push('styles')
 <style>

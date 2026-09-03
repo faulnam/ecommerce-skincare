@@ -445,10 +445,10 @@
         <div class="receipt">
             <div class="header">
                 <div class="brand">
-                    <img src="{{ asset(config('branding.logo', 'storage/logo.png')) }}" alt="Hijab" class="brand-logo" style="width: 60px; height: 60px; object-fit: contain;">
+                    <img src="{{ asset(config('branding.logo', 'storage/logo.png')) }}" alt="LUMINA" class="brand-logo" style="width: 60px; height: 60px; object-fit: contain;">
                     <div class="brand-info">
-                        <h1>{{ config('branding.name', 'Hijab') }}</h1>
-                        <p>{{ $receiptTrans['tagline'][$lang] ?? 'Premium Hijab Equipment' }}</p>
+                        <h1>{{ config('branding.name', 'LUMINA') }}</h1>
+                        <p>{{ $receiptTrans['tagline'][$lang] ?? 'Premium LUMINA Equipment' }}</p>
                         <p>{{ config('branding.address', 'Kec. Tarik, Sidoarjo, Jawa Timur 61265') }}</p>
                     </div>
                 </div>
@@ -476,7 +476,7 @@
             <div class="address-section">
                 <div class="address-box">
                     <h3>{{ $receiptTrans['label_sender'][$lang] ?? 'Sender' }}</h3>
-                    <p class="name">Hijab Store</p>
+                    <p class="name">LUMINA Store</p>
                     <p class="detail">Kec. Tarik, Kab. Sidoarjo</p>
                     <p class="detail">Jawa Timur 61265</p>
                     <p class="detail">{{ $receiptTrans['label_phone'][$lang] ?? 'Phone:' }} {{ config('branding.phone', '+62 812 3456 7890') }}</p>
@@ -570,7 +570,7 @@
             @endif
             
             <div class="footer">
-                <p>{{ $receiptTrans['footer_thanks'][$lang] ?? 'Terima kasih telah berbelanja di Hijab' }}</p>
+                <p>{{ $receiptTrans['footer_thanks'][$lang] ?? 'Terima kasih telah berbelanja di LUMINA' }}</p>
                 <p class="thanks">{{ $receiptTrans['footer_wish'][$lang] ?? 'Semoga perlengkapan barunya bikin game kamu makin total! 🎾' }}</p>
             </div>
         </div>

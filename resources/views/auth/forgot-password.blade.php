@@ -5,15 +5,15 @@
     $forgotTrans = file_exists($jsonPath) ? json_decode(file_get_contents($jsonPath), true) : [];
 @endphp
 
-@section('title', $forgotTrans['meta_title'][$lang] ?? 'Forgot Password - Hijab')
+@section('title', $forgotTrans['meta_title'][$lang] ?? 'Forgot Password - LUMINA')
 
 @section('content')
     <div class="min-h-screen bg-[#f5f5f7] text-black antialiased">
         <header class="fixed left-0 top-0 z-50 w-full border-b border-black/6 bg-white/80 backdrop-blur-xl md:sticky">
             <div class="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-6 md:px-10 lg:px-12">
                 <a href="{{ route('home') }}" class="flex items-center gap-2">
-                    <img src="{{ config('filesystems.disks.r2.url').'/logo.png' }}" alt="Hijab" class="h-7 w-7 object-contain" loading="lazy">
-                    <span class="text-xl font-semibold tracking-tight text-black">Hijab</span>
+                    <img src="{{ config('filesystems.disks.r2.url').'/logo.png' }}" alt="LUMINA" class="h-7 w-7 object-contain" loading="lazy">
+                    <span class="text-xl font-semibold tracking-tight text-black">LUMINA</span>
                 </a>
 
                 <nav class="hidden items-center gap-8 md:flex">
@@ -84,7 +84,7 @@
                 <div class="mx-auto w-full max-w-md">
                     <div class="rounded-3xl border border-black/8 bg-white p-6 shadow-[0_16px_42px_rgba(0,0,0,0.08)] sm:p-8">
                         <div class="mb-6 text-center">
-                            <img src="{{ asset(config('branding.logo', 'storage/logo.png')) }}" alt="{{ config('branding.name', 'Hijab') }}" class="mx-auto h-12 w-auto">
+                            <img src="{{ asset(config('branding.logo', 'storage/logo.png')) }}" alt="{{ config('branding.name', 'LUMINA') }}" class="mx-auto h-12 w-auto">
                             <h2 class="mt-4 text-2xl font-semibold tracking-tight text-black">{{ $forgotTrans['card_title'][$lang] ?? 'Forgot Password' }}</h2>
                             <p class="mt-2 text-sm text-zinc-600">{{ $forgotTrans['card_desc'][$lang] ?? 'Enter your email to receive OTP code' }}</p>
                         </div>

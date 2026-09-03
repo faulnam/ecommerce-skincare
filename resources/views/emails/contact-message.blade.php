@@ -18,7 +18,7 @@
     </div>
 
     <p style="margin-top: 16px; font-size: 12px; color: #6b7280;">
-        Email ini dikirim otomatis dari form Contact Hijab.
+        Email ini dikirim otomatis dari form Contact LUMINA.
     </p>
 </body>
 </html>

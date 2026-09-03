@@ -43,7 +43,7 @@ class CustomerOrderCreatedNotification extends Notification implements ShouldQue
             ->action('Lihat Detail Pesanan', $url)
             ->line('Segera lakukan pembayaran agar pesanan dapat segera diproses. Pesanan akan otomatis dibatalkan jika tidak dibayar dalam 24 jam.')
             ->line('Jika Anda membutuhkan bantuan, silakan hubungi customer service kami.')
-            ->salutation('Terima kasih,' . PHP_EOL . config('branding.name', 'Hijab'));
+            ->salutation('Terima kasih,' . PHP_EOL . config('branding.name', 'LUMINA'));
 
         \Log::debug('CustomerOrderCreatedNotification::toMail MailMessage built successfully');
 

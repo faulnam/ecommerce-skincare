@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Hijab Guarantee - Hijab')
-@section('og_description', 'Hijab Guarantee — jaminan produk original dan layanan terpercaya dari Hijab. Belanja tenang, kualitas terjamin.')
+@section('title', 'LUMINA Guarantee - LUMINA')
+@section('og_description', 'LUMINA Guarantee — jaminan produk original dan layanan terpercaya dari LUMINA. Belanja tenang, kualitas terjamin.')
 
 @push('og_extra')
 <script type="application/ld+json">
@@ -9,7 +9,7 @@
   "@@context": "https://schema.org",
   "@type": "WebPage",
   "url": "{{ url()->current() }}",
-  "name": "{{ $guaTrans['page_title'][$lang] ?? 'Hijab Guarantee' }}",
+  "name": "{{ $guaTrans['page_title'][$lang] ?? 'LUMINA Guarantee' }}",
   "description": "{{ $guaTrans['page_subtitle'][$lang] ?? 'Shop with confidence knowing every product is backed by our commitment.' }}",
   "inLanguage": "{{ $lang === 'id' ? 'id-ID' : 'en-US' }}",
   "isPartOf": { "@id": "{{ url('/') }}/#website" },
@@ -46,7 +46,7 @@
                 <div class="mx-auto w-full max-w-7xl px-6 md:px-10 lg:px-12">
                     <div class="mx-auto max-w-3xl text-center">
                         <p class="text-xs font-semibold uppercase tracking-[0.18em] text-zinc-500">{{ $guaTrans['section_badge'][$lang] ?? 'Our Promise' }}</p>
-                        <h1 class="mt-3 text-3xl font-semibold tracking-tight text-black sm:text-4xl">{{ $guaTrans['page_title'][$lang] ?? 'Hijab Guarantee' }}</h1>
+                        <h1 class="mt-3 text-3xl font-semibold tracking-tight text-black sm:text-4xl">{{ $guaTrans['page_title'][$lang] ?? 'LUMINA Guarantee' }}</h1>
                         <p class="mt-4 text-zinc-600">{{ $guaTrans['page_subtitle'][$lang] ?? 'Shop with confidence knowing every product is backed by our commitment.' }}</p>
                     </div>
 
@@ -58,7 +58,7 @@
                                 </div>
                                 <h2 class="text-lg font-semibold text-black">{!! nl2br(e($guaTrans['title_authentic'][$lang] ?? '100% Authentic Products')) !!}</h2>
                             </div>
-                            <p class="mt-2 text-justify">{!! nl2br(e($guaTrans['desc_authentic'][$lang] ?? 'Every product sold at Hijab is 100% authentic and sourced directly from authorized distributors or the brands themselves. We never sell counterfeit or replica items.')) !!}</p>
+                            <p class="mt-2 text-justify">{!! nl2br(e($guaTrans['desc_authentic'][$lang] ?? 'Every product sold at LUMINA is 100% authentic and sourced directly from authorized distributors or the brands themselves. We never sell counterfeit or replica items.')) !!}</p>
 
                             <div class="mb-6 mt-8 flex items-center gap-3">
                                 <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-black text-white">
@@ -66,7 +66,7 @@
                                 </div>
                                 <h2 class="text-lg font-semibold text-black">{!! nl2br(e($guaTrans['title_inspection'][$lang] ?? 'Quality Inspection')) !!}</h2>
                             </div>
-                            <p class="mt-2 text-justify">{!! nl2br(e($guaTrans['desc_inspection'][$lang] ?? 'All hijabs, shoes, and gear are inspected by our team before shipping. We check for defects, verify string tension accuracy, and ensure every item meets our standards.')) !!}</p>
+                            <p class="mt-2 text-justify">{!! nl2br(e($guaTrans['desc_inspection'][$lang] ?? 'All skincares, shoes, and gear are inspected by our team before shipping. We check for defects, verify string tension accuracy, and ensure every item meets our standards.')) !!}</p>
 
                             <div class="mb-6 mt-8 flex items-center gap-3">
                                 <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-black text-white">
@@ -82,7 +82,7 @@
                                 </div>
                                 <h2 class="text-lg font-semibold text-black">{!! nl2br(e($guaTrans['title_stringing'][$lang] ?? 'Stringing Warranty')) !!}</h2>
                             </div>
-                            <p class="mt-2 text-justify">{!! nl2br(e($guaTrans['desc_stringing'][$lang] ?? 'Hijabs strung by Hijab come with a 30-day stringing warranty. If the strings break within 30 days under normal playing conditions, we will restring your hijab free of charge.')) !!}</p>
+                            <p class="mt-2 text-justify">{!! nl2br(e($guaTrans['desc_stringing'][$lang] ?? 'LUMINAs strung by LUMINA come with a 30-day stringing warranty. If the strings break within 30 days under normal playing conditions, we will restring your skincare free of charge.')) !!}</p>
 
                             <div class="mb-6 mt-8 flex items-center gap-3">
                                 <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-black text-white">
@@ -90,7 +90,7 @@
                                 </div>
                                 <h2 class="text-lg font-semibold text-black">{!! nl2br(e($guaTrans['title_support'][$lang] ?? 'Expert Support')) !!}</h2>
                             </div>
-                            <p class="mt-2 text-justify">{!! nl2br(e($guaTrans['desc_support'][$lang] ?? 'Our team consists of hijab enthusiasts and certified stringers. Whether you need advice on hijab selection, string tension, or shoe sizing, we are here to help you make the right choice.')) !!}</p>
+                            <p class="mt-2 text-justify">{!! nl2br(e($guaTrans['desc_support'][$lang] ?? 'Our team consists of skincare enthusiasts and certified stringers. Whether you need advice on skincare selection, string tension, or shoe sizing, we are here to help you make the right choice.')) !!}</p>
 
                             <div class="mb-6 mt-8 flex items-center gap-3">
                                 <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-black text-white">
@@ -106,7 +106,7 @@
                                 </div>
                                 <h2 class="text-lg font-semibold text-black">{!! nl2br(e($guaTrans['title_questions'][$lang] ?? 'Support')) !!}</h2>
                             </div>
-                            <p class="mt-2 text-justify">{!! nl2br(e($guaTrans['desc_questions_1'][$lang] ?? 'If you have further questions about products and warranties, please contact our team:\nEmail:')) !!} support@hijab.com {!! nl2br(e($guaTrans['desc_questions_or'][$lang] ?? '\nWhatsApp: +62 812 7788 9900\nWe\'re ready to help!')) !!}</p>
+                            <p class="mt-2 text-justify">{!! nl2br(e($guaTrans['desc_questions_1'][$lang] ?? 'If you have further questions about products and warranties, please contact our team:\nEmail:')) !!} support@luminaskincare.id {!! nl2br(e($guaTrans['desc_questions_or'][$lang] ?? '\nWhatsApp: +62 812 7788 9900\nWe\'re ready to help!')) !!}</p>
                         </div>
                     </div>
                 </div>

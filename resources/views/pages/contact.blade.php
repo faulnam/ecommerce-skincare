@@ -64,7 +64,7 @@
                             <h2 class="text-base font-semibold text-black">{{ $contact['contact_page']['info_section']['title'][$lang] ?? 'Informasi Kontak' }}</h2>
                             <ul class="mt-3 space-y-2 text-sm text-zinc-600">
                                 <li><span class="font-medium text-black">WhatsApp:</span> {{ config('branding.phone', '08511735858') }}</li>
-                                <li><span class="font-medium text-black">Email:</span> support@hijab.com</li>
+                                <li><span class="font-medium text-black">Email:</span> support@luminaskincare.id</li>
                                 <li><span class="font-medium text-black">{{ $contact['contact_page']['info_section']['address_label'][$lang] ?? 'Alamat' }}:</span> {{ $contact['contact_page']['info_section']['address_detail'][$lang] ?? config('branding.address', 'Citraland, Surabaya, Jawa Timur, Indonesia') }}</li>
                             </ul>
                         </div>

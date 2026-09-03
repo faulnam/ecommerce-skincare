@@ -6,7 +6,7 @@
 @endphp
 
 @section('title', $brandCatalog['meta_title'][$lang] ?? 'Brand Catalog')
-@section('og_description', $brandCatalog['meta_description'][$lang] ?? 'Katalog brand hijab pilihan di Hijab. Temukan produk dari brand-brand terpercaya dan terbaik di dunia hijab.')
+@section('og_description', $brandCatalog['meta_description'][$lang] ?? 'Katalog brand skincare pilihan di LUMINA. Temukan produk dari brand-brand terpercaya dan terbaik di dunia kecantikan & skincare.')
 
 @section('content')
     @include('components.luxury-navbar')
@@ -17,7 +17,7 @@
                 <div class="mx-auto max-w-3xl text-center">
                     <p class="text-xs font-semibold uppercase tracking-[0.18em] text-zinc-400">{{ $brandCatalog['badge'][$lang] ?? 'Our Partners' }}</p>
                     <h1 class="mt-3 text-3xl font-semibold tracking-tight text-black sm:text-4xl">{{ $brandCatalog['hero_title'][$lang] ?? 'Brand Catalog' }}</h1>
-                    <p class="mt-4 text-zinc-600">{{ $brandCatalog['hero_desc'][$lang] ?? 'Explore official catalogs from premium hijab brands we carry.' }}</p>
+                    <p class="mt-4 text-zinc-600">{{ $brandCatalog['hero_desc'][$lang] ?? 'Explore official catalogs from premium skincare brands we carry.' }}</p>
                 </div>
 
                 @if($catalogs->isEmpty())
@@ -103,9 +103,9 @@
             <!-- SEO Footer Text -->
             <div class="mx-auto mt-16 max-w-4xl px-6 text-center text-sm text-zinc-500 md:px-10 lg:px-12">
                 <p>
-                    Sebagai toko perlengkapan hijab terpercaya, Hijab menyediakan e-katalog resmi dari berbagai merek perlengkapan hijab terkemuka. 
-                    Anda dapat mengunduh katalog PDF untuk melihat spesifikasi detail hijab hijab, sepatu, bola, dan aksesori terbaru. 
-                    Setiap brand di atas memiliki dedikasi tinggi terhadap olahraga hijab, memastikan performa dan durabilitas terbaik di lapangan.
+                    Sebagai toko produk perawatan kulit terpercaya, LUMINA menyediakan e-katalog resmi dari berbagai merek produk perawatan kulit terkemuka. 
+                    Anda dapat mengunduh katalog PDF untuk melihat spesifikasi detail skincare skincare, sepatu, bola, dan aksesori terbaru. 
+                    Setiap brand di atas memiliki dedikasi tinggi terhadap olahraga skincare, memastikan performa dan durabilitas terbaik di lapangan.
                 </p>
             </div>
         </section>
@@ -117,8 +117,8 @@
 {
   "@@context": "https://schema.org",
   "@@type": "ItemList",
-  "name": "Hijab Official Brand Catalogs",
-  "description": "Download e-katalog resmi dari berbagai brand hijab dunia seperti Nox, Bullhijab, Babolat.",
+  "name": "LUMINA Official Brand Catalogs",
+  "description": "Download e-katalog resmi dari berbagai brand skincare dunia seperti Nox, Bullskincare, Babolat.",
   "itemListElement": [
     @foreach($catalogs as $index => $catalog)
     {

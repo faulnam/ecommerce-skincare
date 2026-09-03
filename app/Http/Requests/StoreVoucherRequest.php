@@ -20,7 +20,7 @@ class StoreVoucherRequest extends FormRequest
             'code' => 'nullable|string|max:50|unique:vouchers,code',
             'description' => 'nullable|string',
             'type' => 'required|in:fixed,percent,cashback',
-            'category' => 'required|in:hijab,accessories,shoes,new_arrivals,all',
+            'category' => 'required|in:all,serum,moisturizer,cleanser,toner,sunscreen,new_arrivals,hijab,accessories,shoes',
             'discount_value' => 'required|numeric|min:0',
             'minimum_purchase' => 'required|numeric|min:0',
             'maximum_discount' => 'nullable|numeric|min:0',

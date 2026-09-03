@@ -140,7 +140,7 @@ class Voucher extends Model
     {
         return match($this->category) {
             'all' => 'Semua Kategori',
-            'hijab' => 'Hijab',
+            'skincare' => 'LUMINA',
             'accessories' => 'Accessories',
             'shoes' => 'Shoes',
             'new_arrivals' => 'New Arrivals',

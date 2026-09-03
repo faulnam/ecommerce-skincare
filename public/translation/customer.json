@@ -30,7 +30,7 @@
   "label_total": { "id": "Total", "en": "Total" },
   "btn_view_details": { "id": "Lihat Detail", "en": "View Details" },
   "empty_orders_title": { "id": "Belum Ada Pesanan", "en": "No Orders Yet" },
-  "empty_orders_desc": { "id": "Yuk, mulai belanja perlengkapan hijab pilihanmu!", "en": "Let's start shopping for hijab equipment!" },
+  "empty_orders_desc": { "id": "Yuk, mulai belanja produk perawatan kulit pilihanmu!", "en": "Let's start shopping for skincare equipment!" },
   "btn_start_shopping": { "id": "Mulai Belanja", "en": "Start Shopping" },
   "rewards_subtitle": { "id": "Kelola poin loyalitas dan lihat riwayat transaksi poin Anda", "en": "Manage your loyalty points and view your points transaction history" },
   "btn_back_profile": { "id": "Kembali ke Profile", "en": "Back to Profile" },

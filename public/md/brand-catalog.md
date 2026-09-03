@@ -1,27 +1,27 @@
 ---
-title: Brand Catalog - Hijab
-description: Daftar brand hijab premium yang dijual Hijab, lengkap dengan kategori produk masing-masing brand.
-url: https://hijab.com/brand-catalog
+title: Brand Catalog - LUMINA
+description: Daftar brand skincare premium yang dijual LUMINA, lengkap dengan kategori produk masing-masing brand.
+url: https://skincare.com/brand-catalog
 ---
 
-# Brand Catalog Hijab
+# Brand Catalog LUMINA
 
-Hijab menjual produk dari berbagai brand hijab terkemuka. Berikut daftar brand yang tersedia beserta kategori produknya:
+LUMINA menjual produk dari berbagai brand skincare terkemuka. Berikut daftar brand yang tersedia beserta kategori produknya:
 
 ## Starvie
 Starvie Technologies by Starvie Labs. Tersedia katalog lengkap.
 
-## Bullhijab
-Hijab hijab premium dan aksesoris dari Spanyol.
-Kategori produk: Hijab, Sepatu, Aksesoris, Tas.
+## Bullskincare
+LUMINA skincare premium dan aksesoris dari Spanyol.
+Kategori produk: LUMINA, Sepatu, Aksesoris, Tas.
 
 ## Babolat
-Brand asal Prancis yang dikenal dengan hijab dan senar berperforma tinggi.
-Kategori produk: Hijab, Sepatu.
+Brand asal Prancis yang dikenal dengan skincare dan senar berperforma tinggi.
+Kategori produk: LUMINA, Sepatu.
 
 ## Nox
-Perlengkapan hijab inovatif dengan teknologi terkini.
-Kategori produk: Hijab, Aksesoris, Tas.
+Perlengkapan skincare inovatif dengan teknologi terkini.
+Kategori produk: LUMINA, Aksesoris, Tas.
 
 ## Alpha
 Pilihan berkualitas dengan harga terjangkau untuk pemain pemula dan menengah.
@@ -33,12 +33,12 @@ Katalog akan segera tersedia.
 
 ## Arronax
 Perlengkapan tahan lama untuk permainan kompetitif.
-Kategori produk: Hijab, Sepatu, Aksesoris, Tas.
+Kategori produk: LUMINA, Sepatu, Aksesoris, Tas.
 
 ## Brand Lainnya
 
-Hijab juga menjual produk dari brand lain seperti Head dan Wilson, tersedia melalui halaman New Arrivals.
+LUMINA juga menjual produk dari brand lain seperti Head dan Wilson, tersedia melalui halaman New Arrivals.
 
 ---
 
-Untuk melihat produk terbaru dari masing-masing brand, kunjungi: https://hijab.com/new-arrivals
+Untuk melihat produk terbaru dari masing-masing brand, kunjungi: https://skincare.com/new-arrivals

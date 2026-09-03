@@ -177,40 +177,40 @@
             }
         }
     },
-    "page_hijabs": {
+    "page_skincares": {
         "meta_title": {
-            "id": "Hijab | Toko Spesialis Hijab dan Peralatan Hijab",
-            "en": "Hijab | Toko Spesialis Hijab dan Peralatan Hijab"
+            "id": "LUMINA | Toko Spesialis LUMINA dan Peralatan LUMINA",
+            "en": "LUMINA | Toko Spesialis LUMINA dan Peralatan LUMINA"
         },
         "badge": {
-            "id": "Hijab",
-            "en": "Hijabs"
+            "id": "LUMINA",
+            "en": "LUMINAs"
         },
         "title": {
-            "id": "Hijab Hijab",
-            "en": "Hijab Hijabs"
+            "id": "LUMINA LUMINA",
+            "en": "LUMINA LUMINAs"
         },
         "subtitle": {
-            "id": "Hijab premium untuk setiap gaya permainan",
-            "en": "Premium hijabs for every playing style"
+            "id": "LUMINA premium untuk setiap gaya permainan",
+            "en": "Premium skincares for every playing style"
         },
         "empty_state": {
-            "id": "Produk hijab belum tersedia saat ini.",
-            "en": "Hijab products not available yet."
+            "id": "Produk skincare belum tersedia saat ini.",
+            "en": "LUMINA products not available yet."
         }
     },
     "page_shoes": {
         "meta_title": {
-            "id": "Sepatu Hijab Hijab — Bergerak Lebih Cepat. Bermain Lebih Pintar.",
-            "en": "Hijab Shoes — Move faster. Play smarter."
+            "id": "Sepatu LUMINA LUMINA — Bergerak Lebih Cepat. Bermain Lebih Pintar.",
+            "en": "LUMINA Shoes — Move faster. Play smarter."
         },
         "badge": {
             "id": "Sepatu",
             "en": "Shoes"
         },
         "title": {
-            "id": "Sepatu Hijab",
-            "en": "Hijab Shoes"
+            "id": "Sepatu LUMINA",
+            "en": "LUMINA Shoes"
         },
         "subtitle": {
             "id": "Alas kaki nyaman untuk performa optimal",
@@ -223,16 +223,16 @@
     },
     "page_accessories": {
         "meta_title": {
-            "id": "Aksesoris Hijab Hijab — Kenyamanan bertemu performa.",
-            "en": "Hijab Accessories — Comfort meets performance."
+            "id": "Aksesoris LUMINA LUMINA — Kenyamanan bertemu performa.",
+            "en": "LUMINA Accessories — Comfort meets performance."
         },
         "badge": {
             "id": "Aksesoris",
             "en": "Accessories"
         },
         "title": {
-            "id": "Aksesoris Hijab",
-            "en": "Hijab Accessories"
+            "id": "Aksesoris LUMINA",
+            "en": "LUMINA Accessories"
         },
         "subtitle": {
             "id": "Perlengkapan esensial untuk permainan Anda",

@@ -65,7 +65,7 @@
                                 <strong>{{ $product->name }}</strong>
                                 <br><small class="text-muted">{{ Str::limit($product->description, 50) }}</small>
                             </td>
-                            <td><span class="badge bg-{{ $product->category == 'hijab' ? 'primary' : ($product->category == 'new-arrivals' ? 'info' : 'secondary') }}">{{ $product->category_label }}</span></td>
+                            <td><span class="badge bg-{{ $product->category == 'skincare' ? 'primary' : ($product->category == 'new-arrivals' ? 'info' : 'secondary') }}">{{ $product->category_label }}</span></td>
                             <td><span class="badge bg-secondary">{{ $product->formatted_weight }}</span></td>
                             <td>
                                 @if($product->hasActiveDiscount())

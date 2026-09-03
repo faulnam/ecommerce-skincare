@@ -25,8 +25,8 @@ class UpdateSeederWithBrandLevel extends Command
         $getBrand = function($name) {
             $nameLower = strtolower($name);
             
-            if (strpos($nameLower, 'bullhijab') !== false) {
-                return 'Bullhijab';
+            if (strpos($nameLower, 'bullskincare') !== false) {
+                return 'Bullskincare';
             } elseif (strpos($nameLower, 'babolat') !== false) {
                 return 'Babolat';
             } elseif (strpos($nameLower, 'nox') !== false) {

@@ -78,7 +78,7 @@ class ChatbotController extends Controller
         ];
         $messages[] = [
             'role' => 'assistant',
-            'content' => 'Baik! Saya siap membantu sebagai sales dan customer service Hijab. Saya akan dengan senang hati membantu pelanggan menemukan produk terbaik untuk kebutuhan mereka.',
+            'content' => 'Baik! Saya siap membantu sebagai sales dan customer service LUMINA. Saya akan dengan senang hati membantu pelanggan menemukan produk terbaik untuk kebutuhan mereka.',
         ];
 
         foreach ($history as $item) {
@@ -195,12 +195,12 @@ class ChatbotController extends Controller
         $reply = '';
         $showProducts = false;
 
-        if (str_contains($msg, 'hijab') || str_contains($msg, 'jilbab') || str_contains($msg, 'bergo') || str_contains($msg, 'pashmina')) {
-            $reply = 'Halo! Kami punya berbagai koleksi hijab cantik dari merek terbaik. ';
+        if (str_contains($msg, 'skincare') || str_contains($msg, 'jilbab') || str_contains($msg, 'bergo') || str_contains($msg, 'pashmina')) {
+            $reply = 'Halo! Kami punya berbagai koleksi skincare cantik dari merek terbaik. ';
             if ($relevantProducts->isNotEmpty()) {
                 $reply .= 'Berikut beberapa pilihan yang bisa kamu cek: ✨';
             } else {
-                $reply .= 'Silakan lihat katalog hijab kami di halaman produk ya!';
+                $reply .= 'Silakan lihat katalog skincare kami di halaman produk ya!';
             }
             $showProducts = true;
         } elseif (str_contains($msg, 'dress') || str_contains($msg, 'gamis') || str_contains($msg, 'tunik')) {
@@ -217,7 +217,7 @@ class ChatbotController extends Controller
             $reply = 'Sepatu dan heels kami tersedia untuk menunjang penampilan maksimal. Cek di bawah ya: ✨';
             $showProducts = true;
         } elseif (str_contains($msg, 'aksesori') || str_contains($msg, 'accessories') || str_contains($msg, 'bros') || str_contains($msg, 'ciput')) {
-            $reply = 'Berbagai aksesori hijab tersedia: ciput, bros, manset, dan lainnya. Lihat pilihan ini: ✨';
+            $reply = 'Berbagai aksesori skincare tersedia: ciput, bros, manset, dan lainnya. Lihat pilihan ini: ✨';
             $showProducts = true;
         } elseif (str_contains($msg, 'order') || str_contains($msg, 'cara beli') || str_contains($msg, 'cara order') || str_contains($msg, 'pembayaran') || str_contains($msg, 'bayar')) {
             $reply = "Cara ordernya gampang! 🛒\n\n" .
@@ -233,7 +233,7 @@ class ChatbotController extends Controller
         } elseif (str_contains($msg, 'cod')) {
             $reply = 'COD (Bayar di Tempat) tersedia untuk area tertentu. Kamu bisa pilih opsi COD saat checkout kalau tujuanmu mendukung. ✅';
         } elseif (str_contains($msg, 'halo') || str_contains($msg, 'hi') || str_contains($msg, 'hello') || str_contains($msg, 'hai')) {
-            $reply = 'Halo! 👋 Saya Hijab AI. Mau cari hijab, gamis, tas, sepatu atau aksesori muslimah? Saya siap bantu!';
+            $reply = 'Halo! 👋 Saya LUMINA AI. Mau cari skincare, gamis, tas, sepatu atau aksesori muslimah? Saya siap bantu!';
         } else {
             $reply = 'Maaf, saya sedang dalam mode offline. Tapi saya masih bisa bantu cari produk fashion! Mau lihat produk apa nih? ✨';
             $showProducts = $relevantProducts->isNotEmpty();
@@ -273,7 +273,7 @@ class ChatbotController extends Controller
 
         // Keyword mapping
         $keywords = [
-            'hijab' => ['hijab', 'jilbab', 'pashmina', 'bergo', 'kerudung'],
+            'skincare' => ['skincare', 'jilbab', 'pashmina', 'bergo', 'kerudung'],
             'dress' => ['dress', 'gamis', 'tunik', 'abaya'],
             'bawahan' => ['rok', 'skirt', 'celana', 'kulot', 'bawahan'],
             'tas' => ['tas', 'bag', 'backpack', 'handbag', 'sling'],
@@ -293,7 +293,7 @@ class ChatbotController extends Controller
         $matchedCategories = array_unique($matchedCategories);
 
         // Filter berdasarkan kategori
-        if (in_array('hijab', $matchedCategories)) {
+        if (in_array('skincare', $matchedCategories)) {
             $query->whereIn('category', ['original', 'arrivals']);
         } elseif (in_array('sepatu', $matchedCategories)) {
             $query->where('category', 'shoes');
@@ -398,7 +398,7 @@ class ChatbotController extends Controller
         }
         $productContext = $lines ? implode("\n", $lines) : "Tidak ada data produk saat ini.";
 
-        return "Kamu adalah Hijab AI, sales representative dan customer service fashion muslimah.\n\nIDENTITAS:\n- Nama: Hijab AI\n- Peran: Sales & Customer Service Fashion Muslimah\n- Bahasa: Indonesia natural, ramah, sopan, elegan\n- Gunakan emoji secukupnya ✨🌸\n- JANGAN gunakan format markdown (**, *, -)\n\nTENTANG TOKO:\n- Spesialis fashion muslimah: hijab, gamis, tunik, bawahan, tas, sepatu, dan aksesoris muslimah\n- Pengiriman seluruh Indonesia\n- Pembayaran: transfer bank, e-wallet, COD (tergantung area)\n- Pengiriman: JNE, J&T, SiCepat\n\nKAPAN MEREKOMENDASIKAN PRODUK:\n- HANYA rekomendasikan produk jika user bertanya soal produk, harga, bahan, warna, atau rekomendasi fashion\n- Jika user tanya cara order, promo, pengiriman, atau hal non-produk → jawab saja tanpa rekomendasi produk\n- Jika user tanya produk → WAJIB sebut minimal 3 produk spesifik dari data yang tersedia\n\nFORMAT RESPONS:\nSelalu kembalikan JSON dengan struktur ini:\n{\n  \"reply\": \"teks jawaban untuk user\",\n  \"show_products\": true/false,\n  \"recommended_slugs\": [\"slug-1\", \"slug-2\", \"slug-3\"]\n}\n\n- \"show_products\": true HANYA jika user tanya soal produk, harga, atau rekomendasi fashion\n- \"recommended_slugs\": array slug produk yang direkomendasikan (kosong jika show_products false)\n- \"reply\": jawaban natural dalam bahasa Indonesia, TANPA tag REKOMENDASI\n\nATURAN PENTING:\n- Jangan mengarang produk atau harga yang tidak ada di data\n- Jika stok habis, tetap boleh disebut tapi beri tahu stok kosong\n- Jika budget disebut, prioritaskan produk yang harganya sesuai atau di bawah budget\n\nDATA PRODUK TERSEDIA (gunakan HANYA data ini, jangan mengarang):\n\n" . $productContext . "\n\nPASTIKAN responsmu selalu dalam format JSON yang valid seperti contoh di atas. Jangan tambahkan teks lain di luar JSON.";
+        return "Kamu adalah LUMINA AI, sales representative dan customer service fashion muslimah.\n\nIDENTITAS:\n- Nama: LUMINA AI\n- Peran: Sales & Customer Service Fashion Muslimah\n- Bahasa: Indonesia natural, ramah, sopan, elegan\n- Gunakan emoji secukupnya ✨🌸\n- JANGAN gunakan format markdown (**, *, -)\n\nTENTANG TOKO:\n- Spesialis fashion muslimah: skincare, gamis, tunik, bawahan, tas, sepatu, dan aksesoris muslimah\n- Pengiriman seluruh Indonesia\n- Pembayaran: transfer bank, e-wallet, COD (tergantung area)\n- Pengiriman: JNE, J&T, SiCepat\n\nKAPAN MEREKOMENDASIKAN PRODUK:\n- HANYA rekomendasikan produk jika user bertanya soal produk, harga, bahan, warna, atau rekomendasi fashion\n- Jika user tanya cara order, promo, pengiriman, atau hal non-produk → jawab saja tanpa rekomendasi produk\n- Jika user tanya produk → WAJIB sebut minimal 3 produk spesifik dari data yang tersedia\n\nFORMAT RESPONS:\nSelalu kembalikan JSON dengan struktur ini:\n{\n  \"reply\": \"teks jawaban untuk user\",\n  \"show_products\": true/false,\n  \"recommended_slugs\": [\"slug-1\", \"slug-2\", \"slug-3\"]\n}\n\n- \"show_products\": true HANYA jika user tanya soal produk, harga, atau rekomendasi fashion\n- \"recommended_slugs\": array slug produk yang direkomendasikan (kosong jika show_products false)\n- \"reply\": jawaban natural dalam bahasa Indonesia, TANPA tag REKOMENDASI\n\nATURAN PENTING:\n- Jangan mengarang produk atau harga yang tidak ada di data\n- Jika stok habis, tetap boleh disebut tapi beri tahu stok kosong\n- Jika budget disebut, prioritaskan produk yang harganya sesuai atau di bawah budget\n\nDATA PRODUK TERSEDIA (gunakan HANYA data ini, jangan mengarang):\n\n" . $productContext . "\n\nPASTIKAN responsmu selalu dalam format JSON yang valid seperti contoh di atas. Jangan tambahkan teks lain di luar JSON.";
     }
 
     /**

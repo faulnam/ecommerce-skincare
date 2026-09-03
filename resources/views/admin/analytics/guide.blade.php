@@ -172,7 +172,7 @@
                         Menjawab pertanyaan <em>"Dari mana asal pengunjung saya?"</em><br><br>
                         <ul class="mb-0 ps-3 mt-2">
                             <li><strong>Organic Search:</strong> Masuk gratis dari pencarian Google. Menandakan SEO website Anda baik.</li>
-                            <li><strong>Direct:</strong> Mengetik langsung nama website (misal: hijab.com). Menandakan *brand awareness* kuat.</li>
+                            <li><strong>Direct:</strong> Mengetik langsung nama website (misal: skincare.com). Menandakan *brand awareness* kuat.</li>
                             <li><strong>Social:</strong> Masuk dari link di media sosial. Mengukur seberapa efektif konten Instagram/TikTok Anda.</li>
                             <li><strong>Referral:</strong> Masuk dari rekomendasi website lain (backlink/partnership).</li>
                         </ul>

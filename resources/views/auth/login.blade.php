@@ -5,7 +5,7 @@
     $loginTrans = file_exists($jsonPath) ? json_decode(file_get_contents($jsonPath), true) : [];
 @endphp
 
-@section('title', $loginTrans['meta_title'][$lang] ?? 'Login - Hijab')
+@section('title', $loginTrans['meta_title'][$lang] ?? 'Login - LUMINA')
 
 @section('content')
 <style>
@@ -21,7 +21,7 @@
                 <h1 class="animate-element animate-delay-100 text-3xl md:text-4xl font-light leading-tight tracking-tighter">
                     {{ $loginTrans['welcome_title_1'][$lang] ?? 'Welcome' }} <span class="font-semibold">{{ $loginTrans['welcome_title_2'][$lang] ?? 'back' }}</span>
                 </h1>
-                <p class="animate-element animate-delay-200 text-sm text-zinc-500">{{ $loginTrans['welcome_desc'][$lang] ?? 'Access your account and continue your journey with Hijab.' }}</p>
+                <p class="animate-element animate-delay-200 text-sm text-zinc-500">{{ $loginTrans['welcome_desc'][$lang] ?? 'Access your account and continue your journey with LUMINA.' }}</p>
 
                 @if($errors->any())
                     <div class="animate-element animate-delay-250 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
@@ -85,7 +85,7 @@
                 </button>
 
                 <p class="animate-element animate-delay-900 text-center text-sm text-zinc-500">
-                    {{ $loginTrans['footer_text'][$lang] ?? 'New to Hijab?' }} <a href="{{ route('register') }}" class="text-violet-500 hover:underline transition-colors">{{ $loginTrans['btn_register'][$lang] ?? 'Create Account' }}</a>
+                    {{ $loginTrans['footer_text'][$lang] ?? 'New to LUMINA?' }} <a href="{{ route('register') }}" class="text-violet-500 hover:underline transition-colors">{{ $loginTrans['btn_register'][$lang] ?? 'Create Account' }}</a>
                 </p>
             </div>
         </div>
@@ -134,9 +134,9 @@
         // Firebase Configuration
         const firebaseConfig = {
             apiKey: "AIzaSyAKtin9WevURPmDUdoBwanJNS9kc0prh_A",
-            authDomain: "hijab-fba4f.firebaseapp.com",
-            projectId: "hijab-fba4f",
-            storageBucket: "hijab-fba4f.firebasestorage.app",
+            authDomain: "skincare-fba4f.firebaseapp.com",
+            projectId: "skincare-fba4f",
+            storageBucket: "skincare-fba4f.firebasestorage.app",
             messagingSenderId: "660330989978",
             appId: "1:660330989978:web:70e570eb75b668fdef9223",
             measurementId: "G-6KZ86FEM4K"

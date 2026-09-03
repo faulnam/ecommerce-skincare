@@ -37,8 +37,8 @@ class CustomerPaymentReceivedNotification extends Notification implements Should
             ->line('Status Pesanan: Diproses')
             ->action('Lihat Detail Pesanan', $url)
             ->line('Pesanan Anda sedang dipersiapkan untuk pengiriman. Kami akan menginformasikan kembali saat pesanan dikirim.')
-            ->line('Terima kasih telah berbelanja di ' . config('branding.name', 'Hijab') . '!')
-            ->salutation('Salam,\n' . config('branding.name', 'Hijab'));
+            ->line('Terima kasih telah berbelanja di ' . config('branding.name', 'LUMINA') . '!')
+            ->salutation('Salam,\n' . config('branding.name', 'LUMINA'));
     }
 
     public function toArray(object $notifiable): array

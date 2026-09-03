@@ -16,7 +16,7 @@ class BiteshipLogSeeder extends Seeder
             'order_id' => 'ORD-123456',
             'endpoint' => '/v1/orders',
             'method' => 'POST',
-            'request_payload' => ['shipper' => 'Hijab', 'recipient' => 'John Doe'],
+            'request_payload' => ['shipper' => 'LUMINA', 'recipient' => 'John Doe'],
             'response_payload' => ['success' => true, 'id' => 'biteship_123', 'status' => 'placed'],
             'status_code' => 200,
         ]);

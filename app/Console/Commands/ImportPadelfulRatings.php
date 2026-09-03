@@ -7,10 +7,10 @@ use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Str;
 
-class ImportHijabfulRatings extends Command
+class ImportLUMINAfulRatings extends Command
 {
-    protected $signature = 'import:hijabful-ratings {--pages=5 : Number of pages to fetch} {--dry-run : Show matches without updating}';
-    protected $description = 'Import hijab hijab ratings from hijabful.com and update products';
+    protected $signature = 'import:skincareful-ratings {--pages=5 : Number of pages to fetch} {--dry-run : Show matches without updating}';
+    protected $description = 'Import skincare skincare ratings from skincareful.com and update products';
 
     public function handle(): int
     {
@@ -19,10 +19,10 @@ class ImportHijabfulRatings extends Command
         $updated = 0;
         $matched = 0;
 
-        $this->info("Fetching up to {$maxPages} pages from hijabful.com...");
+        $this->info("Fetching up to {$maxPages} pages from skincareful.com...");
 
         for ($page = 1; $page <= $maxPages; $page++) {
-            $url = "https://www.hijabful.com/en/hijabs?page={$page}";
+            $url = "https://www.skincareful.com/en/skincares?page={$page}";
             $this->info("Fetching page {$page}...");
 
             try {
@@ -39,25 +39,25 @@ class ImportHijabfulRatings extends Command
                 }
 
                 $html = $response->body();
-                $hijabs = $this->parseHijabs($html);
+                $skincares = $this->parseLUMINAs($html);
 
-                $this->info("Found " . count($hijabs) . " hijabs on page {$page}");
+                $this->info("Found " . count($skincares) . " skincares on page {$page}");
 
-                foreach ($hijabs as $hijab) {
-                    $product = $this->findProduct($hijab['name'], $hijab['brand']);
+                foreach ($skincares as $skincare) {
+                    $product = $this->findProduct($skincare['name'], $skincare['brand']);
                     if ($product) {
                         $matched++;
                         if (!$dryRun) {
-                            $product->hijabful_rating = $hijab['rating'];
-                            $product->year = $hijab['year'] ?? $product->year;
+                            $product->rating = $skincare['rating'];
+                            $product->year = $skincare['year'] ?? $product->year;
                             $product->save();
                             $updated++;
-                            $this->line("  Updated: {$product->name} -> Hijabful: {$hijab['rating']}");
+                            $this->line("  Updated: {$product->name} -> LUMINAful: {$skincare['rating']}");
                         } else {
-                            $this->line("  Would update: {$product->name} -> Hijabful: {$hijab['rating']}");
+                            $this->line("  Would update: {$product->name} -> LUMINAful: {$skincare['rating']}");
                         }
                     } else {
-                        $this->line("  No match: {$hijab['name']} ({$hijab['brand']})");
+                        $this->line("  No match: {$skincare['name']} ({$skincare['brand']})");
                     }
                 }
             } catch (\Throwable $e) {
@@ -79,21 +79,21 @@ class ImportHijabfulRatings extends Command
         return self::SUCCESS;
     }
 
-    private function parseHijabs(string $html): array
+    private function parseLUMINAs(string $html): array
     {
-        $hijabs = [];
+        $skincares = [];
 
         // Try to find JSON-LD or structured data first
         if (preg_match_all('/"name"\s*:\s*"([^"]+)"/', $html, $names)) {
             // Fallback to regex-based parsing of the page structure
         }
 
-        // Parse using the visible pattern: each hijab card contains title, brand/year, specs, and rating
+        // Parse using the visible pattern: each skincare card contains title, brand/year, specs, and rating
         // The overall rating appears as the last number, often after prices like "350€ 289€87"
         // We look for common patterns in the HTML
 
-        // Method: look for hijab name links and their surrounding rating data
-        if (preg_match_all('/<a[^>]*href="\/en\/hijabs\/([^"]+)"[^>]*>.*?<\/a>/s', $html, $linkMatches, PREG_SET_ORDER)) {
+        // Method: look for skincare name links and their surrounding rating data
+        if (preg_match_all('/<a[^>]*href="\/en\/skincares\/([^"]+)"[^>]*>.*?<\/a>/s', $html, $linkMatches, PREG_SET_ORDER)) {
             // This is too broad; let's use a simpler heuristic on text content
         }
 
@@ -109,7 +109,7 @@ class ImportHijabfulRatings extends Command
         while ($i < count($lines)) {
             $line = $lines[$i];
 
-            // Look for a line that looks like a hijab name followed by specs
+            // Look for a line that looks like a skincare name followed by specs
             // Pattern: Name... PWRPower##CTLControl##...€##
             if (preg_match('/^(.*?)PWRPower\d+CTLControl\d+/i', $line, $m)) {
                 $nameBrandYear = trim($m[1]);
@@ -134,7 +134,7 @@ class ImportHijabfulRatings extends Command
                         $name = preg_replace('/\s+(?:by|-)\s+.*$/i', '', $name);
 
                         if ($name && $rating) {
-                            $hijabs[] = [
+                            $skincares[] = [
                                 'name' => $name,
                                 'brand' => $brand,
                                 'year' => $year,
@@ -183,7 +183,7 @@ class ImportHijabfulRatings extends Command
                 }
 
                 if ($rating && $rating >= 50 && $rating <= 100) {
-                    $hijabs[] = [
+                    $skincares[] = [
                         'name' => $name,
                         'brand' => $brand,
                         'year' => $year,
@@ -200,7 +200,7 @@ class ImportHijabfulRatings extends Command
         // Deduplicate by name+brand
         $seen = [];
         $unique = [];
-        foreach ($hijabs as $r) {
+        foreach ($skincares as $r) {
             $key = strtolower(trim($r['name'])) . '|' . strtolower(trim($r['brand'] ?? ''));
             if (!isset($seen[$key])) {
                 $seen[$key] = true;

@@ -20,7 +20,7 @@ class ContactMessageMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: '[Contact Hijab] ' . ($this->payload['subject'] ?? 'Pesan Baru'),
+            subject: '[Contact LUMINA] ' . ($this->payload['subject'] ?? 'Pesan Baru'),
             replyTo: [
                 new \Illuminate\Mail\Mailables\Address(
                     $this->payload['email'] ?? config('mail.from.address'),

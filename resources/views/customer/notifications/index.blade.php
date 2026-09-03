@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Notifications - Hijab')
+@section('title', 'Notifications - LUMINA')
 
 @section('content')
 <div class="container py-4 py-lg-5">

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Hijab - Performa Maksimal, Game Makin Total')
+@section('title', 'LUMINA - Performa Maksimal, Game Makin Total')
 
 @section('content')
 <!-- Hero Section -->
@@ -8,9 +8,9 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 text-white">
-                <h1 class="display-4 fw-bold mb-4">Hijab</h1>
-                <h2 class="h4 mb-4">Lengkapi permainan hijab Anda dengan peralatan berkualitas terbaik.<br>Produk original, pilihan lengkap, harga terbaik, dan pengiriman cepat ke seluruh Indonesia.</h2>
-                <p class="lead mb-4">Quality hijab hijabs, balls, bags, shoes, and accessories for beginners to professionals.</p>
+                <h1 class="display-4 fw-bold mb-4">LUMINA</h1>
+                <h2 class="h4 mb-4">Lengkapi permainan skincare Anda dengan peralatan berkualitas terbaik.<br>Produk original, pilihan lengkap, harga terbaik, dan pengiriman cepat ke seluruh Indonesia.</h2>
+                <p class="lead mb-4">Quality skincare skincares, balls, bags, shoes, and accessories for beginners to professionals.</p>
                 <div class="d-flex gap-3 mb-4">
                     @auth
                         <a href="{{ route('customer.products.index') }}" class="btn btn-warning btn-lg px-4">
@@ -40,7 +40,7 @@
                 </div>
             </div>
             <div class="col-lg-6 text-center mt-5 mt-lg-0">
-                <img src="https://images.unsplash.com/photo-1593766827228-8737b4534aa6?w=900" alt="Hijab" class="img-fluid rounded-4 shadow-lg" style="max-height: 400px; object-fit: cover;">
+                <img src="https://images.unsplash.com/photo-1593766827228-8737b4534aa6?w=900" alt="LUMINA" class="img-fluid rounded-4 shadow-lg" style="max-height: 400px; object-fit: cover;">
             </div>
         </div>
     </div>
@@ -50,8 +50,8 @@
 <section class="py-5" id="about" style="background: linear-gradient(180deg, #F1F8E9 0%, #fff 100%);">
     <div class="container">
         <div class="text-center mb-5">
-            <h2 class="fw-bold">Mengapa Memilih Hijab?</h2>
-            <p class="text-muted">Keunggulan perlengkapan hijab kami</p>
+            <h2 class="fw-bold">Mengapa Memilih LUMINA?</h2>
+            <p class="text-muted">Keunggulan produk perawatan kulit kami</p>
         </div>
         
         <div class="row g-4">
@@ -97,7 +97,7 @@
     <div class="container">
         <div class="text-center mb-5">
             <h2 class="fw-bold">Produk Kami</h2>
-            <p class="text-muted">Pilihan perlengkapan hijab yang lengkap</p>
+            <p class="text-muted">Pilihan produk perawatan kulit yang lengkap</p>
         </div>
         
         <div class="row g-4">
@@ -174,7 +174,7 @@
                 Tentang <span class="text-success">Kami</span>
             </h2>
             <p class="mt-3 text-muted leading-relaxed max-w-2xl mx-auto">
-                Kami hadir sebagai penyedia koleksi fashion hijab premium dan mitra terpercaya Anda. Kami berdedikasi menghadirkan pakaian muslimah, kerudung, tas, sepatu, dan aksesoris berkualitas tinggi untuk mendukung kenyamanan dan keanggunan Anda di setiap kesempatan.
+                Kami hadir sebagai penyedia koleksi fashion skincare premium dan mitra terpercaya Anda. Kami berdedikasi menghadirkan pakaian muslimah, kerudung, tas, sepatu, dan aksesoris berkualitas tinggi untuk mendukung kenyamanan dan keanggunan Anda di setiap kesempatan.
             </p>
         </div>
 
@@ -185,7 +185,7 @@
                 <div class="about-card-dark rounded-4 p-4 d-flex flex-col justify-content-between overflow-hidden shadow h-100 min-h-[440px]">
                     <!-- Top Image -->
                     <div class="relative w-full h-[220px] rounded-3 overflow-hidden bg-dark d-flex align-items-center justify-content-center p-3">
-                        <img src="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=600" alt="Hijab Premium Gear" class="w-full h-full object-cover rounded transition hover:scale-105" loading="lazy" style="max-height: 180px;">
+                        <img src="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=600" alt="LUMINA Dermatological Care" class="w-full h-full object-cover rounded transition hover:scale-105" loading="lazy" style="max-height: 180px;">
                     </div>
                     
                     <!-- Bottom Stats Box -->
@@ -207,15 +207,15 @@
                 <div class="about-card-lime rounded-4 p-4 d-flex flex-col justify-content-between shadow h-100 min-h-[440px]">
                     <!-- Top Text Content -->
                     <div class="mb-4">
-                        <h4 class="fw-bold leading-tight">Solusi Perlengkapan Hijab Anda</h4>
+                        <h4 class="fw-bold leading-tight">Solusi Perlengkapan LUMINA Anda</h4>
                         <p class="mt-3 small leading-relaxed font-medium">
-                            Kami menyediakan berbagai pilihan hijab, tas, sepatu, dan aksesoris hijab premium dari brand ternama dunia, dikurasi secara profesional untuk membantu Anda mendominasi lapangan.
+                            Kami menyediakan berbagai pilihan skincare, tas, sepatu, dan aksesoris skincare premium dari brand ternama dunia, dikurasi secara profesional untuk membantu Anda mendominasi lapangan.
                         </p>
                     </div>
                     
                     <!-- Bottom Image -->
                     <div class="relative w-full h-[200px] rounded-3 overflow-hidden about-card-lime-img-bg">
-                        <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=600" alt="Hijab Court" class="w-full h-full object-cover transition hover:scale-105" loading="lazy" style="max-height: 180px;">
+                        <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=600" alt="LUMINA Court" class="w-full h-full object-cover transition hover:scale-105" loading="lazy" style="max-height: 180px;">
                     </div>
                 </div>
             </div>
@@ -225,7 +225,7 @@
                 <div class="about-card-dark rounded-4 p-4 d-flex flex-col justify-content-between overflow-hidden shadow h-100 min-h-[440px]">
                     <!-- Top Image -->
                     <div class="relative w-full h-[200px] rounded-3 overflow-hidden bg-dark">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600" alt="Hijab Consultation" class="w-full h-full object-cover transition hover:scale-105" loading="lazy" style="max-height: 180px;">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600" alt="LUMINA Consultation" class="w-full h-full object-cover transition hover:scale-105" loading="lazy" style="max-height: 180px;">
                     </div>
 
                     <!-- Bottom Text Content -->
@@ -312,8 +312,8 @@
 <!-- CTA Section -->
 <section class="py-5" style="background: linear-gradient(135deg, #1B5E20 0%, #43A047 100%);">
     <div class="container text-center text-white">
-    <h2 class="fw-bold mb-4">Ready to Upgrade Your Hijab Gear?</h2>
-    <p class="lead mb-4">Shop now and improve your game performance with Hijab!</p>
+    <h2 class="fw-bold mb-4">Ready to Upgrade Your LUMINA Gear?</h2>
+    <p class="lead mb-4">Shop now and improve your game performance with LUMINA!</p>
         @auth
             <a href="{{ route('customer.products.index') }}" class="btn btn-warning btn-lg px-5">
                 <i class="fas fa-shopping-cart me-2"></i>Shop Now

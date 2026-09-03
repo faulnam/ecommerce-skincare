@@ -5,7 +5,7 @@
     $payTrans = file_exists($jsonPath) ? json_decode(file_get_contents($jsonPath), true) : [];
 @endphp
 
-@section('title', $payTrans['meta_title'][$lang] ?? 'Payment - Hijab')
+@section('title', $payTrans['meta_title'][$lang] ?? 'Payment - LUMINA')
 
 @push('styles')
 <style>

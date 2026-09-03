@@ -22,7 +22,7 @@ class BiteshipTestFlowCommand extends Command
         {--courier-company=gojek : Courier company to use when creating order}
         {--courier-type=instant : Courier type/service to use when creating order}
         {--origin-postal= : Origin postal code (default from config biteship.origin.postal_code)}
-        {--origin-address=Jl. Raya Hijab No. 1, Surabaya : Origin address}
+        {--origin-address=Jl. Raya LUMINA No. 1, Surabaya : Origin address}
         {--origin-lat= : Origin latitude (default from config biteship.origin.latitude)}
         {--origin-lng= : Origin longitude (default from config biteship.origin.longitude)}
         {--destination-postal=40115 : Destination postal code}
@@ -113,7 +113,7 @@ class BiteshipTestFlowCommand extends Command
             'couriers' => (string) $this->option('couriers'),
             'items' => [
                 [
-                    'name' => 'Hijab Hijab Test Item',
+                    'name' => 'LUMINA LUMINA Test Item',
                     'description' => 'QA flow test',
                     'value' => 1500000,
                     'quantity' => 1,
@@ -217,11 +217,11 @@ class BiteshipTestFlowCommand extends Command
         $this->line("Destination coordinate: {$destinationLatitude}, {$destinationLongitude}");
 
         $createPayload = [
-            'shipper_contact_name' => 'Hijab QA',
+            'shipper_contact_name' => 'LUMINA QA',
             'shipper_contact_phone' => '081234567890',
-            'shipper_contact_email' => 'qa@hijab.test',
+            'shipper_contact_email' => 'qa@skincare.test',
 
-            'origin_contact_name' => 'Hijab QA',
+            'origin_contact_name' => 'LUMINA QA',
             'origin_contact_phone' => '081234567890',
             'origin_address' => (string) $this->option('origin-address'),
             'origin_postal_code' => $originPostalCode,
@@ -258,7 +258,7 @@ class BiteshipTestFlowCommand extends Command
 
             'items' => [
                 [
-                    'name' => 'Hijab Hijab Test Item',
+                    'name' => 'LUMINA LUMINA Test Item',
                     'description' => 'QA flow test',
                     'value' => 1500000,
                     'quantity' => 1,

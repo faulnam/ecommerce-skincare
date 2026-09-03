@@ -216,7 +216,7 @@ class ShippingController extends Controller
     {
         try {
             $url = "https://nominatim.openstreetmap.org/reverse?format=json&lat={$lat}&lon={$lng}&addressdetails=1";
-            $ctx = stream_context_create(['http' => ['header' => 'User-Agent: Hijab/1.0']]);
+            $ctx = stream_context_create(['http' => ['header' => 'User-Agent: LUMINA/1.0']]);
             $json = @file_get_contents($url, false, $ctx);
 
             if (!$json) {

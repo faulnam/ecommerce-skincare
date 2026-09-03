@@ -27,7 +27,7 @@ class MigrateStaticImagesToR2 extends Command
      */
     public function handle()
     {
-        $oldUrlBase = $this->option('old-url') ? rtrim($this->option('old-url'), '/') : 'https://cdn.hijab.com';
+        $oldUrlBase = $this->option('old-url') ? rtrim($this->option('old-url'), '/') : 'https://cdn.skincare.com';
 
         $this->info('Starting static image migration from ' . $oldUrlBase);
 
@@ -40,7 +40,7 @@ class MigrateStaticImagesToR2 extends Command
             'shoes.png',
             '3.png',
             'home/hero-player.jpg',
-            'home/feature-hijabs.jpg',
+            'home/feature-skincares.jpg',
             'home/feature-support.jpg',
             'seabank.png',
             'danamon.png',
@@ -60,7 +60,7 @@ class MigrateStaticImagesToR2 extends Command
             // Brand logos
             'babolat.jpeg',
             'head.jpeg',
-            'bullhijab.jpeg',
+            'bullskincare.jpeg',
             'nox.jpeg',
             'adidas.jpeg',
             'starvie.jpeg',

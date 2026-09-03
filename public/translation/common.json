@@ -8,7 +8,7 @@
             "id": "Produk Terbaru",
             "en": "New Arrivals"
         },
-        "hijab": {
+        "skincare": {
             "id": "Serum",
             "en": "Serums"
         },
@@ -73,11 +73,11 @@
             }
         },
         "promo_texts": {
-            "hijab_title": {
+            "skincare_title": {
                 "id": "Serum & Essence Premium",
                 "en": "Premium Serums & Essences"
             },
-            "hijab_desc": {
+            "skincare_desc": {
                 "id": "Formulasi Aktif & Cepat Meresap",
                 "en": "Active & Fast Absorbing Formulations"
             },

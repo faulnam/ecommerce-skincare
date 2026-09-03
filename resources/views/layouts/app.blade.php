@@ -4,7 +4,7 @@
     <!-- Resource Preconnects for Performance Optimization -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.hijab.com">
+    <link rel="preconnect" href="https://cdn.skincare.com">
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 
@@ -909,7 +909,7 @@
         @keyframes toastOut { to { opacity: 0; transform: translateX(40px); } }
     </style>
     @if(session('success') || session('error'))
-    <div id="hijab-toast" style="
+    <div id="skincare-toast" style="
         position: fixed;
         top: 20px;
         right: 20px;
@@ -933,18 +933,18 @@
     </div>
     <script>
         setTimeout(function() {
-            var t = document.getElementById('hijab-toast');
+            var t = document.getElementById('skincare-toast');
             if (t) { t.style.animation = 'toastOut 0.3s ease forwards'; setTimeout(function(){ t.remove(); }, 300); }
         }, 3000);
     </script>
     @endif
     <script>
-        window.showSkincareToast = window.showToast = window.showHijabToast = function(message, type = 'error') {
-            var existing = document.getElementById('hijab-toast-js');
+        window.showSkincareToast = window.showToast = window.showToast = function(message, type = 'error') {
+            var existing = document.getElementById('skincare-toast-js');
             if (existing) existing.remove();
 
             var t = document.createElement('div');
-            t.id = 'hijab-toast-js';
+            t.id = 'skincare-toast-js';
             t.style.position = 'fixed';
             t.style.top = '20px';
             t.style.right = '20px';
@@ -981,7 +981,7 @@
             document.body.appendChild(t);
 
             setTimeout(function() {
-                if (document.getElementById('hijab-toast-js')) {
+                if (document.getElementById('skincare-toast-js')) {
                     t.style.animation = 'toastOut 0.3s ease forwards';
                     setTimeout(function(){ t.remove(); }, 300);
                 }
@@ -1079,7 +1079,7 @@
             <div class="flex flex-col md:flex-row justify-between gap-10 mb-16">
                 <!-- Logo area -->
                 <div class="w-full md:w-1/4">
-                    <h2 class="text-3xl font-black tracking-tighter uppercase text-black mb-6">HIJAB</h2>
+                    <h2 class="text-3xl font-black tracking-tighter uppercase text-black mb-6">LUMINA</h2>
                     <div class="flex gap-4 text-gray-500">
                         <a href="#" class="hover:text-black transition-colors"><i class="fab fa-instagram text-xl"></i></a>
                         <a href="#" class="hover:text-black transition-colors"><i class="fab fa-tiktok text-xl"></i></a>
@@ -1124,7 +1124,7 @@
             </div>
             
             <div class="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-gray-100 text-xs text-gray-400">
-                <p>&copy; {{ date('Y') }} Hijab Apparel. Hak cipta dilindungi.</p>
+                <p>&copy; {{ date('Y') }} LUMINA Apparel. Hak cipta dilindungi.</p>
                 <div class="flex items-center gap-4 mt-4 md:mt-0">
                     <i class="fab fa-cc-visa text-xl"></i>
                     <i class="fab fa-cc-mastercard text-xl"></i>
@@ -1135,7 +1135,7 @@
         </div>
     </footer>
 
-    @unless(request()->routeIs('home', 'hijab', 'shoes', 'apparel', 'shop', 'login', 'register', 'customer.products.*', 'customer.cart.*', 'customer.cart.index', 'customer.wishlist.index', 'customer.checkout', 'customer.orders.checkout', 'customer.orders.show', 'customer.profile.*', 'new-arrivals', 'contact', 'policy', 'help-center', 'return-refund', 'guarantee', 'product.detail', 'produk.show', 'about', 'brand-catalog'))
+    @unless(request()->routeIs('home', 'skincare', 'shoes', 'apparel', 'shop', 'login', 'register', 'customer.products.*', 'customer.cart.*', 'customer.cart.index', 'customer.wishlist.index', 'customer.checkout', 'customer.orders.checkout', 'customer.orders.show', 'customer.profile.*', 'new-arrivals', 'contact', 'policy', 'help-center', 'return-refund', 'guarantee', 'product.detail', 'produk.show', 'about', 'brand-catalog'))
     <!-- Mobile Bottom Navigation -->
     <nav class="mobile-bottom-nav">
         <div class="mobile-bottom-nav-inner">

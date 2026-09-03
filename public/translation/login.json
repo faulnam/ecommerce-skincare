@@ -1,8 +1,8 @@
 {
-  "meta_title": { "id": "Masuk - Hijab", "en": "Login - Hijab" },
+  "meta_title": { "id": "Masuk - LUMINA", "en": "Login - LUMINA" },
   "welcome_title_1": { "id": "Selamat datang", "en": "Welcome" },
   "welcome_title_2": { "id": "kembali", "en": "back" },
-  "welcome_desc": { "id": "Akses akun Anda dan lanjutkan perjalanan Anda bersama Hijab.", "en": "Access your account and continue your journey with Hijab." },
+  "welcome_desc": { "id": "Akses akun Anda dan lanjutkan perjalanan Anda bersama LUMINA.", "en": "Access your account and continue your journey with LUMINA." },
   "label_email": { "id": "Alamat Email", "en": "Email Address" },
   "placeholder_email": { "id": "Masukkan alamat email Anda", "en": "Enter your email address" },
   "label_password": { "id": "Kata Sandi", "en": "Password" },
@@ -12,6 +12,6 @@
   "btn_submit": { "id": "Masuk", "en": "Sign In" },
   "divider_text": { "id": "Atau lanjutkan dengan", "en": "Or continue with" },
   "btn_google": { "id": "Masuk dengan Google", "en": "Sign in with Google" },
-  "footer_text": { "id": "Baru di Hijab?", "en": "New to Hijab?" },
+  "footer_text": { "id": "Baru di LUMINA?", "en": "New to LUMINA?" },
   "btn_register": { "id": "Buat Akun", "en": "Create Account" }
 }

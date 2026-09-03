@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Shopping Cart - Hijab')
+@section('title', 'Shopping Cart - LUMINA')
 
 @section('content')
 @php
@@ -194,7 +194,7 @@
                 <i class="fas fa-shopping-cart text-2xl"></i>
             </div>
             <h4 class="mb-1.5 text-xl font-bold text-black tracking-tight">{{ $cartTrans['empty_title'][$lang] ?? 'Shopping Cart is Empty' }}</h4>
-            <p class="mb-6 text-xs text-zinc-500 max-w-sm mx-auto px-4 leading-relaxed">{{ $cartTrans['empty_desc'][$lang] ?? "Let's start shopping for Hijab equipment!" }}</p>
+            <p class="mb-6 text-xs text-zinc-500 max-w-sm mx-auto px-4 leading-relaxed">{{ $cartTrans['empty_desc'][$lang] ?? "Let's start shopping for LUMINA equipment!" }}</p>
             <a href="{{ route('home') }}#products" class="inline-flex items-center gap-2 rounded-full bg-black px-8 py-2.5 text-xs font-semibold text-white transition hover:bg-black/90 shadow-sm">
                 <i class="fas fa-shopping-bag text-[10px]"></i>{{ $cartTrans['btn_start_shopping'][$lang] ?? 'Start Shopping' }}
             </a>

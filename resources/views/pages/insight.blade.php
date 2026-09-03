@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Insight - Hijab')
-@section('og_description', 'Insight dan artikel seputar dunia hijab dari Hijab. Tips, trik, review produk, dan berita terbaru untuk para pecinta hijab.')
+@section('title', 'Insight - LUMINA')
+@section('og_description', 'Insight dan artikel seputar dunia kecantikan & skincare dari LUMINA. Tips, trik, review produk, dan berita terbaru untuk para pecinta kulit sehat.')
 
 @push('og_extra')
 <script type="application/ld+json">
@@ -9,8 +9,8 @@
   "@@context": "https://schema.org",
   "@type": "CollectionPage",
   "url": "{{ url()->current() }}",
-  "name": "{{ $lang === 'id' ? 'Insight — Hijab' : 'Insight — Hijab' }}",
-  "description": "{{ $lang === 'id' ? 'Insight dan artikel seputar dunia hijab dari Hijab. Tips, trik, review produk, dan berita terbaru.' : 'Insights and articles about the world of hijab from Hijab. Tips, tricks, product reviews, and latest news.' }}",
+  "name": "{{ $lang === 'id' ? 'Insight — LUMINA' : 'Insight — LUMINA' }}",
+  "description": "{{ $lang === 'id' ? 'Insight dan artikel seputar dunia kecantikan & skincare dari LUMINA. Tips, trik, review produk, dan berita terbaru.' : 'Insights and articles about the world of skincare from LUMINA. Tips, tricks, product reviews, and latest news.' }}",
   "inLanguage": "{{ $lang === 'id' ? 'id-ID' : 'en-US' }}",
   "isPartOf": { "@id": "{{ url('/') }}/#website" },
   "publisher": { "@id": "{{ url('/') }}/#organization" }

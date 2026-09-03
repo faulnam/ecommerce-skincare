@@ -64,7 +64,7 @@
                         <select name="category" id="category" class="form-select @error('category') is-invalid @enderror" required>
                             <option value="">Pilih Kategori</option>
                             <option value="all" {{ old('category', $voucher->category ?? 'all') === 'all' ? 'selected' : '' }}>Semua Kategori</option>
-                            <option value="hijab" {{ old('category', $voucher->category) === 'hijab' ? 'selected' : '' }}>Hijab</option>
+                            <option value="skincare" {{ old('category', $voucher->category) === 'skincare' ? 'selected' : '' }}>LUMINA</option>
                             <option value="accessories" {{ old('category', $voucher->category) === 'accessories' ? 'selected' : '' }}>Accessories</option>
                             <option value="shoes" {{ old('category', $voucher->category) === 'shoes' ? 'selected' : '' }}>Shoes</option>
                             <option value="new_arrivals" {{ old('category', $voucher->category) === 'new_arrivals' ? 'selected' : '' }}>New Arrivals</option>

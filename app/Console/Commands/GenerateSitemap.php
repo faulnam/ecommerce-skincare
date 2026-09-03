@@ -33,7 +33,7 @@ class GenerateSitemap extends Command
     public function handle(): int
     {
         $this->info('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
-        $this->info('  🗺️  Sitemap Generator — hijab.com');
+        $this->info('  🗺️  Sitemap Generator — skincare.com');
         $this->info('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
 
         try {

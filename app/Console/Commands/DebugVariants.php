@@ -13,7 +13,7 @@ class DebugVariants extends Command
 
     public function handle()
     {
-        $this->info('🔍 DEBUG VARIAN PRODUK - HIJAB');
+        $this->info('🔍 DEBUG VARIAN PRODUK - LUMINA SKINCARE');
         $this->newLine();
 
         // 1. CEK SEMUA PRODUK

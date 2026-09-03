@@ -44,7 +44,7 @@
                                     ['name' => 'series', 'label' => 'Series', 'category' => 'Series'],
                                     ['name' => 'shape', 'label' => 'Shape', 'category' => 'Shape'],
                                     ['name' => 'balance', 'label' => 'Balance', 'category' => 'Balance'],
-                                    ['name' => 'hijab_weight', 'label' => 'Hijab Weight', 'category' => 'Hijab weight'],
+                                    ['name' => 'skincare_weight', 'label' => 'LUMINA Weight', 'category' => 'LUMINA weight'],
                                     ['name' => 'play_style', 'label' => 'Play Style', 'category' => 'Play style'],
                                     ['name' => 'core', 'label' => 'Core', 'category' => 'Core'],
                                     ['name' => 'carbon_type', 'label' => 'Carbon (Faces)', 'category' => 'Carbon'],
@@ -204,11 +204,11 @@
                                 <label for="bundle_type" class="form-label">Pilihan Bundling</label>
                                 <select class="form-select @error('bundle_type') is-invalid @enderror" id="bundle_type" name="bundle_type">
                                     <option value="">Pilih Jenis Bundling</option>
-                                    <option value="Starter Pack" {{ old('bundle_type', $product->bundle_type) == 'Starter Pack' ? 'selected' : '' }}>Starter Pack (Hijab entry, ball, grip)</option>
-                                    <option value="Game Ready Set" {{ old('bundle_type', $product->bundle_type) == 'Game Ready Set' ? 'selected' : '' }}>Game Ready Set (Hijab mid, shoes) same brand</option>
+                                    <option value="Starter Pack" {{ old('bundle_type', $product->bundle_type) == 'Starter Pack' ? 'selected' : '' }}>Starter Pack (LUMINA entry, ball, grip)</option>
+                                    <option value="Game Ready Set" {{ old('bundle_type', $product->bundle_type) == 'Game Ready Set' ? 'selected' : '' }}>Game Ready Set (LUMINA mid, shoes) same brand</option>
                                     <option value="Maintenance Kit" {{ old('bundle_type', $product->bundle_type) == 'Maintenance Kit' ? 'selected' : '' }}>Maintenance Kit (Grip, edge protector, ball)</option>
-                                    <option value="Brand Bundle" {{ old('bundle_type', $product->bundle_type) == 'Brand Bundle' ? 'selected' : '' }}>Brand Bundle (Hijab, bag, grip) (1 brand)</option>
-                                    <option value="Gift Bundle" {{ old('bundle_type', $product->bundle_type) == 'Gift Bundle' ? 'selected' : '' }}>Gift Bundle (Hijab, ball, mini bag) with gift box</option>
+                                    <option value="Brand Bundle" {{ old('bundle_type', $product->bundle_type) == 'Brand Bundle' ? 'selected' : '' }}>Brand Bundle (LUMINA, bag, grip) (1 brand)</option>
+                                    <option value="Gift Bundle" {{ old('bundle_type', $product->bundle_type) == 'Gift Bundle' ? 'selected' : '' }}>Gift Bundle (LUMINA, ball, mini bag) with gift box</option>
                                 </select>
                                 @error('bundle_type')
                                     <div class="invalid-feedback">{{ $message }}</div>
@@ -674,7 +674,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     function toggleSpecCard() {
         if (categorySelect && specCard) {
-            specCard.style.display = categorySelect.value === 'hijab' ? 'block' : 'none';
+            specCard.style.display = categorySelect.value === 'skincare' ? 'block' : 'none';
         }
     }
     

@@ -31,12 +31,12 @@ class CustomerOrderCompletedNotification extends Notification implements ShouldQ
         return (new MailMessage)
             ->subject('Pesanan Selesai - ' . $this->order->order_number)
             ->greeting('Halo, ' . $this->order->shipping_name . '!')
-            ->line('Pesanan Anda telah selesai. Terima kasih telah berbelanja di ' . config('branding.name', 'Hijab') . '.')
+            ->line('Pesanan Anda telah selesai. Terima kasih telah berbelanja di ' . config('branding.name', 'LUMINA') . '.')
             ->line('Nomor Pesanan: **' . $this->order->order_number . '**')
             ->line('Total: **' . $this->order->formatted_total . '**')
             ->action('Lihat Detail Pesanan', $url)
             ->line('Kami harap Anda puas dengan layanan kami. Jangan ragu untuk menghubungi kami jika ada pertanyaan atau masukan.')
-            ->salutation('Salam hangat,\n' . config('branding.name', 'Hijab'));
+            ->salutation('Salam hangat,\n' . config('branding.name', 'LUMINA'));
     }
 
     public function toArray(object $notifiable): array

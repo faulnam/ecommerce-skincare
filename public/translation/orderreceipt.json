@@ -2,7 +2,7 @@
   "meta_title": { "id": "Struk Pesanan - ", "en": "Order Receipt - " },
   "btn_print": { "id": "Cetak Struk", "en": "Print Receipt" },
   "btn_back": { "id": "Kembali", "en": "Back" },
-  "tagline": { "id": "Perlengkapan Hijab Premium", "en": "Premium Hijab Equipment" },
+  "tagline": { "id": "Perlengkapan LUMINA Premium", "en": "Premium LUMINA Equipment" },
   "meta_order_no": { "id": "No. Pesanan", "en": "Order No." },
   "meta_order_date": { "id": "Tanggal Pesanan", "en": "Order Date" },
   "meta_order_time": { "id": "Waktu Pesanan", "en": "Order Time" },
@@ -27,6 +27,6 @@
   "summary_shipping_disc": { "id": "Diskon Ongkir", "en": "Shipping Discount" },
   "summary_total": { "id": "TOTAL", "en": "TOTAL" },
   "notes_title": { "id": "Catatan Pesanan", "en": "Order Notes" },
-  "footer_thanks": { "id": "Terima kasih telah berbelanja di Hijab", "en": "Thank you for shopping at Hijab" },
+  "footer_thanks": { "id": "Terima kasih telah berbelanja di LUMINA", "en": "Thank you for shopping at LUMINA" },
   "footer_wish": { "id": "Semoga perlengkapan barunya bikin game kamu makin total! 🎾", "en": "Hope your new gear elevates your game to the next level! 🎾" }
 }

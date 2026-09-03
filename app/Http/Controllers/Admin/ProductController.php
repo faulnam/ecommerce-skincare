@@ -98,7 +98,7 @@ class ProductController extends Controller
             'discount_start' => 'nullable|date',
             'discount_end' => 'nullable|date|after_or_equal:discount_start',
             'stock' => $request->boolean('has_variants') ? 'nullable|integer|min:0' : 'required|integer|min:0',
-            'category' => 'required|in:hijab,new-arrivals,accessories',
+            'category' => 'required|in:skincare,new-arrivals,accessories',
             'package_type' => 'nullable|in:single,bundle',
             'bundle_type' => 'nullable|string',
             'weight' => 'nullable|integer|min:0|max:50000',
@@ -107,7 +107,7 @@ class ProductController extends Controller
             'series' => 'nullable|string',
             'shape' => 'nullable|string',
             'balance' => 'nullable|string',
-            'hijab_weight' => 'nullable|string',
+            'skincare_weight' => 'nullable|string',
             'play_style' => 'nullable|string',
             'core' => 'nullable|string',
             'carbon_type' => 'nullable|string',
@@ -164,20 +164,20 @@ class ProductController extends Controller
             'bundle_type' => $validated['bundle_type'] ?? null,
             'weight' => $validated['weight'] ?? 500,
             'package_weight' => $validated['package_weight'] ?? null,
-            'brand' => $validated['category'] === 'hijab' ? ($validated['brand'] ?? null) : null,
-            'series' => $validated['category'] === 'hijab' ? ($validated['series'] ?? null) : null,
-            'shape' => $validated['category'] === 'hijab' ? ($validated['shape'] ?? null) : null,
-            'balance' => $validated['category'] === 'hijab' ? ($validated['balance'] ?? null) : null,
-            'hijab_weight' => $validated['category'] === 'hijab' ? ($validated['hijab_weight'] ?? null) : null,
-            'play_style' => $validated['category'] === 'hijab' ? ($validated['play_style'] ?? null) : null,
-            'core' => $validated['category'] === 'hijab' ? ($validated['core'] ?? null) : null,
-            'carbon_type' => $validated['category'] === 'hijab' ? ($validated['carbon_type'] ?? null) : null,
-            'surface' => $validated['category'] === 'hijab' ? ($validated['surface'] ?? null) : null,
-            'feel' => $validated['category'] === 'hijab' ? ($validated['feel'] ?? null) : null,
-            'power' => $validated['category'] === 'hijab' ? ($validated['power'] ?? null) : null,
-            'control' => $validated['category'] === 'hijab' ? ($validated['control'] ?? null) : null,
-            'maneuverability' => $validated['category'] === 'hijab' ? ($validated['maneuverability'] ?? null) : null,
-            'comfort' => $validated['category'] === 'hijab' ? ($validated['comfort'] ?? null) : null,
+            'brand' => $validated['category'] === 'skincare' ? ($validated['brand'] ?? null) : null,
+            'series' => $validated['category'] === 'skincare' ? ($validated['series'] ?? null) : null,
+            'shape' => $validated['category'] === 'skincare' ? ($validated['shape'] ?? null) : null,
+            'balance' => $validated['category'] === 'skincare' ? ($validated['balance'] ?? null) : null,
+            'skincare_weight' => $validated['category'] === 'skincare' ? ($validated['skincare_weight'] ?? null) : null,
+            'play_style' => $validated['category'] === 'skincare' ? ($validated['play_style'] ?? null) : null,
+            'core' => $validated['category'] === 'skincare' ? ($validated['core'] ?? null) : null,
+            'carbon_type' => $validated['category'] === 'skincare' ? ($validated['carbon_type'] ?? null) : null,
+            'surface' => $validated['category'] === 'skincare' ? ($validated['surface'] ?? null) : null,
+            'feel' => $validated['category'] === 'skincare' ? ($validated['feel'] ?? null) : null,
+            'power' => $validated['category'] === 'skincare' ? ($validated['power'] ?? null) : null,
+            'control' => $validated['category'] === 'skincare' ? ($validated['control'] ?? null) : null,
+            'maneuverability' => $validated['category'] === 'skincare' ? ($validated['maneuverability'] ?? null) : null,
+            'comfort' => $validated['category'] === 'skincare' ? ($validated['comfort'] ?? null) : null,
             'image' => $hasVariants ? null : ($imagePath ?? null),
             'image_2' => $hasVariants ? null : $image2Path,
             'image_3' => $hasVariants ? null : $image3Path,
@@ -230,7 +230,7 @@ class ProductController extends Controller
             'discount_start' => 'nullable|date',
             'discount_end' => 'nullable|date|after_or_equal:discount_start',
             'stock' => $request->boolean('has_variants') ? 'nullable|integer|min:0' : 'required|integer|min:0',
-            'category' => 'required|in:hijab,new-arrivals,accessories',
+            'category' => 'required|in:skincare,new-arrivals,accessories',
             'package_type' => 'nullable|in:single,bundle',
             'bundle_type' => 'nullable|string',
             'weight' => 'nullable|integer|min:0|max:50000',
@@ -239,7 +239,7 @@ class ProductController extends Controller
             'series' => 'nullable|string',
             'shape' => 'nullable|string',
             'balance' => 'nullable|string',
-            'hijab_weight' => 'nullable|string',
+            'skincare_weight' => 'nullable|string',
             'play_style' => 'nullable|string',
             'core' => 'nullable|string',
             'carbon_type' => 'nullable|string',
@@ -291,12 +291,12 @@ class ProductController extends Controller
         $product->weight = $validated['weight'] ?? 500;
         $product->package_weight = $validated['package_weight'] ?? null;
 
-        if ($product->category === 'hijab') {
+        if ($product->category === 'skincare') {
             $product->brand = $validated['brand'] ?? null;
             $product->series = $validated['series'] ?? null;
             $product->shape = $validated['shape'] ?? null;
             $product->balance = $validated['balance'] ?? null;
-            $product->hijab_weight = $validated['hijab_weight'] ?? null;
+            $product->skincare_weight = $validated['skincare_weight'] ?? null;
             $product->play_style = $validated['play_style'] ?? null;
             $product->core = $validated['core'] ?? null;
             $product->carbon_type = $validated['carbon_type'] ?? null;
@@ -311,7 +311,7 @@ class ProductController extends Controller
             $product->series = null;
             $product->shape = null;
             $product->balance = null;
-            $product->hijab_weight = null;
+            $product->skincare_weight = null;
             $product->play_style = null;
             $product->core = null;
             $product->carbon_type = null;

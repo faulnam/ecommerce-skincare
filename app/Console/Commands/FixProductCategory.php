@@ -15,7 +15,7 @@ class FixProductCategory extends Command
         $dryRun = $this->option('dry-run');
 
         $typeToCategory = [
-            'hijab'      => 'original',
+            'skincare'      => 'original',
             'shoes'       => 'shoes',
             'accessories' => 'pedas',
         ];
@@ -30,14 +30,14 @@ class FixProductCategory extends Command
             if (empty($product->type)) {
                 if (str_contains($name, 'shoe') || str_contains($name, 'sepatu') || str_contains($name, 'footwear')) {
                     $product->type = 'shoes';
-                } elseif (str_contains($name, 'hijab') || str_contains($name, 'hijab') || str_contains($name, 'pala') || str_contains($name, 'paddle')) {
-                    $product->type = 'hijab';
+                } elseif (str_contains($name, 'skincare') || str_contains($name, 'skincare') || str_contains($name, 'pala') || str_contains($name, 'paddle')) {
+                    $product->type = 'skincare';
                 } else {
                     $product->type = 'accessories';
                 }
             }
 
-            $type = $product->type ?? 'hijab';
+            $type = $product->type ?? 'skincare';
             $correctCategory = $typeToCategory[$type] ?? 'original';
 
             $needsUpdate = false;

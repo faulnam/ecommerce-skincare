@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Help Center - Hijab')
-@section('og_description', 'Pusat bantuan Hijab. Temukan jawaban untuk pertanyaan seputar pemesanan, pengiriman, pembayaran, dan produk kami.')
+@section('title', 'Help Center - LUMINA')
+@section('og_description', 'Pusat bantuan LUMINA. Temukan jawaban untuk pertanyaan seputar pemesanan, pengiriman, pembayaran, dan produk kami.')
 
 @push('og_extra')
 @php

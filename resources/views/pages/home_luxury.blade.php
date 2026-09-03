@@ -90,7 +90,7 @@
 
         const mobileImages = [
             "{{ asset('storage/model-1.jpg') }}",
-            "{{ asset('storage/product-1-hijab.jpg') }}",
+            "{{ asset('storage/product-1-skincare.jpg') }}",
             "{{ asset('storage/product-1-baju.jpg') }}"
         ];
         const titles = [
@@ -283,45 +283,59 @@
 
 @if(isset($vouchers) && $vouchers->count() > 0)
 <!-- EXCLUSIVE VOUCHERS -->
-<section class="py-6 bg-white max-w-[1440px] mx-auto px-4 md:px-12 relative overflow-hidden group">
+<section class="py-6 bg-white max-w-[1440px] mx-auto px-6 md:px-14 relative group">
     
-    <!-- Left/Right controls for vouchers -->
-    <button id="voucher-scroll-left" class="absolute bg-white rounded-full flex items-center justify-center text-black shadow-md z-10 cursor-pointer" style="width: 32px; height: 32px; top: 50%; left: 16px; transform: translateY(-50%); border: 1px solid #eee;">
-        <i class="fas fa-chevron-left" style="font-size: 10px;"></i>
+    <!-- Left/Right controls for vouchers (positioned outside card area) -->
+    <button id="voucher-scroll-left" class="absolute bg-white rounded-full flex items-center justify-center text-black shadow-md z-10 cursor-pointer hover:bg-gray-50 transition-all" style="width: 36px; height: 36px; top: 50%; left: 8px; transform: translateY(-50%); border: 1px solid #e5e7eb;" aria-label="Previous Voucher">
+        <i class="fas fa-chevron-left text-xs"></i>
     </button>
-    <button id="voucher-scroll-right" class="absolute bg-white rounded-full flex items-center justify-center text-black shadow-md z-10 cursor-pointer" style="width: 32px; height: 32px; top: 50%; right: 16px; transform: translateY(-50%); border: 1px solid #eee;">
-        <i class="fas fa-chevron-right" style="font-size: 10px;"></i>
+    <button id="voucher-scroll-right" class="absolute bg-white rounded-full flex items-center justify-center text-black shadow-md z-10 cursor-pointer hover:bg-gray-50 transition-all" style="width: 36px; height: 36px; top: 50%; right: 8px; transform: translateY(-50%); border: 1px solid #e5e7eb;" aria-label="Next Voucher">
+        <i class="fas fa-chevron-right text-xs"></i>
     </button>
 
-    <div id="voucher-carousel" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth hide-scrollbar" style="gap: 20px;">
+    <div id="voucher-carousel" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth hide-scrollbar py-2" style="gap: 18px;">
         @foreach($vouchers as $voucher)
-        <div class="snap-start relative flex bg-white border border-gray-200 shadow-sm transition-shadow hover:shadow-md shrink-0" style="min-width: 320px; width: 320px; flex: 0 0 auto; border-radius: 8px;">
-            <!-- Left Section -->
-            <div class="flex-1 p-4 flex flex-col justify-center">
-                <h3 class="text-[15px] font-semibold text-black mb-1 leading-tight truncate" style="font-family: 'Inter', sans-serif;">{{ $voucher->title }}</h3>
-                <p class="text-xs text-gray-500 mb-3" style="font-family: 'Inter', sans-serif;">Min. Blj Rp{{ number_format($voucher->minimum_purchase, 0, ',', '.') }}</p>
-                
-                <div class="w-full bg-gray-100 rounded-full h-1 mb-2">
-                    <div class="bg-gray-700 h-1 rounded-full" style="width: {{ $voucher->quota_percentage }}%"></div>
+        <div class="snap-start relative flex bg-white border border-gray-200 shadow-sm transition-all hover:shadow-md shrink-0 overflow-hidden" style="min-width: 350px; width: 350px; flex: 0 0 auto; border-radius: 12px;">
+            <!-- Left Section (Voucher Details) -->
+            <div class="flex-1 p-4 flex flex-col justify-between" style="background-color: #ffffff;">
+                <div>
+                    <div class="flex items-center gap-2 mb-1.5">
+                        <span class="inline-block text-[10px] font-bold tracking-wider uppercase px-2.5 py-0.5 rounded-full" style="background-color: #EBF3EE; color: #2D4C41; font-family: 'Inter', sans-serif;">
+                            @if($voucher->type === 'percent')
+                                DISKON {{ intval($voucher->discount_value) }}%
+                            @elseif($voucher->type === 'fixed')
+                                POTONGAN RP {{ number_format($voucher->discount_value / 1000, 0) }}K
+                            @else
+                                SPESIAL VOUCHER
+                            @endif
+                        </span>
+                    </div>
+                    <h3 class="text-[14px] font-bold text-gray-900 leading-tight truncate mb-1" style="font-family: 'Inter', sans-serif;" title="{{ $voucher->title }}">{{ $voucher->title }}</h3>
+                    <p class="text-xs text-gray-500 mb-2" style="font-family: 'Inter', sans-serif;">Min. belanja Rp{{ number_format($voucher->minimum_purchase, 0, ',', '.') }}</p>
                 </div>
                 
-                <p class="text-[10px] text-gray-400" style="font-family: 'Inter', sans-serif;">
-                    Sisa: {{ $voucher->remaining_quota }}/{{ $voucher->quota }} &bull; Hingga: {{ $voucher->end_date->format('d.m.Y') }}
-                </p>
+                <div>
+                    <div class="w-full bg-gray-100 rounded-full h-1.5 mb-1.5 overflow-hidden">
+                        <div class="h-1.5 rounded-full transition-all" style="background-color: #2D4C41; width: {{ max(10, min(100, $voucher->quota_percentage)) }}%;"></div>
+                    </div>
+                    <div class="flex items-center justify-between text-[10px] text-gray-400" style="font-family: 'Inter', sans-serif;">
+                        <span>Sisa: <strong class="text-gray-600 font-semibold">{{ $voucher->remaining_quota }}</strong></span>
+                        <span>Berlaku s/d {{ $voucher->end_date->format('d.m.Y') }}</span>
+                    </div>
+                </div>
             </div>
             
-            <!-- Divider -->
-            <div class="w-[1px] my-3 border-l-2 border-dashed border-gray-200 relative">
-                <!-- Top Cutout -->
-                <div class="absolute -top-4 w-4 h-4 bg-white border-b border-gray-200 rounded-full" style="left: -8px;"></div>
-                <!-- Bottom Cutout -->
-                <div class="absolute -bottom-4 w-4 h-4 bg-white border-t border-gray-200 rounded-full" style="left: -8px;"></div>
-            </div>
+            <!-- Ticket Stub Divider with clean styling -->
+            <div class="w-[1px] my-2 border-l border-dashed border-gray-300 relative shrink-0"></div>
             
-            <!-- Right Section -->
-            <div class="w-20 shrink-0 flex items-center justify-center" style="min-width: 80px;">
-                <button onclick="claimVoucher('{{ $voucher->code }}')" class="w-10 h-10 flex items-center justify-center text-white rounded-full transition-transform hover:scale-110 shadow-sm" style="background-color: #4f5d75;" title="Klaim / Salin Kode" onmouseover="this.style.backgroundColor='#3f4a5d';" onmouseout="this.style.backgroundColor='#4f5d75';">
-                    <i class="far fa-copy text-sm"></i>
+            <!-- Right Section (Stub & Action) -->
+            <div class="w-24 shrink-0 flex flex-col items-center justify-center p-3 text-center" style="background-color: #FAF8F5;">
+                <span class="text-[9px] font-bold uppercase tracking-wider text-gray-400 mb-1" style="font-family: 'Inter', sans-serif;">KODE</span>
+                <span class="font-mono font-bold text-[11px] text-gray-900 bg-white border border-gray-200 rounded px-1.5 py-0.5 mb-2.5 tracking-wider select-all shadow-2xs w-full block truncate">
+                    {{ $voucher->code }}
+                </span>
+                <button onclick="claimVoucher('{{ $voucher->code }}')" class="inline-flex items-center justify-center gap-1 w-full py-1.5 rounded-md text-[11px] font-semibold text-white transition-all hover:opacity-90 active:scale-95 shadow-xs cursor-pointer" style="background-color: #2D4C41; font-family: 'Inter', sans-serif;" title="Klaim Kode Voucher">
+                    <i class="far fa-copy text-[10px]"></i> Klaim
                 </button>
             </div>
         </div>
@@ -387,7 +401,15 @@
                         $uniqueSizes = $sizes->unique();
                     @endphp
                     @forelse($uniqueSizes->take(4) as $size)
-                        <div class="flex-1 text-center py-2 text-xs font-semibold hover:bg-gray-100" style="border-right: 1px solid #f3f4f6;" onclick="event.stopPropagation(); window.location.href='{{ $detailUrl }}?size={{ urlencode(trim($size)) }}'">{{ trim($size) }}</div>
+                        @php
+                            $displaySize = trim($size);
+                            if (preg_match('/(\d+\s*(?:ml|gr|g|oz))/i', $displaySize, $m)) {
+                                $displaySize = strtolower(str_replace(' ', '', $m[1]));
+                            } else {
+                                $displaySize = preg_replace('/^(Travel|Regular|Jumbo|Mini|Full)\s*/i', '', $displaySize);
+                            }
+                        @endphp
+                        <div class="flex-1 text-center py-2 text-xs font-semibold hover:bg-gray-100" style="border-right: 1px solid #f3f4f6;" onclick="event.stopPropagation(); window.location.href='{{ $detailUrl }}?size={{ urlencode(trim($size)) }}'">{{ $displaySize }}</div>
                     @empty
                         <div class="flex-1 text-center py-2 text-xs font-semibold hover:bg-gray-100">All Size</div>
                     @endforelse
@@ -608,7 +630,7 @@
     <!-- Banner Left -->
     <div onclick="window.location.href='{{ $splitBanners[0]->link ?? route('produk.index') }}'" style="position: relative; flex: 1 1 50%; min-width: 300px; aspect-ratio: 3 / 4; min-height: 95vh; overflow: hidden; cursor: pointer;" onmouseover="this.querySelector('img').style.transform='scale(1.05)'" onmouseout="this.querySelector('img').style.transform='scale(1)'">
         <img src="{{ $splitBanners[0]->image_url }}" alt="{{ $splitBanners[0]->title }}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease;">
-        <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 40%; background: rgba(0, 0, 0, 0.65); pointer-events: none;"></div>
+        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.5) 45%, rgba(0, 0, 0, 0.15) 75%, transparent 100%); pointer-events: none;"></div>
         <div style="position: absolute; bottom: 45px; left: 0; width: 100%; text-align: center; display: flex; flex-direction: column; align-items: center; padding: 0 20px;">
             <h3 style="color: #fff; font-size: 22px; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 24px; font-family: Arial, sans-serif;">{{ $splitBanners[0]->title }}</h3>
             <button style="background-color: #fff; color: #000; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; padding: 14px 40px; border: none; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#000'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='#fff'; this.style.color='#000';">{{ $splitBanners[0]->button_text }}</button>
@@ -618,7 +640,7 @@
     <!-- Banner Right -->
     <div onclick="window.location.href='{{ $splitBanners[1]->link ?? route('produk.index') }}'" style="position: relative; flex: 1 1 50%; min-width: 300px; aspect-ratio: 3 / 4; min-height: 95vh; overflow: hidden; cursor: pointer;" onmouseover="this.querySelector('img').style.transform='scale(1.05)'" onmouseout="this.querySelector('img').style.transform='scale(1)'">
         <img src="{{ $splitBanners[1]->image_url }}" alt="{{ $splitBanners[1]->title }}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease;">
-        <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 40%; background: rgba(0, 0, 0, 0.65); pointer-events: none;"></div>
+        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.5) 45%, rgba(0, 0, 0, 0.15) 75%, transparent 100%); pointer-events: none;"></div>
         <div style="position: absolute; bottom: 45px; left: 0; width: 100%; text-align: center; display: flex; flex-direction: column; align-items: center; padding: 0 20px;">
             <h3 style="color: #fff; font-size: 22px; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 24px; font-family: Arial, sans-serif;">{{ $splitBanners[1]->title }}</h3>
             <button style="background-color: #fff; color: #000; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; padding: 14px 40px; border: none; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#000'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='#fff'; this.style.color='#000';">{{ $splitBanners[1]->button_text }}</button>
@@ -680,7 +702,15 @@
                         $uniqueSizes2 = $sizes2->unique();
                     @endphp
                     @forelse($uniqueSizes2->take(4) as $size)
-                        <div class="flex-1 text-center py-2 text-xs font-semibold hover:bg-gray-100" style="border-right: 1px solid #f3f4f6;" onclick="event.stopPropagation(); window.location.href='{{ $detailUrl2 }}?size={{ urlencode(trim($size)) }}'">{{ trim($size) }}</div>
+                        @php
+                            $displaySize2 = trim($size);
+                            if (preg_match('/(\d+\s*(?:ml|gr|g|oz))/i', $displaySize2, $m2)) {
+                                $displaySize2 = strtolower(str_replace(' ', '', $m2[1]));
+                            } else {
+                                $displaySize2 = preg_replace('/^(Travel|Regular|Jumbo|Mini|Full)\s*/i', '', $displaySize2);
+                            }
+                        @endphp
+                        <div class="flex-1 text-center py-2 text-xs font-semibold hover:bg-gray-100" style="border-right: 1px solid #f3f4f6;" onclick="event.stopPropagation(); window.location.href='{{ $detailUrl2 }}?size={{ urlencode(trim($size)) }}'">{{ $displaySize2 }}</div>
                     @empty
                         <div class="flex-1 text-center py-2 text-xs font-semibold hover:bg-gray-100">All Size</div>
                     @endforelse

@@ -98,7 +98,7 @@ class PageController extends Controller
             }
         }
 
-        // Sort by popularity, latest, year, or hijabful rating
+        // Sort by popularity, latest, year, or skincareful rating
         if ($request->filled('filter_sort')) {
             switch ($request->filter_sort) {
                 case 'popular':
@@ -113,8 +113,8 @@ class PageController extends Controller
                 case 'year_desc':
                     $shopProductsQuery->orderByRaw('year IS NULL, year desc');
                     break;
-                case 'hijabful_rating':
-                    $shopProductsQuery->orderByRaw('hijabful_rating IS NULL, hijabful_rating desc');
+                case 'rating':
+                    $shopProductsQuery->orderByRaw('rating IS NULL, rating desc');
                     break;
                 default:
                     $shopProductsQuery->orderBy('created_at', 'desc');
@@ -269,8 +269,8 @@ class PageController extends Controller
                 case 'year_desc':
                     $query->orderByRaw('year IS NULL, year desc');
                     break;
-                case 'hijabful_rating':
-                    $query->orderByRaw('hijabful_rating IS NULL, hijabful_rating desc');
+                case 'rating':
+                    $query->orderByRaw('rating IS NULL, rating desc');
                     break;
                 default:
                     $query->latest();
@@ -334,7 +334,7 @@ class PageController extends Controller
                 'bundle' => Product::CATEGORY_BUNDLE,
                 // legacy aliases
                 'new-arrivals' => Product::CATEGORY_SERUM,
-                'hijab' => Product::CATEGORY_SERUM,
+                'skincare' => Product::CATEGORY_SERUM,
                 'shoes' => Product::CATEGORY_MOISTURIZER,
                 'accessories' => Product::CATEGORY_SUNSCREEN,
             ];
@@ -617,7 +617,7 @@ class PageController extends Controller
         ]);
 
         $receiverEmail = (string) config('contact.receiver_email');
-        $receiverName = (string) config('contact.receiver_name', config('app.name', 'Hijab Support'));
+        $receiverName = (string) config('contact.receiver_name', config('app.name', 'LUMINA Support'));
 
         if (empty($receiverEmail)) {
             return back()->withInput()->with('error', 'Konfigurasi email tujuan contact belum diatur. Set CONTACT_RECEIVER_EMAIL di file .env.');
@@ -644,9 +644,9 @@ class PageController extends Controller
     {
         // Map slug to valid request category format
         $slugMap = [
-            'hijab-hijab' => 'hijab',
-            'sepatu-hijab' => 'sepatu',
-            'aksesoris-hijab' => 'accessories',
+            'skincare-skincare' => 'skincare',
+            'sepatu-skincare' => 'sepatu',
+            'aksesoris-skincare' => 'accessories',
         ];
 
         $categoryParam = $slugMap[strtolower($slug)] ?? strtolower($slug);
@@ -662,7 +662,7 @@ class PageController extends Controller
      */
     public function brandShow($slug, Request $request)
     {
-        // Convert slug back to brand name (e.g. bullhijab -> Bullhijab)
+        // Convert slug back to brand name (e.g. bullskincare -> Bullskincare)
         $brandName = ucwords(str_replace('-', ' ', $slug));
 
         // Merge into request so newArrivals can process it
@@ -852,7 +852,7 @@ class PageController extends Controller
         if ($request->filled('category')) {
             $reqCat = strtolower($request->category);
             $categoryMap = [
-                'hijab'       => 'Hijab',
+                'skincare'       => 'LUMINA',
                 'baju'        => 'Baju',
                 'tas'         => 'Tas',
                 'celana'      => 'Celana',
@@ -897,8 +897,8 @@ class PageController extends Controller
                 case 'year_desc':
                     $query->orderByRaw('year IS NULL, year desc');
                     break;
-                case 'hijabful_rating':
-                    $query->orderByRaw('hijabful_rating IS NULL, hijabful_rating desc');
+                case 'rating':
+                    $query->orderByRaw('rating IS NULL, rating desc');
                     break;
                 default:
                     $query->latest();
@@ -938,7 +938,7 @@ class PageController extends Controller
         if ($request->filled('category')) {
             $reqCat = strtolower($request->category);
             $categoryMap = [
-                'hijab'       => 'Hijab',
+                'skincare'       => 'LUMINA',
                 'baju'        => 'Baju',
                 'tas'         => 'Tas',
                 'celana'      => 'Celana',
@@ -990,7 +990,7 @@ class PageController extends Controller
         if ($request->filled('category')) {
             $reqCat = strtolower($request->category);
             $categoryMap = [
-                'hijab'       => 'Hijab',
+                'skincare'       => 'LUMINA',
                 'baju'        => 'Baju',
                 'tas'         => 'Tas',
                 'celana'      => 'Celana',
@@ -1040,8 +1040,8 @@ class PageController extends Controller
                 case 'year_desc':
                     $baseQuery->orderByRaw('year IS NULL, year desc');
                     break;
-                case 'hijabful_rating':
-                    $baseQuery->orderByRaw('hijabful_rating IS NULL, hijabful_rating desc');
+                case 'rating':
+                    $baseQuery->orderByRaw('rating IS NULL, rating desc');
                     break;
                 default:
                     $baseQuery->latest();

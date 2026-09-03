@@ -907,7 +907,7 @@ class OrderController extends Controller
                 'pickup' => [
                     'name' => (string) (
                         data_get($origin, 'contact_name')
-                        ?? config('branding.name', 'Hijab')
+                        ?? config('branding.name', 'LUMINA')
                     ),
                     'phone' => (string) (
                         data_get($origin, 'contact_phone')

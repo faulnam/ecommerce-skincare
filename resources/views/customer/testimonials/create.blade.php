@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Write Testimonial - Hijab')
+@section('title', 'Write Testimonial - LUMINA')
 
 @section('content')
 @php
@@ -27,7 +27,7 @@
                 <div class="card-body p-3 p-lg-4">
                     <div class="alert alert-info py-2 alert-mobile">
                         <i class="fas fa-info-circle me-2"></i>
-                        <span class="d-none d-sm-inline">{{ $testTrans['alert_thanks'][$lang] ?? 'Thank you for shopping at Hijab!' }} </span>{{ $testTrans['alert_share'][$lang] ?? 'Share your experience.' }}
+                        <span class="d-none d-sm-inline">{{ $testTrans['alert_thanks'][$lang] ?? 'Thank you for shopping at LUMINA!' }} </span>{{ $testTrans['alert_share'][$lang] ?? 'Share your experience.' }}
                     </div>
 
                     <!-- Order Info -->
@@ -108,7 +108,7 @@
                             @error('image')
                             <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
-                            <small class="text-muted">{{ $testTrans['photo_hint'][$lang] ?? 'Format: JPEG, PNG, WEBP. Maximum 2MB. Image will be displayed in Hijab gallery.' }}</small>
+                            <small class="text-muted">{{ $testTrans['photo_hint'][$lang] ?? 'Format: JPEG, PNG, WEBP. Maximum 2MB. Image will be displayed in LUMINA gallery.' }}</small>
                             <div id="imagePreview" class="mt-2" style="display: none;">
                                 <img id="previewImg" src="" alt="Preview" class="rounded shadow-sm" style="max-height: 200px; object-fit: cover;">
                                 <button type="button" class="btn btn-sm btn-outline-danger mt-2" onclick="removeImage()">

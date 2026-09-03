@@ -25,7 +25,7 @@ class BrandCatalog extends Model
     ];
 
     public static array $categories = [
-        'hijabs' => 'Hijabs',
+        'skincares' => 'LUMINAs',
         'shoes' => 'Shoes',
         'accessories' => 'Accessories',
         'bags' => 'Bags',

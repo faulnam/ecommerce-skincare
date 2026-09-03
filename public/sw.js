@@ -1,9 +1,9 @@
 /**
  * Service Worker for Push Notifications
- * Hijab - Push Notification System
+ * LUMINA - Push Notification System
  */
 
-const CACHE_NAME = 'hijab-hijab-v1';
+const CACHE_NAME = 'skincare-skincare-v1';
 
 // Install event
 self.addEventListener('install', (event) => {
@@ -22,10 +22,10 @@ self.addEventListener('push', (event) => {
     console.log('Service Worker: Push received');
     
     let data = {
-        title: 'Hijab',
+        title: 'LUMINA',
         body: 'Anda memiliki notifikasi baru',
     icon: '/storage/logo.png',
-        badge: '/images/hijab-hijab-favicon.svg',
+        badge: '/images/skincare-skincare-favicon.svg',
         url: '/',
         type: 'default'
     };
@@ -41,7 +41,7 @@ self.addEventListener('push', (event) => {
     const options = {
         body: data.body || data.message,
     icon: data.icon || '/storage/logo.png',
-    badge: data.badge || '/images/hijab-hijab-favicon.svg',
+    badge: data.badge || '/images/skincare-skincare-favicon.svg',
         vibrate: [200, 100, 200, 100, 200],
         tag: data.tag || 'notification-' + Date.now(),
         renotify: true,
@@ -122,7 +122,7 @@ async function checkForNotifications() {
                     await self.registration.showNotification(notif.title, {
                         body: notif.message,
                         icon: '/storage/logo.png',
-                        badge: '/images/hijab-hijab-favicon.svg',
+                        badge: '/images/skincare-skincare-favicon.svg',
                         vibrate: [200, 100, 200],
                         tag: 'notif-' + notif.id,
                         renotify: true,

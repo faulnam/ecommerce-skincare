@@ -159,10 +159,10 @@ class ProfileController extends Controller
 
         try {
             Mail::raw(
-                "Kode OTP penghapusan akun Hijab Anda adalah: {$otpCode}\n\nKode berlaku {$ttlMinutes} menit. Jika Anda tidak merasa melakukan permintaan ini, segera amankan akun Anda.",
+                "Kode OTP penghapusan akun LUMINA Anda adalah: {$otpCode}\n\nKode berlaku {$ttlMinutes} menit. Jika Anda tidak merasa melakukan permintaan ini, segera amankan akun Anda.",
                 function ($message) use ($user) {
                     $message->to($user->email)
-                        ->subject('Kode OTP Penghapusan Akun Hijab');
+                        ->subject('Kode OTP Penghapusan Akun LUMINA');
                 }
             );
         } catch (\Throwable $exception) {

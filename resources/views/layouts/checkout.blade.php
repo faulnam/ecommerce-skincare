@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title', 'Hijab')</title>
+    <title>@yield('title', 'LUMINA')</title>
     
     <!-- Tailwind CSS -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -39,8 +39,8 @@
     <header class="fixed left-0 top-0 z-50 w-full border-b border-black/6 bg-white/80 backdrop-blur-xl md:sticky">
         <div class="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-6 md:px-10 lg:px-12">
             <a href="{{ route('home') }}" class="flex items-center gap-2">
-                <img src="{{ config('filesystems.disks.r2.url').'/logo.png' }}" alt="Hijab" class="h-7 w-7 object-contain" loading="lazy">
-                <span class="text-xl font-semibold tracking-tight text-black">Hijab</span>
+                <img src="{{ config('filesystems.disks.r2.url').'/logo.png' }}" alt="LUMINA" class="h-7 w-7 object-contain" loading="lazy">
+                <span class="text-xl font-semibold tracking-tight text-black">LUMINA</span>
             </a>
 
             <nav class="hidden items-center gap-8 md:flex">
@@ -126,7 +126,7 @@
                 <div>
                     <h3 class="mb-3 text-xs font-semibold uppercase tracking-wide text-black">Belanja</h3>
                     <ul class="space-y-2">
-                        <li><a href="{{ route('produk.index') }}" class="hover:underline">Hijab</a></li>
+                        <li><a href="{{ route('produk.index') }}" class="hover:underline">LUMINA</a></li>
                         <li><a href="{{ route('produk.index') }}" class="hover:underline">Sepatu</a></li>
                         <li><a href="{{ route('produk.index') }}" class="hover:underline">Aksesoris</a></li>
                     </ul>
@@ -169,7 +169,7 @@
                         <i class="fas fa-chevron-down text-[10px] text-zinc-500 transition group-open:rotate-180"></i>
                     </summary>
                     <ul class="mt-3 space-y-2 text-sm">
-                        <li><a href="{{ route('produk.index') }}" class="hover:underline">Hijab</a></li>
+                        <li><a href="{{ route('produk.index') }}" class="hover:underline">LUMINA</a></li>
                         <li><a href="{{ route('produk.index') }}" class="hover:underline">Sepatu</a></li>
                         <li><a href="{{ route('produk.index') }}" class="hover:underline">Aksesoris</a></li>
                     </ul>
@@ -219,7 +219,7 @@
         </div>
         <div
             class="mx-auto mt-10 w-full max-w-7xl border-t border-black/10 px-6 pt-5 text-xs text-zinc-400 md:px-10 lg:px-12">
-            © {{ now()->year }} Hijab. Hak cipta dilindungi.
+            © {{ now()->year }} LUMINA. Hak cipta dilindungi.
         </div>
     </footer>
 

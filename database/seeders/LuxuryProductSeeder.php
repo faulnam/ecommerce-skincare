@@ -35,7 +35,7 @@ class LuxuryProductSeeder extends Seeder
                 'discount_percent' => 0,
                 'stock' => 120,
                 'weight' => 150,
-                'image' => 'product-1-hijab.jpg',
+                'image' => 'product-1-skincare.jpg',
                 'category' => 'Serum',
                 'type' => 'serum',
                 'brand' => 'LUMINA',
@@ -47,7 +47,7 @@ class LuxuryProductSeeder extends Seeder
                 'discount_percent' => 50,
                 'stock' => 100,
                 'weight' => 200,
-                'image' => 'product-2-hijab.jpg',
+                'image' => 'product-2-skincare.jpg',
                 'category' => 'Moisturizer',
                 'type' => 'moisturizer',
                 'brand' => 'LUMINA',
@@ -150,7 +150,7 @@ class LuxuryProductSeeder extends Seeder
             ],
         ];
 
-        $sizes = ['Travel 20ml', 'Regular 50ml', 'Jumbo 100ml'];
+        $sizes = ['10ml', '30ml', '50ml'];
         // Skincare finishes & shades
         $finishes = [
             ['name' => 'Dewy Glow', 'hex' => '#F5EBE0'],

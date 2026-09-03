@@ -133,12 +133,12 @@ Route::get('/kategori/{slug}', [PageController::class, 'categoryShow'])->name('k
 Route::get('/brand/{slug}', [PageController::class, 'brandShow'])->name('brand.show');
 
 // SEO 301 Redirects for Legacy/404 URLs
-Route::redirect('/hijab', '/kategori/hijab-hijab', 301);
-Route::redirect('/shoes', '/kategori/sepatu-hijab', 301);
+Route::redirect('/skincare', '/kategori/skincare-skincare', 301);
+Route::redirect('/shoes', '/kategori/sepatu-skincare', 301);
 Route::redirect('/apparel', '/kategori/apparel', 301);
-Route::redirect('/accessories', '/kategori/aksesoris-hijab', 301);
-Route::redirect('/insight/5-kesalahan-umum-pemula-saat-bermain-hijab-dan-cara-mengatasinya', '/insight/5-kesalahan-umum-pemula-saat-bermain-hijab', 301);
-Route::redirect('/insight/cara-membersihkan-sepatu-hijab-setelah-bermain', '/insight/cara-membersihkan-sepatu-hijab-biar-awet', 301);
+Route::redirect('/accessories', '/kategori/aksesoris-skincare', 301);
+Route::redirect('/insight/5-kesalahan-umum-pemula-saat-bermain-skincare-dan-cara-mengatasinya', '/insight/5-kesalahan-umum-pemula-saat-bermain-skincare', 301);
+Route::redirect('/insight/cara-membersihkan-sepatu-skincare-setelah-bermain', '/insight/cara-membersihkan-sepatu-skincare-biar-awet', 301);
 
 Route::get('/produk', [PageController::class, 'produkIndex'])->name('produk.index');
 Route::get('/produk/{category}/{product}', [PageController::class, 'produkShow'])->name('produk.show');

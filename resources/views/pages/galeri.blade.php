@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Gallery - Hijab')
-@section('og_description', 'Galeri foto dan momen Hijab — event komunitas, aktivitas hijab, dan koleksi produk terbaik kami.')
+@section('title', 'Gallery - LUMINA')
+@section('og_description', 'Galeri foto dan momen LUMINA — event komunitas, aktivitas skincare, dan koleksi produk terbaik kami.')
 
 @section('content')
 <!-- Hero -->
@@ -9,7 +9,7 @@
     <div class="container">
         <span class="section-badge">Gallery</span>
         <h1 class="page-title">Our <span class="text-primary">Moments & Activities</span></h1>
-    <p class="page-subtitle">Documentation of Hijab products, events, and activities</p>
+    <p class="page-subtitle">Documentation of LUMINA products, events, and activities</p>
     </div>
 </section>
 

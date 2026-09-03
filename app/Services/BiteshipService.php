@@ -496,13 +496,13 @@ class BiteshipService
             $isInstantCourier = in_array($courierCode, ['grab', 'grabexpress', 'gojek', 'gosend'], true);
 
             $payload = [
-                'shipper_contact_name' => $orderData['shipper_contact_name'] ?? ($orderData['origin_contact_name'] ?? config('branding.name', 'Hijab')),
+                'shipper_contact_name' => $orderData['shipper_contact_name'] ?? ($orderData['origin_contact_name'] ?? config('branding.name', 'LUMINA')),
                 'shipper_contact_phone' => $orderData['shipper_contact_phone'] ?? ($orderData['origin_contact_phone'] ?? config('branding.phone', '081234567890')),
-                'shipper_contact_email' => $orderData['shipper_contact_email'] ?? config('mail.from.address', 'qa@hijab.test'),
+                'shipper_contact_email' => $orderData['shipper_contact_email'] ?? config('mail.from.address', 'qa@skincare.test'),
 
-                'origin_contact_name' => $orderData['origin_contact_name'] ?? config('branding.name', 'Hijab'),
+                'origin_contact_name' => $orderData['origin_contact_name'] ?? config('branding.name', 'LUMINA'),
                 'origin_contact_phone' => $orderData['origin_contact_phone'] ?? config('branding.phone', '081234567890'),
-                'origin_address' => $orderData['origin_address'] ?? config('branding.address', 'Toko Hijab'),
+                'origin_address' => $orderData['origin_address'] ?? config('branding.address', 'Toko LUMINA'),
                 'origin_note' => $orderData['origin_note'] ?? 'Pickup dari toko',
                 
                 'destination_contact_name' => $orderData['destination_contact_name'],
@@ -675,13 +675,13 @@ class BiteshipService
             $isInstantCourier = in_array($courierCode, ['grab', 'grabexpress', 'gojek', 'gosend'], true);
 
             $payload = [
-                'shipper_contact_name' => $orderData['shipper_contact_name'] ?? ($orderData['origin_contact_name'] ?? config('branding.name', 'Hijab')),
+                'shipper_contact_name' => $orderData['shipper_contact_name'] ?? ($orderData['origin_contact_name'] ?? config('branding.name', 'LUMINA')),
                 'shipper_contact_phone' => $orderData['shipper_contact_phone'] ?? ($orderData['origin_contact_phone'] ?? config('branding.phone', '081234567890')),
-                'shipper_contact_email' => $orderData['shipper_contact_email'] ?? config('mail.from.address', 'qa@hijab.test'),
+                'shipper_contact_email' => $orderData['shipper_contact_email'] ?? config('mail.from.address', 'qa@skincare.test'),
 
-                'origin_contact_name' => $orderData['origin_contact_name'] ?? config('branding.name', 'Hijab'),
+                'origin_contact_name' => $orderData['origin_contact_name'] ?? config('branding.name', 'LUMINA'),
                 'origin_contact_phone' => $orderData['origin_contact_phone'] ?? config('branding.phone', '081234567890'),
-                'origin_address' => $orderData['origin_address'] ?? config('branding.address', 'Toko Hijab'),
+                'origin_address' => $orderData['origin_address'] ?? config('branding.address', 'Toko LUMINA'),
                 'origin_note' => $orderData['origin_note'] ?? 'Pickup dari toko',
 
                 'destination_contact_name' => $orderData['destination_contact_name'],
@@ -838,11 +838,11 @@ class BiteshipService
         $customerOrderNote = trim((string) ($order->notes ?? ''));
 
         $draftPayload = [
-            'shipper_contact_name' => config('branding.name', 'Hijab'),
+            'shipper_contact_name' => config('branding.name', 'LUMINA'),
             'shipper_contact_phone' => config('branding.phone', '081234567890'),
-            'origin_contact_name' => config('branding.name', 'Hijab'),
+            'origin_contact_name' => config('branding.name', 'LUMINA'),
             'origin_contact_phone' => config('branding.phone', '081234567890'),
-            'origin_address' => config('branding.address', 'Toko Hijab'),
+            'origin_address' => config('branding.address', 'Toko LUMINA'),
             'origin_note' => 'Pickup dari toko',
             'origin_latitude' => (float) config('biteship.origin.latitude'),
             'origin_longitude' => (float) config('biteship.origin.longitude'),
@@ -1569,11 +1569,11 @@ class BiteshipService
         $customerOrderNote = trim((string) ($order->notes ?? ''));
 
         $shipmentPayload = [
-            'shipper_contact_name' => config('branding.name', 'Hijab'),
+            'shipper_contact_name' => config('branding.name', 'LUMINA'),
             'shipper_contact_phone' => config('branding.phone', '081234567890'),
-            'origin_contact_name' => config('branding.name', 'Hijab'),
+            'origin_contact_name' => config('branding.name', 'LUMINA'),
             'origin_contact_phone' => config('branding.phone', '081234567890'),
-            'origin_address' => config('branding.address', 'Toko Hijab'),
+            'origin_address' => config('branding.address', 'Toko LUMINA'),
             'origin_note' => 'Pickup dari toko',
             'origin_latitude' => (float) config('biteship.origin.latitude'),
             'origin_longitude' => (float) config('biteship.origin.longitude'),

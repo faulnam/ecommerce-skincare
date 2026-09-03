@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Checkout - Hijab')
+@section('title', 'Checkout - LUMINA')
 @php
     $jsonPath = public_path('translation/checkout.json');
     $checkTrans = file_exists($jsonPath) ? json_decode(file_get_contents($jsonPath), true) : [];
@@ -1111,7 +1111,7 @@
         });
         
         storeMarker = L.marker([STORE_LAT, STORE_LNG], { icon: storeIcon }).addTo(map);
-    storeMarker.bindPopup('<strong>Hijab Store</strong><br>Lokasi pengambilan barang').openPopup();
+    storeMarker.bindPopup('<strong>LUMINA Store</strong><br>Lokasi pengambilan barang').openPopup();
         
         // Delivery marker (red/draggable)
         const deliveryIcon = L.divIcon({

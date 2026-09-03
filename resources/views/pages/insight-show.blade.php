@@ -10,7 +10,7 @@
 @push('og_extra')
     <meta property="article:published_time" content="{{ $insight->published_at->toIso8601String() }}">
     <meta property="article:author" content="{{ $insight->author }}">
-    <meta property="article:section" content="Hijab">
+    <meta property="article:section" content="LUMINA">
 <script type="application/ld+json">
 {
   "@@context": "https://schema.org",
@@ -33,7 +33,7 @@
     "caption": "{{ $insight->title }}"
   },
   @endif
-  "articleSection": "Hijab",
+  "articleSection": "LUMINA",
   "inLanguage": "{{ $lang === 'id' ? 'id-ID' : 'en-US' }}"
 }
 </script>
@@ -128,7 +128,7 @@
                                 <div>
                                     <p class="text-sm font-bold text-black">{{ $insight->author }}</p>
                                     <div class="flex items-center gap-2 text-xs text-zinc-500 mt-0.5">
-                                        <span>Hijab Team</span>
+                                        <span>LUMINA Team</span>
                                         <span>•</span>
                                         <time datetime="{{ $insight->published_at->format('Y-m-d') }}">{{ $insight->published_at->format('M d, Y') }}</time>
                                     </div>
@@ -162,7 +162,7 @@
                             <i class="fas fa-newspaper text-6xl text-zinc-300"></i>
                         </div>
                         @endif
-                        <p class="text-[10px] text-zinc-400 mt-3 text-right uppercase tracking-wider font-medium">Image Credit: Hijab</p>
+                        <p class="text-[10px] text-zinc-400 mt-3 text-right uppercase tracking-wider font-medium">Image Credit: LUMINA</p>
                     </div>
 
                     <div class="prose max-w-none text-zinc-800">
@@ -171,7 +171,7 @@
 
                     <div class="mt-12 pt-6 border-t border-zinc-200">
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-4 py-1.5 bg-zinc-100 text-zinc-600 text-xs font-bold uppercase tracking-wider rounded-full hover:bg-zinc-200 transition cursor-pointer">Hijab</span>
+                            <span class="px-4 py-1.5 bg-zinc-100 text-zinc-600 text-xs font-bold uppercase tracking-wider rounded-full hover:bg-zinc-200 transition cursor-pointer">LUMINA</span>
                             <span class="px-4 py-1.5 bg-zinc-100 text-zinc-600 text-xs font-bold uppercase tracking-wider rounded-full hover:bg-zinc-200 transition cursor-pointer">Sports</span>
                             <span class="px-4 py-1.5 bg-zinc-100 text-zinc-600 text-xs font-bold uppercase tracking-wider rounded-full hover:bg-zinc-200 transition cursor-pointer">News</span>
                         </div>
@@ -235,8 +235,8 @@
                             <div class="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-white/10 blur-2xl"></div>
                             <div class="absolute -left-10 -bottom-10 h-32 w-32 rounded-full bg-blue-500/20 blur-2xl"></div>
 
-                            <h3 class="text-lg font-bold mb-2 relative z-10">Hijab Premium Gear</h3>
-                            <p class="text-xs text-zinc-400 mb-6 relative z-10">Jelajahi koleksi terbaru dari Bullhijab, Nox, dan Babolat dengan penawaran spesial hari ini.</p>
+                            <h3 class="text-lg font-bold mb-2 relative z-10">LUMINA Dermatological Care</h3>
+                            <p class="text-xs text-zinc-400 mb-6 relative z-10">Jelajahi koleksi terbaru dari Bullskincare, Nox, dan Babolat dengan penawaran spesial hari ini.</p>
                             <a href="{{ route('home') }}" class="inline-block bg-white text-black px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-zinc-200 transition relative z-10">
                                 Belanja Sekarang
                             </a>

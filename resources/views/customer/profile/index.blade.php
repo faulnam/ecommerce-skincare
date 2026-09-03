@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'My Profile - Hijab')
+@section('title', 'My Profile - LUMINA')
 
 @section('content')
 @php
@@ -304,7 +304,7 @@
                                 <i class="fas fa-shopping-bag text-2xl text-zinc-400"></i>
                             </div>
                             <h5 class="mb-1 text-sm font-semibold text-black">{{ $custTrans['empty_orders_title'][$lang] ?? 'No Orders Yet' }}</h5>
-                            <p class="mb-4 text-xs text-zinc-600">{{ $custTrans['empty_orders_desc'][$lang] ?? "Let's start shopping for hijab equipment!" }}</p>
+                            <p class="mb-4 text-xs text-zinc-600">{{ $custTrans['empty_orders_desc'][$lang] ?? "Let's start shopping for skincare equipment!" }}</p>
                             <a href="{{ route('new-arrivals') }}"
                                class="inline-block rounded-lg bg-black px-4 py-2 text-xs font-medium text-white hover:bg-black/90 transition">
                                 {{ $custTrans['btn_start_shopping'][$lang] ?? 'Start Shopping' }}

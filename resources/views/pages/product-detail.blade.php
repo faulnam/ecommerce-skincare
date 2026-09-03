@@ -812,16 +812,16 @@ if ($totalReviews > 0) {
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                if (typeof showHijabToast === 'function') {
-                    showHijabToast('Product successfully added to cart!', 'success');
+                if (typeof showToast === 'function') {
+                    showToast('Product successfully added to cart!', 'success');
                     setTimeout(() => location.reload(), 1500);
                 } else {
                     alert('Product successfully added to cart!');
                     location.reload();
                 }
             } else {
-                if (typeof showHijabToast === 'function') {
-                    showHijabToast(data.message || 'Failed to add product to cart', 'error');
+                if (typeof showToast === 'function') {
+                    showToast(data.message || 'Failed to add product to cart', 'error');
                 } else {
                     alert(data.message || 'Failed to add product to cart');
                 }
@@ -829,8 +829,8 @@ if ($totalReviews > 0) {
         })
         .catch(error => {
             console.error('Error:', error);
-            if (typeof showHijabToast === 'function') {
-                showHijabToast('An error occurred. Please try again.', 'error');
+            if (typeof showToast === 'function') {
+                showToast('An error occurred. Please try again.', 'error');
             } else {
                 alert('An error occurred. Please try again.');
             }
@@ -854,16 +854,16 @@ if ($totalReviews > 0) {
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                if (typeof showHijabToast === 'function') {
-                    showHijabToast('Product successfully added to wishlist!', 'success');
+                if (typeof showToast === 'function') {
+                    showToast('Product successfully added to wishlist!', 'success');
                     setTimeout(() => location.reload(), 1500);
                 } else {
                     alert('Product successfully added to wishlist!');
                     location.reload();
                 }
             } else {
-                if (typeof showHijabToast === 'function') {
-                    showHijabToast(data.message || 'Product already in wishlist', 'error');
+                if (typeof showToast === 'function') {
+                    showToast(data.message || 'Product already in wishlist', 'error');
                 } else {
                     alert(data.message || 'Product already in wishlist');
                 }
@@ -871,8 +871,8 @@ if ($totalReviews > 0) {
         })
         .catch(error => {
             console.error('Error:', error);
-            if (typeof showHijabToast === 'function') {
-                showHijabToast('An error occurred. Please try again.', 'error');
+            if (typeof showToast === 'function') {
+                showToast('An error occurred. Please try again.', 'error');
             } else {
                 alert('An error occurred. Please try again.');
             }

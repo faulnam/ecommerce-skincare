@@ -90,7 +90,7 @@
                         <i class="fas fa-shopping-bag text-2xl text-zinc-400"></i>
                     </div>
                     <h3 class="mb-1.5 text-base font-bold text-black">{{ $historyTrans['empty_title'][$lang] ?? 'No Orders Yet' }}</h3>
-                    <p class="mb-6 text-xs text-zinc-500 max-w-sm mx-auto px-4">{{ $historyTrans['empty_desc'][$lang] ?? "Let's start shopping for hijab equipment!" }}</p>
+                    <p class="mb-6 text-xs text-zinc-500 max-w-sm mx-auto px-4">{{ $historyTrans['empty_desc'][$lang] ?? "Let's start shopping for skincare equipment!" }}</p>
                     <a href="{{ route('produk.index') }}" 
                        class="inline-block rounded-xl bg-black px-6 py-2.5 text-xs font-semibold text-white hover:bg-black/90 transition-colors shadow-sm">
                         {{ $historyTrans['btn_start_shopping'][$lang] ?? 'Start Shopping' }}
@@ -119,7 +119,7 @@
                 <ul class="mt-3 space-y-2 text-xs font-medium text-zinc-500">
                     <li><a href="{{ route('policy') }}" class="hover:text-black transition-colors">{{ $historyTrans['foot_policy'][$lang] ?? 'Policy' }}</a></li>
                     <li><a href="{{ route('return-refund') }}" class="hover:text-black transition-colors">{{ $historyTrans['foot_return'][$lang] ?? 'Return & Refund' }}</a></li>
-                    <li><a href="{{ route('guarantee') }}" class="hover:text-black transition-colors">{{ $historyTrans['foot_guarantee'][$lang] ?? 'Hijab Guarantee' }}</a></li>
+                    <li><a href="{{ route('guarantee') }}" class="hover:text-black transition-colors">{{ $historyTrans['foot_guarantee'][$lang] ?? 'LUMINA Guarantee' }}</a></li>
                     <li><a href="{{ route('help-center') }}" class="hover:text-black transition-colors">{{ $historyTrans['foot_help'][$lang] ?? 'Help Center' }}</a></li>
                 </ul>
             </details>
@@ -137,7 +137,7 @@
         </div>
     </div>
     <div class="mx-auto mt-8 w-full max-w-7xl border-t border-black/5 px-6 pt-5 text-[11px] font-medium text-zinc-400 md:px-10 lg:px-12">
-        &copy; {{ now()->year }} Hijab. {{ $historyTrans['foot_rights'][$lang] ?? 'All rights reserved.' }}
+        &copy; {{ now()->year }} LUMINA. {{ $historyTrans['foot_rights'][$lang] ?? 'All rights reserved.' }}
     </div>
 </footer>
 @endsection

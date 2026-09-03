@@ -62,7 +62,7 @@
         <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-10 lg:px-12 py-4 lg:hidden">
             <p class="text-xs font-semibold uppercase tracking-[0.18em] text-zinc-500">{{ $newarrivals['page_new_arrivals']['badge'][$lang] ?? 'New Arrivals' }}</p>
             <h1 class="mt-2 text-2xl font-semibold tracking-tight text-black sm:text-3xl">{{ $newarrivals['page_new_arrivals']['title'][$lang] ?? 'Latest Products' }}</h1>
-            <p class="mt-2 text-zinc-600 text-sm">{{ $newarrivals['page_new_arrivals']['subtitle'][$lang] ?? 'Discover our newest premium hijab equipment' }}</p>
+            <p class="mt-2 text-zinc-600 text-sm">{{ $newarrivals['page_new_arrivals']['subtitle'][$lang] ?? 'Discover our newest premium skincare equipment' }}</p>
         </div>
 
         <!-- Main Layout: Sidebar + Grid -->
@@ -95,7 +95,7 @@
                                     <input type="radio" name="filterCategory" class="border-zinc-300 text-black focus:ring-black" value="" onchange="applyCategory()">
                                     <span class="text-sm text-zinc-600">Semua Kategori</span>
                                 </label>
-                                @foreach(['hijab' => 'Hijab', 'baju' => 'Baju', 'tas' => 'Tas', 'celana' => 'Celana', 'sepatu' => 'Sepatu'] as $val => $label)
+                                @foreach(['serum' => 'Serum', 'moisturizer' => 'Moisturizer', 'cleanser' => 'Cleanser', 'toner' => 'Toner', 'sunscreen' => 'Sunscreen'] as $val => $label)
                                 <label class="flex cursor-pointer items-center gap-2">
                                     <input type="radio" name="filterCategory" class="border-zinc-300 text-black focus:ring-black" value="{{ $val }}" {{ request()->get('category') === $val ? 'checked' : '' }} onchange="applyCategory()">
                                     <span class="text-sm text-zinc-600">{{ $label }}</span>
@@ -154,8 +154,8 @@
                                     <span class="text-sm text-zinc-600">Year (Oldest)</span>
                                 </label>
                                 <label class="flex cursor-pointer items-center gap-2">
-                                    <input type="radio" name="filterSort" class="border-zinc-300 text-black focus:ring-black" value="hijabful_rating" {{ request()->get('sort') === 'hijabful_rating' ? 'checked' : '' }} onchange="applySort()">
-                                    <span class="text-sm text-zinc-600">Hijabful Rating</span>
+                                    <input type="radio" name="filterSort" class="border-zinc-300 text-black focus:ring-black" value="rating" {{ request()->get('sort') === 'rating' ? 'checked' : '' }} onchange="applySort()">
+                                    <span class="text-sm text-zinc-600">LUMINA Rating</span>
                                 </label>
                             </div>
                         </div>
@@ -226,7 +226,7 @@
                                 <input type="radio" name="mobileCategory" value="" class="w-4 h-4 text-black border-zinc-300 focus:ring-black" onchange="updateMobileFilterCount()" {{ !request()->get('category') ? 'checked' : '' }}>
                                 <span class="text-sm text-zinc-600">Semua Kategori</span>
                             </label>
-                            @foreach(['hijab' => 'Hijab', 'baju' => 'Baju', 'tas' => 'Tas', 'celana' => 'Celana', 'sepatu' => 'Sepatu'] as $val => $label)
+                            @foreach(['serum' => 'Serum', 'moisturizer' => 'Moisturizer', 'cleanser' => 'Cleanser', 'toner' => 'Toner', 'sunscreen' => 'Sunscreen'] as $val => $label)
                             <label class="flex items-center gap-3 cursor-pointer">
                                 <input type="radio" name="mobileCategory" value="{{ $val }}" class="w-4 h-4 text-black border-zinc-300 focus:ring-black" onchange="updateMobileFilterCount()" {{ request()->get('category') === $val ? 'checked' : '' }}>
                                 <span class="text-sm text-zinc-600">{{ $label }}</span>
@@ -279,8 +279,8 @@
                                 <span class="text-sm text-zinc-600">Year (Oldest)</span>
                             </label>
                             <label class="flex items-center gap-3 cursor-pointer">
-                                <input type="radio" name="mobileSort" value="hijabful_rating" class="w-4 h-4 text-black border-zinc-300 focus:ring-black" {{ request()->get('sort') === 'hijabful_rating' ? 'checked' : '' }}>
-                                <span class="text-sm text-zinc-600">Hijabful Rating</span>
+                                <input type="radio" name="mobileSort" value="rating" class="w-4 h-4 text-black border-zinc-300 focus:ring-black" {{ request()->get('sort') === 'rating' ? 'checked' : '' }}>
+                                <span class="text-sm text-zinc-600">LUMINA Rating</span>
                             </label>
                         </div>
                     </div>

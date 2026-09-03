@@ -170,7 +170,7 @@ class Order extends Model
         static::creating(function ($order) {
             if (empty($order->order_number)) {
                 // Format: NP-YYYYMMDD-XXXXX
-                // NP = Hijab
+                // NP = LUMINA
                 // YYYYMMDD = Tanggal
                 // XXXXX = 5 digit random
                 $order->order_number = 'NP-' . date('Ymd') . '-' . strtoupper(substr(uniqid(), -5));

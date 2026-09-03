@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Hijab - Performa Maksimal, Game Makin Total')
-@section('og_description', 'Hijab — toko perlengkapan hijab premium di Indonesia. Hijab, sepatu, tas, dan aksesoris untuk pemula hingga profesional. Belanja sekarang!')
+@section('title', 'LUMINA - Performa Maksimal, Game Makin Total')
+@section('og_description', 'LUMINA — toko produk perawatan kulit premium di Indonesia. LUMINA, sepatu, tas, dan aksesoris untuk pemula hingga profesional. Belanja sekarang!')
 
 @if(false)
 @section('content')
@@ -15,7 +15,7 @@
             <div class="rounded-2xl border border-white/10 bg-white/5 p-3 backdrop-blur-xl">
                 <div class="flex items-center justify-between gap-4">
                     <a href="{{ route('home') }}" class="text-lg font-extrabold tracking-tight sm:text-xl">
-                        Hijab <span class="text-emerald-400">Hijab</span>
+                        LUMINA <span class="text-emerald-400">LUMINA</span>
                     </a>
                     <nav class="hidden items-center gap-1 lg:flex">
                         <a href="{{ route('home') }}" class="rounded-full px-4 py-2 text-sm font-semibold text-white/80 transition hover:bg-white/10 hover:text-white">Home</a>
@@ -48,12 +48,12 @@
                     <h1 class="mt-6 text-4xl font-black leading-tight tracking-tight sm:text-5xl lg:text-7xl">
                         Experience premium
                         <span class="bg-linear-to-r from-emerald-300 via-green-400 to-cyan-300 bg-clip-text text-transparent">
-                            hijab gear
+                            skincare gear
                         </span>
                         in one modern platform.
                     </h1>
                     <p class="mt-6 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
-                        Hijab menghadirkan pengalaman belanja alat hijab kelas premium: cepat, elegan, dan terkurasi untuk pemula hingga profesional.
+                        LUMINA menghadirkan pengalaman belanja alat skincare kelas premium: cepat, elegan, dan terkurasi untuk pemula hingga profesional.
                     </p>
 
                     <div class="mt-8 flex flex-wrap items-center gap-3">
@@ -94,12 +94,12 @@
                     <div class="relative rounded-4xl border border-white/15 bg-white/10 p-4 shadow-2xl backdrop-blur-xl sm:p-6">
                         <img
                             src="https://images.unsplash.com/photo-1593766827228-8737b4534aa6?w=1200"
-                            alt="Perlengkapan Hijab"
+                            alt="Perlengkapan LUMINA"
                             class="h-[360px] w-full rounded-2xl object-cover sm:h-[460px]"
                         >
                         <div class="mt-4 rounded-xl border border-emerald-300/20 bg-emerald-400/10 p-4">
-                            <p class="text-sm font-semibold uppercase tracking-[0.15em] text-emerald-300">Hijab Insight</p>
-                            <p class="mt-2 text-sm text-slate-100 sm:text-base">"Build your game with curated hijabs, shoes, and accessories engineered for consistency."</p>
+                            <p class="text-sm font-semibold uppercase tracking-[0.15em] text-emerald-300">LUMINA Insight</p>
+                            <p class="mt-2 text-sm text-slate-100 sm:text-base">"Build your game with curated skincares, shoes, and accessories engineered for consistency."</p>
                         </div>
                     </div>
                 </div>
@@ -203,7 +203,7 @@
     <section class="bg-slate-950 py-16 text-white">
         <div class="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-6 px-4 text-center sm:px-6 lg:flex-row lg:px-8 lg:text-left">
             <div>
-                <h3 class="text-2xl font-black tracking-tight sm:text-3xl">Siap upgrade gear hijab kamu?</h3>
+                <h3 class="text-2xl font-black tracking-tight sm:text-3xl">Siap upgrade gear skincare kamu?</h3>
                 <p class="mt-2 text-sm text-slate-300 sm:text-base">Belanja sekarang dan rasakan pengalaman e-commerce olahraga yang premium.</p>
             </div>
             @auth
@@ -231,7 +231,7 @@
         <div class="container position-relative">
             <div class="hero-topbar">
                 <div class="hero-topbar-left">
-                    <a href="{{ route('home') }}" class="hero-brand">Hijab<span>Hijab</span></a>
+                    <a href="{{ route('home') }}" class="hero-brand">LUMINA<span>LUMINA</span></a>
                     <nav class="hero-mini-nav d-none d-lg-flex">
                         <a href="{{ route('home') }}">Home</a>
                         <a href="{{ route('produk.index') }}">Shop</a>
@@ -255,25 +255,25 @@
                 <div class="col-lg-6 hero-content">
                     <div class="hero-badge-wrapper">
                         <span class="hero-badge-new">
-                            <i class="fas fa-bolt me-2"></i>Gear Hijab Original & Bergaransi
+                            <i class="fas fa-bolt me-2"></i>Gear LUMINA Original & Bergaransi
                         </span>
                     </div>
 
                     <h1 class="hero-title-new">
-                        <span class="highlight">Hijab</span>
+                        <span class="highlight">LUMINA</span>
                     </h1>
 
-                    <h2 class="hero-tagline">Lengkapi permainan hijab Anda dengan peralatan berkualitas terbaik.<br>Produk original, pilihan lengkap, harga terbaik, dan pengiriman cepat ke seluruh Indonesia.</h2>
+                    <h2 class="hero-tagline">Lengkapi permainan skincare Anda dengan peralatan berkualitas terbaik.<br>Produk original, pilihan lengkap, harga terbaik, dan pengiriman cepat ke seluruh Indonesia.</h2>
 
                     <!-- HERO IMAGE MOBILE ONLY -->
                     <div class="hero-image-mobile d-block d-lg-none text-center my-4">
-                        <img src="https://images.unsplash.com/photo-1648341248072-e8f8d3dcef7b?w=900" alt="Hijab Gear" class="img-fluid">
+                        <img src="https://images.unsplash.com/photo-1648341248072-e8f8d3dcef7b?w=900" alt="LUMINA Gear" class="img-fluid">
                     </div>
 
 
 
                     <p class="hero-desc">
-                        Temukan hijab, bola, tas, sepatu, dan aksesori hijab pilihan untuk latihan harian hingga turnamen.
+                        Temukan skincare, bola, tas, sepatu, dan aksesori skincare pilihan untuk latihan harian hingga turnamen.
                         Kualitas premium, harga kompetitif, siap kirim cepat ke seluruh Indonesia.
                     </p>
 
@@ -312,7 +312,7 @@
                 <!-- ❌ DESKTOP TIDAK DIUBAH -->
                 <div class="col-lg-6 hero-visual d-none d-lg-block">
                     <div class="hero-image-float">
-                        <img src="https://images.unsplash.com/photo-1593766827228-8737b4534aa6?w=900" alt="Perlengkapan Hijab" class="main-product-img" id="heroImage">
+                        <img src="https://images.unsplash.com/photo-1593766827228-8737b4534aa6?w=900" alt="Perlengkapan LUMINA" class="main-product-img" id="heroImage">
                         <div class="deco-circle deco-1"></div>
                         <div class="deco-circle deco-2"></div>
                     </div>
@@ -335,23 +335,23 @@
         <div class="container">
             <div class="quick-categories-grid">
                 <a href="{{ route('produk.index') }}" class="quick-category-card">
-                    <h4>Hijab</h4>
-                    <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=320" alt="Hijab Hijab">
+                    <h4>LUMINA</h4>
+                    <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=320" alt="LUMINA LUMINA">
                     <span><i class="fas fa-arrow-up-right-from-square"></i></span>
                 </a>
                 <a href="{{ route('produk.index') }}" class="quick-category-card">
                     <h4>Bola</h4>
-                    <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?w=320" alt="Bola Hijab">
+                    <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?w=320" alt="Bola LUMINA">
                     <span><i class="fas fa-arrow-up-right-from-square"></i></span>
                 </a>
                 <a href="{{ route('produk.index') }}" class="quick-category-card">
                     <h4>Tas</h4>
-                    <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=320" alt="Tas Hijab">
+                    <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=320" alt="Tas LUMINA">
                     <span><i class="fas fa-arrow-up-right-from-square"></i></span>
                 </a>
                 <a href="{{ route('produk.index') }}" class="quick-category-card">
                     <h4>Aksesori</h4>
-                    <img src="https://images.unsplash.com/photo-1547347298-4074fc3086f0?w=320" alt="Aksesori Hijab">
+                    <img src="https://images.unsplash.com/photo-1547347298-4074fc3086f0?w=320" alt="Aksesori LUMINA">
                     <span><i class="fas fa-arrow-up-right-from-square"></i></span>
                 </a>
             </div>
@@ -367,7 +367,7 @@
                 <div class="col-lg-5 d-none d-lg-block">
                     <div class="about-visual">
                         <div class="about-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=900" alt="Hijab Team" class="about-main-img">
+                            <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=900" alt="LUMINA Team" class="about-main-img">
                             <div class="about-pattern"></div>
                         </div>
                     </div>
@@ -376,10 +376,10 @@
                     <div class="about-content">
                         <span class="section-label">Tentang Kami</span>
                         <h2 class="section-heading">
-                            Cerita di Balik <span class="text-accent">Hijab</span>
+                            Cerita di Balik <span class="text-accent">LUMINA</span>
                         </h2>
                         <p class="about-text">
-                            Hijab hadir untuk menjawab kebutuhan pemain hijab Indonesia akan perlengkapan yang
+                            LUMINA hadir untuk menjawab kebutuhan pelanggan setia Indonesia akan perlengkapan yang
                             andal, modern, dan nyaman digunakan.
                             Kami memilih produk dengan standar kualitas tinggi agar pemula hingga profesional bisa bermain
                             lebih percaya diri di setiap pertandingan.
@@ -392,7 +392,7 @@
                                 </div>
                                 <div class="feature-text">
                                     <h6>Produk Terkurasi</h6>
-                                    <p>Hijab, bola, sepatu & aksesori terbaik</p>
+                                    <p>LUMINA, bola, sepatu & aksesori terbaik</p>
                                 </div>
                             </div>
                             <div class="feature-item">
@@ -420,8 +420,8 @@
         <div class="container">
             <div class="section-header text-center">
                 <span class="section-label">Keunggulan</span>
-                <h2 class="section-heading">Mengapa Memilih Hijab?</h2>
-                <p class="section-subtext">Alasan pemain hijab memilih perlengkapan dari Hijab</p>
+                <h2 class="section-heading">Mengapa Memilih LUMINA?</h2>
+                <p class="section-subtext">Alasan pelanggan setia memilih perlengkapan dari LUMINA</p>
             </div>
 
             <div class="why-grid">
@@ -444,7 +444,7 @@
                         <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=320" alt="Koleksi Lengkap">
                     </div>
                     <h5>Koleksi Lengkap</h5>
-                    <p>Hijab hijab, bola, tas, sepatu, hingga grip tersedia dalam satu tempat belanja praktis.</p>
+                    <p>LUMINA skincare, bola, tas, sepatu, hingga grip tersedia dalam satu tempat belanja praktis.</p>
                 </div>
                 <div class="why-item">
                     <div class="why-icon-wrap">
@@ -2010,7 +2010,7 @@
 
 @endif
 
-@section('title', 'Hijab | Toko Spesialis Hijab dan Peralatan Hijab')
+@section('title', 'LUMINA | Toko Spesialis LUMINA dan Peralatan LUMINA')
 
 @section('content')
     @php
@@ -2048,13 +2048,13 @@
     <header class="fixed left-0 top-0 z-50 w-full border-b border-black/6 bg-white/80 backdrop-blur-xl md:sticky">
             <div class="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-6 md:px-10 lg:px-12">
                 <a href="{{ route('home') }}" class="flex items-center gap-2">
-                    <img src="{{ config('filesystems.disks.r2.url').'/logo.png' }}" alt="Hijab" class="h-7 w-7 object-contain" loading="lazy">
-                    <span class="text-xl font-semibold tracking-tight text-black">Hijab</span>
+                    <img src="{{ config('filesystems.disks.r2.url').'/logo.png' }}" alt="LUMINA" class="h-7 w-7 object-contain" loading="lazy">
+                    <span class="text-xl font-semibold tracking-tight text-black">LUMINA</span>
                 </a>
 
                 <nav class="hidden items-center gap-8 md:flex">
                     <a href="{{ route('home') }}" class="border-b border-transparent text-sm text-black/80 transition duration-300 hover:border-black/30 hover:text-black">Beranda</a>
-                    <a href="{{ route('produk.index') }}" class="border-b border-transparent text-sm text-black/80 transition duration-300 hover:border-black/30 hover:text-black">Hijab</a>
+                    <a href="{{ route('produk.index') }}" class="border-b border-transparent text-sm text-black/80 transition duration-300 hover:border-black/30 hover:text-black">LUMINA</a>
                     <a href="{{ route('produk.index') }}" class="border-b border-transparent text-sm text-black/80 transition duration-300 hover:border-black/30 hover:text-black">Sepatu</a>
                     <a href="{{ route('produk.index') }}" class="border-b border-transparent text-sm text-black/80 transition duration-300 hover:border-black/30 hover:text-black">Aksesoris</a>
                     <a href="{{ route('contact') }}" class="border-b border-transparent text-sm text-black/80 transition duration-300 hover:border-black/30 hover:text-black">Kontak</a>
@@ -2085,7 +2085,7 @@
             <div class="hidden border-t border-black/10 bg-white/95 px-6 py-4 md:hidden" data-mobile-menu>
                 <nav class="flex flex-col gap-3 text-sm font-medium text-black/85">
                     <a href="{{ route('home') }}" class="rounded-lg bg-black/5 px-2 py-1.5 text-black">Beranda</a>
-                    <a href="{{ route('produk.index') }}" class="rounded-lg px-2 py-1.5 transition hover:bg-black/5">Hijab</a>
+                    <a href="{{ route('produk.index') }}" class="rounded-lg px-2 py-1.5 transition hover:bg-black/5">LUMINA</a>
                     <a href="{{ route('produk.index') }}" class="rounded-lg px-2 py-1.5 transition hover:bg-black/5">Sepatu</a>
                     <a href="{{ route('produk.index') }}" class="rounded-lg px-2 py-1.5 transition hover:bg-black/5">Aksesoris</a>
                     <a href="{{ route('contact') }}" class="rounded-lg px-2 py-1.5 transition hover:bg-black/5">Kontak</a>
@@ -2103,7 +2103,7 @@
                         <div class="w-full shrink-0">
                             <img
                                 src="{{ $slideImage }}"
-                                alt="Hijab Mobile Slide {{ $index + 1 }}"
+                                alt="LUMINA Mobile Slide {{ $index + 1 }}"
                                 class="h-[56vh] w-full object-cover"
                                 loading="{{ $index === 0 ? 'eager' : 'lazy' }}"
                             >
@@ -2145,11 +2145,11 @@
     <div class="hidden md:block">
 
     <x-landing.hero-product
-            id="hijab"
-            title="Hijab Hijab"
+            id="skincare"
+            title="LUMINA LUMINA"
             subtitle="Precision. Power. Performance."
             image="{{ config('filesystems.disks.r2.url').'/2.png' }}"
-            alt="Hijab Hijab"
+            alt="LUMINA LUMINA"
             primary-text="Explore"
             primary-href="{{ route('produk.index') }}"
             secondary-text="Buy Now"
@@ -2159,10 +2159,10 @@
 
         <x-landing.hero-product
             id="shoes"
-            title="Hijab Shoes"
+            title="LUMINA Shoes"
             subtitle="Move faster. Play smarter."
             image="{{ config('filesystems.disks.r2.url').'/shoes.png' }}"
-            alt="Hijab Shoes"
+            alt="LUMINA Shoes"
             primary-text="Explore"
             primary-href="{{ route('produk.index') }}"
             secondary-text="Buy Now"
@@ -2172,10 +2172,10 @@
 
         <x-landing.hero-product
             id="apparel"
-            title="Hijab Accessories"
+            title="LUMINA Accessories"
             subtitle="Comfort meets performance."
             image="{{ config('filesystems.disks.r2.url').'/3.png' }}"
-            alt="Hijab Accessories"
+            alt="LUMINA Accessories"
             primary-text="Explore"
             primary-href="{{ route('produk.index') }}"
             secondary-text="Buy Now"
@@ -2189,7 +2189,7 @@
     <section class="np-fade-section bg-white py-16 lg:py-20">
             <div class="mx-auto w-full max-w-7xl px-6 md:px-10 lg:px-12">
                 <div class="rounded-3xl border border-black/5 bg-linear-to-r from-zinc-100 to-white px-8 py-14 text-center shadow-[0_8px_34px_rgba(0,0,0,0.04)] lg:px-12">
-                    <h2 class="text-3xl font-semibold tracking-tight text-black sm:text-4xl lg:text-5xl">Level up your game with Hijab</h2>
+                    <h2 class="text-3xl font-semibold tracking-tight text-black sm:text-4xl lg:text-5xl">Level up your game with LUMINA</h2>
                     <p class="mx-auto mt-4 max-w-2xl text-zinc-600">Designed for players who expect precision craftsmanship and world-class performance in every detail.</p>
                     <a href="{{ auth()->check() ? route('customer.products.index') : route('login') }}"
                        class="mt-8 inline-flex rounded-full bg-[#0071e3] px-8 py-3 text-sm font-medium text-white transition duration-300 hover:scale-[1.02] hover:bg-[#0077ED]">
@@ -2348,8 +2348,8 @@
                 const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
                 if (!prefersReduced) {
-                    // Target semua section hero-product (id: hijab, shoes, apparel)
-                    const heroSections = document.querySelectorAll('#hijab, #shoes, #apparel');
+                    // Target semua section hero-product (id: skincare, shoes, apparel)
+                    const heroSections = document.querySelectorAll('#skincare, #shoes, #apparel');
 
                     heroSections.forEach((section) => {
                         // Cari elemen card (div dengan max-w-5xl yang berisi img)

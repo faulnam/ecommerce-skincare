@@ -34,7 +34,7 @@
                 📤 PENGIRIM
             </div>
             <div style="font-size: 16px; font-weight: 700; color: #1F2937; margin-bottom: 8px;">
-                {{ config('branding.name', 'Hijab Store') }}
+                {{ config('branding.name', 'LUMINA Store') }}
             </div>
             <div style="font-size: 13px; color: #4B5563; line-height: 1.6;">
                 {{ config('branding.address', 'Kec. Tarik, Sidoarjo, Jawa Timur 61265') }}

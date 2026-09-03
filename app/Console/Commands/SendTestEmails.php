@@ -30,7 +30,7 @@ class SendTestEmails extends Command
 
         $emails = [
             'Registrasi' => [
-                'subject' => 'Kode OTP Registrasi Hijab',
+                'subject' => 'Kode OTP Registrasi LUMINA',
                 'message' => "Ini adalah email tes sungguhan untuk kategori Registrasi.\nOTP Anda: 123456"
             ],
             'Belum Melakukan Pembayaran' => [

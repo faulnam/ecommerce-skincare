@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'My Vouchers - Hijab')
+@section('title', 'My Vouchers - LUMINA')
 
 @push('styles')
 <style>

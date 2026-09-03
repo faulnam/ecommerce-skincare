@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Privacy Policy - Hijab')
-@section('og_description', 'Kebijakan privasi Hijab — bagaimana kami mengumpulkan, menggunakan, dan melindungi data pribadi kamu.')
+@section('title', 'Privacy Policy - LUMINA')
+@section('og_description', 'Kebijakan privasi LUMINA — bagaimana kami mengumpulkan, menggunakan, dan melindungi data pribadi kamu.')
 
 @push('og_extra')
 <script type="application/ld+json">
@@ -10,7 +10,7 @@
   "@type": "WebPage",
   "url": "{{ url()->current() }}",
   "name": "{{ $polTrans['page_title'][$lang] ?? 'Privacy Policy' }}",
-  "description": "{{ $lang === 'id' ? 'Kebijakan privasi Hijab — bagaimana kami mengumpulkan, menggunakan, dan melindungi data pribadi kamu.' : 'Hijab privacy policy — how we collect, use, and protect your personal data.' }}",
+  "description": "{{ $lang === 'id' ? 'Kebijakan privasi LUMINA — bagaimana kami mengumpulkan, menggunakan, dan melindungi data pribadi kamu.' : 'LUMINA privacy policy — how we collect, use, and protect your personal data.' }}",
   "inLanguage": "{{ $lang === 'id' ? 'id-ID' : 'en-US' }}",
   "isPartOf": { "@id": "{{ url('/') }}/#website" },
   "publisher": { "@id": "{{ url('/') }}/#organization" }
@@ -71,7 +71,7 @@
                         <p class="mt-2 text-justify">{!! nl2br(e($polTrans['desc_changes'][$lang] ?? 'We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page.')) !!}</p>
 
                         <h2 class="mt-6 text-lg font-semibold text-black">{{ $polTrans['title_contact'][$lang] ?? '8. Contact Us' }}</h2>
-                        <p class="mt-2 text-justify">{!! nl2br(e($polTrans['desc_contact'][$lang] ?? 'If you have any questions about this Privacy Policy, please contact us at support@hijab.com.')) !!}</p>
+                        <p class="mt-2 text-justify">{!! nl2br(e($polTrans['desc_contact'][$lang] ?? 'If you have any questions about this Privacy Policy, please contact us at support@luminaskincare.id.')) !!}</p>
                     </div>
                 </div>
             </section>

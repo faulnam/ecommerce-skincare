@@ -24,7 +24,7 @@ class WebPushService
     {
         $publicKey = config('services.webpush.public_key');
         $privateKey = config('services.webpush.private_key');
-    $subject = config('services.webpush.subject', 'mailto:admin@hijab.id');
+    $subject = config('services.webpush.subject', 'mailto:admin@luminaskincare.id');
 
         if (!$publicKey || !$privateKey) {
             Log::warning('WebPush: VAPID keys not configured');
@@ -109,7 +109,7 @@ class WebPushService
             'body' => $message,
             'message' => $message,
             'icon' => '/storage/logo.png',
-            'badge' => '/images/hijab-hijab-favicon.svg',
+            'badge' => '/images/skincare-skincare-favicon.svg',
             'url' => $url ?? '/',
             'type' => $type,
             'timestamp' => now()->toISOString(),
