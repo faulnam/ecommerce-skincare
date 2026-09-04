@@ -250,7 +250,7 @@
         // Create toast element
         const toast = document.createElement('div');
         toast.className = 'bg-white border-l-4 border-green-500 shadow-lg rounded px-4 py-3 flex items-center transform transition-all duration-300 translate-x-full opacity-0';
-        toast.style.fontFamily = "Arial, 'Helvetica Neue', Helvetica, sans-serif";
+        toast.style.fontFamily = "'Inter', sans-serif";
         toast.style.minWidth = "250px";
         
         toast.innerHTML = `
@@ -295,17 +295,24 @@
 
     <div id="voucher-carousel" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth hide-scrollbar py-2" style="gap: 20px;">
         @foreach($vouchers as $voucher)
+        @php
+            // Format agar judul voucher rapi & tidak all-caps (Title Case)
+            $formattedTitle = ucwords(strtolower($voucher->title));
+            $formattedTitle = preg_replace_callback('/\b(rp|off|id)\b/i', function($m) {
+                return strtolower($m[1]) === 'rp' ? 'Rp' : (strtolower($m[1]) === 'off' ? 'Off' : strtoupper($m[1]));
+            }, $formattedTitle);
+        @endphp
         <div class="snap-start relative flex bg-white border border-gray-200 shadow-sm transition-shadow hover:shadow-md shrink-0" style="min-width: 320px; width: 320px; flex: 0 0 auto; border-radius: 8px;">
             <!-- Left Section -->
             <div class="flex-1 min-w-0 p-4 flex flex-col justify-center">
-                <h3 class="text-[15px] font-semibold text-black mb-1 leading-tight truncate" style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;" title="{{ $voucher->title }}">{{ $voucher->title }}</h3>
-                <p class="text-xs text-gray-500 mb-3" style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;">Min. Blj Rp{{ number_format($voucher->minimum_purchase, 0, ',', '.') }}</p>
+                <h3 class="text-[14px] font-semibold text-black mb-1 leading-tight truncate" style="font-family: 'Inter', sans-serif;" title="{{ $formattedTitle }}">{{ $formattedTitle }}</h3>
+                <p class="text-xs text-gray-500 mb-3" style="font-family: 'Inter', sans-serif;">Min. Blj Rp{{ number_format($voucher->minimum_purchase, 0, ',', '.') }}</p>
                 
                 <div class="w-full bg-gray-100 rounded-full h-1 mb-2">
                     <div class="bg-gray-700 h-1 rounded-full" style="width: {{ max(5, min(100, $voucher->quota_percentage)) }}%"></div>
                 </div>
                 
-                <p class="text-[10px] text-gray-400 truncate" style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;">
+                <p class="text-[10px] text-gray-400 truncate" style="font-family: 'Inter', sans-serif;">
                     Sisa: {{ $voucher->remaining_quota }}/{{ $voucher->quota }} &bull; Hingga: {{ $voucher->end_date->format('d.m.Y') }}
                 </p>
             </div>

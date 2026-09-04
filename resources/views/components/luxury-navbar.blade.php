@@ -30,12 +30,14 @@
 <div id="custom-navbar" class="fixed left-0 w-full px-6 md:px-12 flex items-center justify-between bg-transparent border-b border-transparent" style="top: 31px; padding-top: 15px; padding-bottom: 15px; z-index: 90; transition: all 0.3s ease;">
     <!-- Custom Fonts for Luxury Feel -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&family=Inter:wght@300;400;500;600;700&display=swap');
         
         .nav-link-custom {
             position: relative;
-            font-size: 15px;
-            font-weight: 400;
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.02em;
             color: #111;
             padding-bottom: 6px; /* space between text and underline */
             transition: color 0.3s ease;
@@ -177,28 +179,28 @@
     </div>
     
     <!-- Menu Links -->
-    <div class="flex flex-col px-6 py-4 overflow-y-auto bg-white flex-1" style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;">
-        <a href="{{ route('home') }}" class="py-4 border-b border-gray-100 text-[13px] font-semibold tracking-wider text-black flex justify-between items-center hover:bg-gray-50">
-            BERANDA
+    <div class="flex flex-col px-6 py-4 overflow-y-auto bg-white flex-1" style="font-family: 'Inter', sans-serif;">
+        <a href="{{ route('home') }}" class="py-3.5 border-b border-gray-100 text-[13px] font-medium tracking-wide text-black flex justify-between items-center hover:bg-gray-50">
+            Beranda
         </a>
-        <a href="{{ route('new-arrivals') }}" class="py-4 border-b border-gray-100 text-[13px] font-semibold tracking-wider text-black flex justify-between items-center hover:bg-gray-50">
-            PRODUK TERBARU
+        <a href="{{ route('new-arrivals') }}" class="py-3.5 border-b border-gray-100 text-[13px] font-medium tracking-wide text-black flex justify-between items-center hover:bg-gray-50">
+            Produk Terbaru
         </a>
-        <a href="{{ route('about') }}" class="py-4 border-b border-gray-100 text-[13px] font-semibold tracking-wider text-black flex justify-between items-center hover:bg-gray-50">
-            TENTANG KAMI
+        <a href="{{ route('about') }}" class="py-3.5 border-b border-gray-100 text-[13px] font-medium tracking-wide text-black flex justify-between items-center hover:bg-gray-50">
+            Tentang Kami
         </a>
-        <a href="{{ route('insight') }}" class="py-4 border-b border-gray-100 text-[13px] font-semibold tracking-wider text-black flex justify-between items-center hover:bg-gray-50">
-            INSIGHT
+        <a href="{{ route('insight') }}" class="py-3.5 border-b border-gray-100 text-[13px] font-medium tracking-wide text-black flex justify-between items-center hover:bg-gray-50">
+            Insight
         </a>
-        <a href="{{ route('contact') }}" class="py-4 border-b border-gray-100 text-[13px] font-semibold tracking-wider text-black flex justify-between items-center hover:bg-gray-50">
-            KONTAK
+        <a href="{{ route('contact') }}" class="py-3.5 border-b border-gray-100 text-[13px] font-medium tracking-wide text-black flex justify-between items-center hover:bg-gray-50">
+            Kontak
         </a>
         
         <!-- Account link -->
-        <div class="mt-10 flex flex-col gap-6">
-            <a href="{{ route('login') }}" class="flex items-center gap-3 text-sm font-medium text-black hover:text-gray-600">
-                <i class="far fa-user text-lg"></i>
-                AKUN SAYA
+        <div class="mt-8 flex flex-col gap-5">
+            <a href="{{ route('login') }}" class="flex items-center gap-3 text-[13px] font-medium text-black hover:text-gray-600">
+                <i class="far fa-user text-base"></i>
+                Akun Saya
             </a>
         </div>
     </div>

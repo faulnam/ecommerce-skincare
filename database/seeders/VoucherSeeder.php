@@ -23,7 +23,7 @@ class VoucherSeeder extends Seeder
 
         $vouchers = [
             [
-                'title' => 'GLOWING SERUM 20% OFF',
+                'title' => 'Glowing Serum 20% Off',
                 'slug' => 'glowing-serum-20-off',
                 'code' => 'GLOW20',
                 'description' => 'Diskon 20% spesial untuk semua produk serum dan treatment pencerah kulit.',
@@ -42,7 +42,7 @@ class VoucherSeeder extends Seeder
                 'created_by' => $admin->id,
             ],
             [
-                'title' => 'BARRIER REPAIR RP 25K',
+                'title' => 'Barrier Repair Rp 25K',
                 'slug' => 'barrier-repair-rp-25k',
                 'code' => 'BARRIER25',
                 'description' => 'Potongan langsung Rp 25.000 untuk pembelian pelembap ceramide dan sunscreen.',
@@ -61,7 +61,7 @@ class VoucherSeeder extends Seeder
                 'created_by' => $admin->id,
             ],
             [
-                'title' => 'WELCOME BEAUTY BONUS 15%',
+                'title' => 'Welcome Beauty Bonus 15%',
                 'slug' => 'welcome-beauty-bonus-15',
                 'code' => 'NEWGLOW15',
                 'description' => 'Diskon 15% untuk pelanggan baru LUMINA Skincare tanpa minimum belanja.',
@@ -80,7 +80,7 @@ class VoucherSeeder extends Seeder
                 'created_by' => $admin->id,
             ],
             [
-                'title' => 'GRATIS ONGKIR SE-INDONESIA',
+                'title' => 'Gratis Ongkir Se-Indonesia',
                 'slug' => 'gratis-ongkir-se-indonesia',
                 'code' => 'FREESHIP',
                 'description' => 'Potongan ongkir hingga Rp 20.000 ke seluruh wilayah Indonesia.',
