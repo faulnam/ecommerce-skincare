@@ -283,59 +283,45 @@
 
 @if(isset($vouchers) && $vouchers->count() > 0)
 <!-- EXCLUSIVE VOUCHERS -->
-<section class="py-6 bg-white max-w-[1440px] mx-auto px-6 md:px-14 relative group">
+<section class="py-6 bg-white max-w-[1440px] mx-auto px-4 md:px-12 relative overflow-hidden group">
     
-    <!-- Left/Right controls for vouchers (positioned outside card area) -->
-    <button id="voucher-scroll-left" class="absolute bg-white rounded-full flex items-center justify-center text-black shadow-md z-10 cursor-pointer hover:bg-gray-50 transition-all" style="width: 36px; height: 36px; top: 50%; left: 8px; transform: translateY(-50%); border: 1px solid #e5e7eb;" aria-label="Previous Voucher">
-        <i class="fas fa-chevron-left text-xs"></i>
+    <!-- Left/Right controls for vouchers -->
+    <button id="voucher-scroll-left" class="absolute bg-white rounded-full flex items-center justify-center text-black shadow-md z-10 cursor-pointer hover:bg-gray-50 transition-all" style="width: 32px; height: 32px; top: 50%; left: 16px; transform: translateY(-50%); border: 1px solid #eee;" aria-label="Previous Voucher">
+        <i class="fas fa-chevron-left" style="font-size: 10px;"></i>
     </button>
-    <button id="voucher-scroll-right" class="absolute bg-white rounded-full flex items-center justify-center text-black shadow-md z-10 cursor-pointer hover:bg-gray-50 transition-all" style="width: 36px; height: 36px; top: 50%; right: 8px; transform: translateY(-50%); border: 1px solid #e5e7eb;" aria-label="Next Voucher">
-        <i class="fas fa-chevron-right text-xs"></i>
+    <button id="voucher-scroll-right" class="absolute bg-white rounded-full flex items-center justify-center text-black shadow-md z-10 cursor-pointer hover:bg-gray-50 transition-all" style="width: 32px; height: 32px; top: 50%; right: 16px; transform: translateY(-50%); border: 1px solid #eee;" aria-label="Next Voucher">
+        <i class="fas fa-chevron-right" style="font-size: 10px;"></i>
     </button>
 
-    <div id="voucher-carousel" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth hide-scrollbar py-2" style="gap: 18px;">
+    <div id="voucher-carousel" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth hide-scrollbar py-2" style="gap: 20px;">
         @foreach($vouchers as $voucher)
-        <div class="snap-start relative flex bg-white border border-gray-200 shadow-sm transition-all hover:shadow-md shrink-0 overflow-hidden" style="min-width: 350px; width: 350px; flex: 0 0 auto; border-radius: 12px;">
-            <!-- Left Section (Voucher Details) -->
-            <div class="flex-1 p-4 flex flex-col justify-between" style="background-color: #ffffff;">
-                <div>
-                    <div class="flex items-center gap-2 mb-1.5">
-                        <span class="inline-block text-[10px] font-bold tracking-wider uppercase px-2.5 py-0.5 rounded-full" style="background-color: #EBF3EE; color: #2D4C41; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;">
-                            @if($voucher->type === 'percent')
-                                DISKON {{ intval($voucher->discount_value) }}%
-                            @elseif($voucher->type === 'fixed')
-                                POTONGAN RP {{ number_format($voucher->discount_value / 1000, 0) }}K
-                            @else
-                                SPESIAL VOUCHER
-                            @endif
-                        </span>
-                    </div>
-                    <h3 class="text-[14px] font-bold text-gray-900 leading-tight truncate mb-1" style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;" title="{{ $voucher->title }}">{{ $voucher->title }}</h3>
-                    <p class="text-xs text-gray-500 mb-2" style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;">Min. belanja Rp{{ number_format($voucher->minimum_purchase, 0, ',', '.') }}</p>
+        <div class="snap-start relative flex bg-white border border-gray-200 shadow-sm transition-shadow hover:shadow-md shrink-0" style="min-width: 320px; width: 320px; flex: 0 0 auto; border-radius: 8px;">
+            <!-- Left Section -->
+            <div class="flex-1 min-w-0 p-4 flex flex-col justify-center">
+                <h3 class="text-[15px] font-semibold text-black mb-1 leading-tight truncate" style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;" title="{{ $voucher->title }}">{{ $voucher->title }}</h3>
+                <p class="text-xs text-gray-500 mb-3" style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;">Min. Blj Rp{{ number_format($voucher->minimum_purchase, 0, ',', '.') }}</p>
+                
+                <div class="w-full bg-gray-100 rounded-full h-1 mb-2">
+                    <div class="bg-gray-700 h-1 rounded-full" style="width: {{ max(5, min(100, $voucher->quota_percentage)) }}%"></div>
                 </div>
                 
-                <div>
-                    <div class="w-full bg-gray-100 rounded-full h-1.5 mb-1.5 overflow-hidden">
-                        <div class="h-1.5 rounded-full transition-all" style="background-color: #2D4C41; width: {{ max(10, min(100, $voucher->quota_percentage)) }}%;"></div>
-                    </div>
-                    <div class="flex items-center justify-between text-[10px] text-gray-400" style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;">
-                        <span>Sisa: <strong class="text-gray-600 font-semibold">{{ $voucher->remaining_quota }}</strong></span>
-                        <span>Berlaku s/d {{ $voucher->end_date->format('d.m.Y') }}</span>
-                    </div>
-                </div>
+                <p class="text-[10px] text-gray-400 truncate" style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;">
+                    Sisa: {{ $voucher->remaining_quota }}/{{ $voucher->quota }} &bull; Hingga: {{ $voucher->end_date->format('d.m.Y') }}
+                </p>
             </div>
             
-            <!-- Ticket Stub Divider with clean styling -->
-            <div class="w-[1px] my-2 border-l border-dashed border-gray-300 relative shrink-0"></div>
+            <!-- Divider -->
+            <div class="w-[1px] my-3 border-l-2 border-dashed border-gray-200 relative shrink-0">
+                <!-- Top Cutout -->
+                <div class="absolute -top-4 w-4 h-4 bg-white border-b border-gray-200 rounded-full" style="left: -8px;"></div>
+                <!-- Bottom Cutout -->
+                <div class="absolute -bottom-4 w-4 h-4 bg-white border-t border-gray-200 rounded-full" style="left: -8px;"></div>
+            </div>
             
-            <!-- Right Section (Stub & Action) -->
-            <div class="w-24 shrink-0 flex flex-col items-center justify-center p-3 text-center" style="background-color: #FAF8F5;">
-                <span class="text-[9px] font-bold uppercase tracking-wider text-gray-400 mb-1" style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;">KODE</span>
-                <span class="font-mono font-bold text-[11px] text-gray-900 bg-white border border-gray-200 rounded px-1.5 py-0.5 mb-2.5 tracking-wider select-all shadow-2xs w-full block truncate">
-                    {{ $voucher->code }}
-                </span>
-                <button onclick="claimVoucher('{{ $voucher->code }}')" class="inline-flex items-center justify-center gap-1 w-full py-1.5 rounded-md text-[11px] font-semibold text-white transition-all hover:opacity-90 active:scale-95 shadow-xs cursor-pointer" style="background-color: #2D4C41; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;" title="Klaim Kode Voucher">
-                    <i class="far fa-copy text-[10px]"></i> Klaim
+            <!-- Right Section -->
+            <div class="w-20 shrink-0 flex items-center justify-center" style="min-width: 80px;">
+                <button onclick="claimVoucher('{{ $voucher->code }}')" class="w-10 h-10 flex items-center justify-center text-white rounded-full transition-transform hover:scale-110 shadow-sm cursor-pointer" style="background-color: #4f5d75;" title="Klaim / Salin Kode" onmouseover="this.style.backgroundColor='#3f4a5d';" onmouseout="this.style.backgroundColor='#4f5d75';">
+                    <i class="far fa-copy text-sm"></i>
                 </button>
             </div>
         </div>
