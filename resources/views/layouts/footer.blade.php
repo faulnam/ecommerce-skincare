@@ -14,7 +14,7 @@
                 </h3>
                 <ul class="mt-4 space-y-2.5 text-sm">
                    <li><a href="{{ route('brand-catalog') }}" class="inline-flex transition-colors duration-200 hover:text-black">{{ $common['footer']['links']['brand_catalog'][$lang] ?? 'Katalog Brand' }}</a></li>
-                    <li><a href="{{ route('produk.index') }}" class="inline-flex transition-colors duration-200 hover:text-black">{{ $common['footer']['links']['shop'][$lang] ?? 'Belanja' }}</a></li>
+                    <li><a href="{{ route('new-arrivals') }}" class="inline-flex transition-colors duration-200 hover:text-black">{{ $common['footer']['links']['shop'][$lang] ?? 'Belanja' }}</a></li>
                     <li><a href="{{ route('about') }}" class="inline-flex transition-colors duration-200 hover:text-black">{{ $common['footer']['links']['about'][$lang] ?? 'Tentang Kami' }}</a></li>
                 </ul>
             </div>
@@ -75,7 +75,7 @@
                 </summary>
                 <ul class="mt-3 space-y-2.5 text-sm">
                     <li><a href="{{ route('brand-catalog') }}" class="inline-flex transition-colors duration-200 hover:text-black">Brand Catalog</a></li>
-                    <li><a href="{{ route('produk.index') }}" class="inline-flex transition-colors duration-200 hover:text-black">Shop</a></li>
+                    <li><a href="{{ route('new-arrivals') }}" class="inline-flex transition-colors duration-200 hover:text-black">Shop</a></li>
                     <li><a href="{{ route('about') }}" class="inline-flex transition-colors duration-200 hover:text-black">About</a></li>
                 </ul>
             </details>

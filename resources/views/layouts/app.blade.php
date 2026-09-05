@@ -1097,7 +1097,7 @@
                         <ul class="space-y-3 text-xs text-gray-500">
                             <li><a href="{{ route('home') }}" class="hover:text-black transition-colors">Beranda</a></li>
                             <li><a href="{{ route('new-arrivals') }}" class="hover:text-black transition-colors">Produk Terbaru</a></li>
-                            <li><a href="{{ route('produk.index') }}" class="hover:text-black transition-colors">Semua Produk</a></li>
+                            <li><a href="{{ route('new-arrivals') }}" class="hover:text-black transition-colors">Semua Produk</a></li>
                         </ul>
                     </div>
                     <div>
@@ -1146,7 +1146,7 @@
                 <i class="fas fa-home"></i>
                 <br>
             </a>
-            <a href="{{ route('produk.index') }}" class="mobile-nav-item {{ request()->routeIs('produk.*') ? 'active' : '' }}">
+            <a href="{{ route('new-arrivals') }}" class="mobile-nav-item {{ request()->routeIs('new-arrivals') ? 'active' : '' }}">
                 <i class="fas fa-box"></i>
                <br>
             </a>

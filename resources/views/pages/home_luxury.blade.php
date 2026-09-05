@@ -60,7 +60,7 @@
 
     <!-- Center Content -->
     <div class="absolute inset-0 flex flex-col items-center justify-end text-center px-4 pointer-events-none z-20" style="padding-bottom: 70px;">
-        <a id="shop-now-btn" href="{{ route('produk.index') }}" class="pointer-events-auto text-white hover:bg-white hover:text-black font-bold uppercase" style="border: 1px solid rgba(255, 255, 255, 0.5); background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); font-size: 13px; letter-spacing: 0.2em; padding: 16px 60px; transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease, background-color 0.3s, color 0.3s; transform: translateY(0); opacity: 1;">
+        <a id="shop-now-btn" href="{{ (!empty($heroBanners->first()->link) && !str_contains($heroBanners->first()->link, 'produk')) ? $heroBanners->first()->link : route('new-arrivals') }}" class="pointer-events-auto text-white hover:bg-white hover:text-black font-bold uppercase" style="border: 1px solid rgba(255, 255, 255, 0.5); background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); font-size: 13px; letter-spacing: 0.2em; padding: 16px 60px; transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease, background-color 0.3s, color 0.3s; transform: translateY(0); opacity: 1;">
             {{ $heroBanners->first()->title ?? 'SHOP NOW' }}
         </a>
     </div>
@@ -96,6 +96,11 @@
         const titles = [
             @foreach($heroBanners as $banner)
             "{{ $banner->title }}",
+            @endforeach
+        ];
+        const bannerLinks = [
+            @foreach($heroBanners as $banner)
+            "{{ (!empty($banner->link) && !str_contains($banner->link, 'produk')) ? $banner->link : route('new-arrivals') }}",
             @endforeach
         ];
         let currentIndex = 0;
@@ -148,6 +153,9 @@
                 setTimeout(() => {
                     blinkOverlay.style.opacity = '0';
                     shopNowBtn.textContent = titles[currentIndex];
+                    if (bannerLinks[currentIndex]) {
+                        shopNowBtn.href = bannerLinks[currentIndex];
+                    }
                     
                     // Animate button in
                     shopNowBtn.style.transition = 'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease, background-color 0.3s, color 0.3s';
@@ -607,7 +615,7 @@
 
         <div class="cat-container">
             @foreach($categories as $cat)
-            <a href="{{ route('produk.index') }}?category={{ $cat['filter'] }}" class="cat-link">
+            <a href="{{ route('new-arrivals') }}?category={{ $cat['filter'] }}" class="cat-link">
                 <div class="cat-item cat-img-wrapper">
                     <img src="{{ $cat['img'] }}" alt="{{ $cat['name'] }}" style="max-width: 100%; max-height: 100%; object-fit: contain; mix-blend-mode: multiply; filter: contrast(1.1);">
                 </div>
@@ -621,7 +629,7 @@
 @if(isset($splitBanners) && $splitBanners->count() >= 2)
 <section style="display: flex; flex-wrap: wrap; width: 100%;">
     <!-- Banner Left -->
-    <div onclick="window.location.href='{{ $splitBanners[0]->link ?? route('produk.index') }}'" style="position: relative; flex: 1 1 50%; min-width: 300px; aspect-ratio: 3 / 4; min-height: 95vh; overflow: hidden; cursor: pointer;" onmouseover="this.querySelector('img').style.transform='scale(1.05)'" onmouseout="this.querySelector('img').style.transform='scale(1)'">
+    <div onclick="window.location.href='{{ (!empty($splitBanners[0]->link) && !str_contains($splitBanners[0]->link, 'produk')) ? $splitBanners[0]->link : route('new-arrivals') }}'" style="position: relative; flex: 1 1 50%; min-width: 300px; aspect-ratio: 3 / 4; min-height: 95vh; overflow: hidden; cursor: pointer;" onmouseover="this.querySelector('img').style.transform='scale(1.05)'" onmouseout="this.querySelector('img').style.transform='scale(1)'">
         <img src="{{ $splitBanners[0]->image_url }}" alt="{{ $splitBanners[0]->title }}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease;">
         <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.5) 45%, rgba(0, 0, 0, 0.15) 75%, transparent 100%); pointer-events: none;"></div>
         <div style="position: absolute; bottom: 45px; left: 0; width: 100%; text-align: center; display: flex; flex-direction: column; align-items: center; padding: 0 20px;">
@@ -631,7 +639,7 @@
     </div>
     
     <!-- Banner Right -->
-    <div onclick="window.location.href='{{ $splitBanners[1]->link ?? route('produk.index') }}'" style="position: relative; flex: 1 1 50%; min-width: 300px; aspect-ratio: 3 / 4; min-height: 95vh; overflow: hidden; cursor: pointer;" onmouseover="this.querySelector('img').style.transform='scale(1.05)'" onmouseout="this.querySelector('img').style.transform='scale(1)'">
+    <div onclick="window.location.href='{{ (!empty($splitBanners[1]->link) && !str_contains($splitBanners[1]->link, 'produk')) ? $splitBanners[1]->link : route('new-arrivals') }}'" style="position: relative; flex: 1 1 50%; min-width: 300px; aspect-ratio: 3 / 4; min-height: 95vh; overflow: hidden; cursor: pointer;" onmouseover="this.querySelector('img').style.transform='scale(1.05)'" onmouseout="this.querySelector('img').style.transform='scale(1)'">
         <img src="{{ $splitBanners[1]->image_url }}" alt="{{ $splitBanners[1]->title }}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease;">
         <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.5) 45%, rgba(0, 0, 0, 0.15) 75%, transparent 100%); pointer-events: none;"></div>
         <div style="position: absolute; bottom: 45px; left: 0; width: 100%; text-align: center; display: flex; flex-direction: column; align-items: center; padding: 0 20px;">
@@ -970,7 +978,7 @@
         Temukan rangkaian skincare premium dengan formulasi dermatologis teruji klinis dan bersertifikasi BPOM. Dapatkan jaminan 100% original serta konsultasi gratis bersama Beauty Advisor kami.
     </p>
     <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-        <a href="{{ route('produk.index') }}" class="inline-flex items-center justify-center rounded-full text-white font-medium transition-all" style="background-color: #18181b; padding: 14px 32px; font-size: 0.95rem; min-width: 180px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);" onmouseover="this.style.transform='translateY(-2px)';" onmouseout="this.style.transform='translateY(0)';">
+        <a href="{{ route('new-arrivals') }}" class="inline-flex items-center justify-center rounded-full text-white font-medium transition-all" style="background-color: #18181b; padding: 14px 32px; font-size: 0.95rem; min-width: 180px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);" onmouseover="this.style.transform='translateY(-2px)';" onmouseout="this.style.transform='translateY(0)';">
             Belanja Sekarang <span style="margin-left: 8px;">&rarr;</span>
         </a>
         <a href="{{ route('login') }}" class="inline-flex items-center justify-center rounded-full text-black font-medium transition-all" style="background-color: #fff; padding: 14px 32px; font-size: 0.95rem; border: 1px solid #e4e4e7; min-width: 180px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;" onmouseover="this.style.backgroundColor='#f4f4f5';" onmouseout="this.style.backgroundColor='#fff';">
